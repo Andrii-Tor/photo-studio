@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання - Студія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- hdr -->
+    <header class="hdr">
+        <a href="index.html" class="lg">STUDIO</a>
+        <nav class="nv">
+            <a href="index.html">Головна</a>
+            <a href="cat.html">Зали</a>
+            <a href="about.html">Про нас</a>
+            <a href="book.html">Бронювання</a>
+        </nav>
+    </header>
+
+    <main class="bk-main">
+        <h2 class="tc">Бронювання та розклад</h2>
+        <div class="bk-grd">
+            
+            <!-- Ліва колонка: Календар -->
+            <div class="bk-cal shw">
+                <h3>Вільні години</h3>
+                <div class="cal-wrp">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKiev" scrolling="no"></iframe>
+                </div>
+            </div>
+
+            <!-- Права колонка: Форма -->
+            <div class="bk-frm shw">
+                <h3>Оформлення заявки</h3>
+                <p class="bk-rules">[ Мінімальний час оренди — 2 години. Бронювання підтверджується після передоплати. ]</p>
+                <form id="f1" class="frm">
+                    <input type="text" class="inp" placeholder="ПІБ" required>
+                    <input type="tel" class="inp" placeholder="Номер телефону" required>
+                    <textarea class="inp txt" placeholder="Коментар (дата, зал)"></textarea>
+                    <button type="submit" class="btn">Продовжити</button>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- ftr -->
+    <footer class="ftr">
+        <div class="ftr-w">
+            <div class="f-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="cat.html">Зали</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="book.html">Бронювання онлайн</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="#">Політика конфіденційності</a></li>
+                    <li><a href="#">Договір публічної оферти</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Контакти</h4>
+                <ul>
+                    <li>📍 [ Адреса студії ]</li>
+                    <li>📞 +38 097 061 54 11</li>
+                    <li>✉️ [ Надати/вписати адресу ]</li>
+                    <li>💬 <a href="#">Написати в Telegram</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Слідкуйте за нами</h4>
+                <div class="soc">
+                    <a href="#"><img src="icons/fb.svg" alt="FB" width="20"></a>
+                    <a href="#"><img src="icons/insta.svg" alt="IN" width="20"></a>
+                    <a href="#"><img src="icons/tg.svg" alt="TG" width="20"></a>
+                </div>
+                <div class="pay">
+                    <img src="icons/visa.svg" alt="Visa" width="40">
+                    <img src="icons/mastercard.svg" alt="Mastercard" width="40">
+                </div>
+            </div>
+        </div>
+        <div class="ftr-b">
+            <p>© 2026 Студія. Всі права захищено. | <a href="#">Карта сайту</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

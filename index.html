@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- hdr -->
+    <header class="hdr">
+        <a href="index.html" class="lg">STUDIO</a>
+        <nav class="nv">
+            <a href="index.html">Головна</a>
+            <a href="cat.html">Зали</a>
+            <a href="about.html">Про нас</a>
+            <a href="book.html">Бронювання</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- bnr -->
+        <section class="bnr">
+            <h1>[ Головний заголовок студії ]</h1>
+        </section>
+
+        <!-- sld -->
+        <section class="shw sld-sec">
+            <div class="sld-wrp" id="promo-sld">
+                <div class="sld vis-sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800');"></div>
+                    <div class="sld-txt">
+                        <h3>[ Назва акції 1 ]</h3>
+                        <p>[ Короткий опис акції або пропозиції ]</p>
+                    </div>
+                </div>
+                <div class="sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800');"></div>
+                    <div class="sld-txt">
+                        <h3>[ Назва акції 2 ]</h3>
+                        <p>[ Короткий опис акції або пропозиції ]</p>
+                    </div>
+                </div>
+                <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
+                <button class="sld-btn nxt" onclick="moveSld(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- grd -->
+        <section class="grd">
+            <div class="crd shw">
+                <div class="img i1"></div>
+                <h3>[ Зал 1 ]</h3>
+                <a href="cat.html" class="btn-c">Детальніше</a>
+            </div>
+            <div class="crd shw">
+                <div class="img i2"></div>
+                <h3>[ Зал 2 ]</h3>
+                <a href="cat.html" class="btn-c">Детальніше</a>
+            </div>
+            <div class="crd shw">
+                <div class="img i3"></div>
+                <h3>[ Зал 3 ]</h3>
+                <a href="cat.html" class="btn-c">Детальніше</a>
+            </div>
+        </section>
+
+        <!-- adv -->
+        <section class="shw adv-sec">
+            <h2 class="tc">Наші переваги</h2>
+            <div class="adv-grd">
+                <div class="adv-crd">
+                    <div class="adv-ico">⚡</div>
+                    <h4>[ Перевага 1 ]</h4>
+                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
+                </div>
+                <div class="adv-crd">
+                    <div class="adv-ico">🚪</div>
+                    <h4>[ Перевага 2 ]</h4>
+                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
+                </div>
+                <div class="adv-crd">
+                    <div class="adv-ico">📍</div>
+                    <h4>[ Перевага 3 ]</h4>
+                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- abt -->
+        <section class="shw abt-hm">
+            <div class="abt-txt">
+                <h2>Про нашу студію</h2>
+                <p>[ Текст з описом компанії, історії створення, особливостей підходу до роботи та ключових переваг. Заповнюється клієнтом. ]</p>
+                <a href="about.html" class="btn-c">Більше про нас</a>
+            </div>
+            <div class="abt-img"></div>
+        </section>
+
+        <!-- prc -->
+        <section class="shw prc-sec">
+            <h2 class="tc">Вартість оренди та послуг</h2>
+            <div class="prc-grd">
+                <div class="prc-crd">
+                    <h4>[ Зал 1 ]</h4>
+                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
+                    <ul>
+                        <li>[ Характеристика 1 ]</li>
+                        <li>[ Характеристика 2 ]</li>
+                        <li>[ Умови вихідного дня ]</li>
+                    </ul>
+                    <a href="book.html" class="btn-c">Забронювати</a>
+                </div>
+                <div class="prc-crd popular">
+                    <div class="badge">Популярно</div>
+                    <h4>[ Зал 2 ]</h4>
+                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
+                    <ul>
+                        <li>[ Характеристика 1 ]</li>
+                        <li>[ Характеристика 2 ]</li>
+                        <li>[ Умови вихідного дня ]</li>
+                    </ul>
+                    <a href="book.html" class="btn-c">Забронювати</a>
+                </div>
+                <div class="prc-crd">
+                    <h4>[ Зал 3 ]</h4>
+                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
+                    <ul>
+                        <li>[ Характеристика 1 ]</li>
+                        <li>[ Характеристика 2 ]</li>
+                        <li>[ Умови вихідного дня ]</li>
+                    </ul>
+                    <a href="book.html" class="btn-c">Забронювати</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ftr -->
+    <footer class="ftr">
+        <div class="ftr-w">
+            <div class="f-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="cat.html">Зали</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="book.html">Бронювання онлайн</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="#">Політика конфіденційності</a></li>
+                    <li><a href="#">Договір публічної оферти</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Контакти</h4>
+                <ul>
+                    <li>📍 [ Адреса студії ]</li>
+                    <li>📞 +38 097 061 54 11</li>
+                    <li>✉️ [ Надати/вписати адресу ]</li>
+                    <li>💬 <a href="#">Написати в Telegram</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Слідкуйте за нами</h4>
+                <div class="soc">
+                    <a href="#"><img src="icons/fb.svg" alt="FB" width="20"></a>
+                    <a href="#"><img src="icons/insta.svg" alt="IN" width="20"></a>
+                    <a href="#"><img src="icons/tg.svg" alt="TG" width="20"></a>
+                </div>
+                <div class="pay">
+                    <img src="icons/visa.svg" alt="Visa" width="40">
+                    <img src="icons/mastercard.svg" alt="Mastercard" width="40">
+                </div>
+            </div>
+        </div>
+        <div class="ftr-b">
+            <p>© 2026 Студія. Всі права захищено. | <a href="#">Карта сайту</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
