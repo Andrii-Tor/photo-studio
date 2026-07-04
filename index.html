@@ -3,28 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Студія</title>
+    <title>Студія — Головна</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- hdr -->
-    <header class="hdr">
-        <a href="index.html" class="lg">STUDIO</a>
-        <nav class="nv">
-            <a href="index.html">Головна</a>
-            <a href="cat.html">Зали</a>
-            <a href="about.html">Про нас</a>
-            <a href="book.html">Бронювання</a>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-contacts">
+                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
+                <p>🏢 Арт-завод Платформа</p>
+                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+            </div>
+            <div class="header-logo">
+                <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+            </div>
+            <div class="header-action">
+                <div class="social-icons">
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="24" height="24"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="24" height="24"></a>
+                </div>
+                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">ГОЛОВНА</a></li>
+                <li><a href="cat.html">ЗАЛИ</a></li>
+                <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
+                <li><a href="services.html">ПОСЛУГИ</a></li>
+                <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
+                <li><a href="book.html">КАЛЕНДАР</a></li>
+                <li><a href="events.html">ЗАХОДИ</a></li>
+                <li><a href="about.html">КОНТАКТИ</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <!-- bnr -->
         <section class="bnr">
             <h1>[ Головний заголовок студії ]</h1>
         </section>
 
-        <!-- sld -->
         <section class="shw sld-sec">
             <div class="sld-wrp" id="promo-sld">
                 <div class="sld vis-sld">
@@ -46,7 +66,6 @@
             </div>
         </section>
 
-        <!-- grd -->
         <section class="grd">
             <div class="crd shw">
                 <div class="img i1"></div>
@@ -65,7 +84,6 @@
             </div>
         </section>
 
-        <!-- adv -->
         <section class="shw adv-sec">
             <h2 class="tc">Наші переваги</h2>
             <div class="adv-grd">
@@ -87,7 +105,6 @@
             </div>
         </section>
 
-        <!-- abt -->
         <section class="shw abt-hm">
             <div class="abt-txt">
                 <h2>Про нашу студію</h2>
@@ -97,7 +114,6 @@
             <div class="abt-img"></div>
         </section>
 
-        <!-- prc -->
         <section class="shw prc-sec">
             <h2 class="tc">Вартість оренди та послуг</h2>
             <div class="prc-grd">
@@ -136,45 +152,43 @@
         </section>
     </main>
 
-    <!-- ftr -->
-    <footer class="ftr">
+<footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
                 <h4>Навігація</h4>
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="cat.html">Зали</a></li>
-                    <li><a href="about.html">Про нас</a></li>
-                    <li><a href="book.html">Бронювання онлайн</a></li>
+                    <li><a href="clothes.html">Оренда одягу</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="cert.html">Сертифікати</a></li>
                 </ul>
             </div>
-<div class="f-col">
-    <h4>Інформація</h4>
-    <ul>
-        <li><a href="#">Правила студії</a></li>
-        <li><a href="#">Умови оренди</a></li>
-        <li><a href="#">Часті питання (FAQ)</a></li>
-    </ul>
-</div>
+            <div class="f-col">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="book.html">Календар бронювання</a></li>
+                    <li><a href="events.html">Заходи та події</a></li>
+                    <li><a href="about.html">Контакти</a></li>
+                    <li><a href="#">Правила студії</a></li>
+                    <li><a href="#">Умови оренди</a></li>
+                </ul>
+            </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 [ Адреса студії ]</li>
-                    <li>📞 +38 097 061 54 11</li>
-                    <li>✉️ [ Надати/вписати адресу ]</li>
+                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
+                    <li>📞 +38 097 194 35 83</li>
+                    <li>✉️ info@photostudio.kiev.ua</li>
                     <li>💬 <a href="#">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Слідкуйте за нами</h4>
-                <div class="soc">
-                    <a href="#"><img src="icons/fb.svg" alt="FB" width="20"></a>
-                    <a href="#"><img src="icons/insta.svg" alt="IN" width="20"></a>
-                    <a href="#"><img src="icons/tg.svg" alt="TG" width="20"></a>
-                </div>
-                <div class="pay">
-                    <img src="icons/visa.svg" alt="Visa" width="40">
-                    <img src="icons/mastercard.svg" alt="Mastercard" width="40">
+                <div class="social-icons">
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
             </div>
         </div>
