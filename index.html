@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -27,13 +26,10 @@
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
         </div>
-        <!-- НАВІГАЦІЯ З ВИПАДАЮЧИМ МЕНЮ ДЛЯ ЗАЛІВ -->
-        <button class="burger-btn" onclick="toggleMenu()">☰</button>
-
+        
         <nav class="header-nav" id="myNav">
             <ul>
                 <li><a href="index.html">ГОЛОВНА</a></li>
-                
                 <li class="dropdown">
                     <a href="#" class="dropbtn" onclick="return false;">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
@@ -42,7 +38,6 @@
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
-
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
                 <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
@@ -53,62 +48,65 @@
                 <li><a href="about.html">КОНТАКТИ</a></li>
             </ul>
         </nav>
+    </header>
 
     <main>
-        <!-- 1. СЛАЙДИ З РЕКЛАМОЮ (НА КОЖНІЙ СТОРІНЦІ) -->
-        <section class="shw sld-sec" style="margin-top: 20px;">
-            <div class="sld-wrp" id="promo-sld">
-                <div class="sld vis-sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
-                    <div class="sld-txt">
-                        <h3>Назва</h3>
-                        <p>Опис</p>
+        <section class="shw sld-sec" style="max-width: 1200px; margin: 20px auto; padding: 0 15px;">
+            <div class="sld-wrp" style="border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                
+                <div class="sld-track" id="promo-track">
+                    
+                    <div class="sld">
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
+                        <div class="sld-txt">
+                            <h3>[ Спеціальна пропозиція студії Wave ]</h3>
+                            <p>[ Короткий рекламний текст або знижка ]</p>
+                        </div>
                     </div>
-                </div>
-                <div class="sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
-                    <div class="sld-txt">
-                        <h3>Назва</h3>
-                        <p>Опис</p>
+                    
+                    <div class="sld">
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
+                        <div class="sld-txt">
+                            <h3>[ Нова локація чи акція ]</h3>
+                            <p>[ Бронюйте вільні години за вигідною ціною ]</p>
+                        </div>
                     </div>
+
                 </div>
-                <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
-                <button class="sld-btn nxt" onclick="moveSld(1)">&#10095;</button>
+
+                <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
+                <button class="sld-btn nxt" onclick="moveSld(1)">❯</button>
+            </div>
+            
+            <div class="slider-dots" style="text-align: center; margin-top: 15px;">
+                <span class="dot active-dot" onclick="goToSld(0)"></span>
+                <span class="dot" onclick="goToSld(1)"></span>
             </div>
         </section>
 
-        <!-- 2. ГОЛОВНЕ МЕНЮ В КАРТКАХ -->
         <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
             <div class="home-grid-6">
-                <!-- Рядок 1 -->
                 <a href="cat.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600');">
                     <h3>ЗАЛИ</h3>
                 </a>
-
                 <a href="photos.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=600');">
                     <h3>ФОТОСЕСІЇ</h3>
                 </a>
-
                 <a href="all-inclusive.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600');">
                     <h3>ВСЕ ВКЛЮЧЕНО</h3>
                 </a>
-
-                <!-- Рядок 2 -->
                 <a href="events.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600');">
                     <h3>ЗАХОДИ</h3>
                 </a>
-
                 <a href="clothes.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600');">
                     <h3>ОРЕНДА ОДЯГУ</h3>
                 </a>
-
                 <a href="cert.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600');">
                     <h3>СЕРТИФІКАТИ</h3>
                 </a>
             </div>
         </section>
 
-        <!-- 3. ПРОДУБЛЬОВАНИЙ КАЛЕНДАР РОЗКЛАДУ -->
         <section class="shw" style="max-width: 1000px; margin: 50px auto; padding: 0 20px;">
             <h2 class="tc" style="margin-bottom: 20px;">Розклад та вільні години</h2>
             <div class="cal-wrp" style="box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea;">
@@ -116,17 +114,15 @@
             </div>
         </section>
 
-        <!-- 4. ЧИСТИЙ БЛОК ДЛЯ ТЕКСТУ ВІД КЛІЄНТА (БЕЗ МОЇХ ЗАГОЛОВКІВ) -->
         <section class="shw" style="max-width: 900px; margin: 50px auto 70px; padding: 0 20px;">
             <div style="font-size: 16px; color: #555; line-height: 1.8; background: #fff; padding: 35px; border-radius: 8px; border: 1px solid #eaeaea;">
                 <p style="margin: 0; text-align: center; color: #888;">
-                    цей блок потрібен?
+                    [ Тут буде розміщено фінальний текст з описом студії після отримання матеріалів від клієнта ]
                 </p>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
