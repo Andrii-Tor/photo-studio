@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ Назва розділу ] — Студія</title>
+    <title>Фотостудія WAVE — [ Назва розділу ]</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -16,13 +16,13 @@
                 <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
             </div>
             <div class="header-logo">
-                <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+                <a href="index.html"><img src="logo.png" alt="WAVE Studio"></a>
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="24" height="24"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
@@ -30,7 +30,16 @@
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html">ГОЛОВНА</a></li>
-                <li><a href="cat.html">ЗАЛИ</a></li>
+                <li class="dropdown">
+                    <a href="cat.html" class="dropbtn">ЗАЛИ <span class="arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="room-air.html">Зал «Air»</a></li>
+                        <li><a href="room-stone.html">Зал «Stone»</a></li>
+                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
+                <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
                 <li><a href="services.html">ПОСЛУГИ</a></li>
                 <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
@@ -42,28 +51,48 @@
     </header>
 
     <main>
-        <section class="bnr" style="height: 20vh; min-height: 150px;">
-            <h1>[ Назва розділу ]</h1>
+        <!-- 1. СЛАЙДИ З РЕКЛАМОЮ (НА КОЖНІЙ СТОРІНЦІ) -->
+        <section class="shw sld-sec" style="margin-top: 20px;">
+            <div class="sld-wrp" id="promo-sld">
+                <div class="sld vis-sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
+                    <div class="sld-txt">
+                        <h3>Назва</h3>
+                        <p>Опис</p>
+                    </div>
+                </div>
+                <div class="sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
+                    <div class="sld-txt">
+                        <h3>Назва</h3>
+                        <p>Опис</p>
+                    </div>
+                </div>
+                <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
+                <button class="sld-btn nxt" onclick="moveSld(1)">&#10095;</button>
+            </div>
         </section>
 
-        <section class="shw" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto; text-align: center;">
-            <h2 class="tc" style="margin-bottom: 20px;">Скоро тут з'явиться інформація</h2>
-            <p style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                заглушка
+        <!-- ЧИСТИЙ І НЕЙТРАЛЬНИЙ КОНТЕЙНЕР ДЛЯ КОНТЕНТУ -->
+        <section class="shw" style="padding: 60px 20px; max-width: 900px; margin: 0 auto; text-align: center;">
+            <h1 class="tc" style="margin-bottom: 15px; font-size: 28px; color: #1a252f;">Текст</h1>
+            <p style="font-size: 16px; color: #7f8c8d; max-width: 500px; margin: 0 auto;">
+                Текст
             </p>
         </section>
     </main>
 
-<footer class="ftr">
+    <!-- FOOTER -->
+    <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
                 <h4>Навігація</h4>
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="cat.html">Зали</a></li>
+                    <li><a href="photos.html">Фотосесії</a></li>
+                    <li><a href="all-inclusive.html">Все включено</a></li>
                     <li><a href="clothes.html">Оренда одягу</a></li>
-                    <li><a href="services.html">Послуги</a></li>
-                    <li><a href="cert.html">Сертифікати</a></li>
                 </ul>
             </div>
             <div class="f-col">
@@ -81,7 +110,7 @@
                 <ul>
                     <li>📍 Київ, вул. Якова Гніздовського 1А</li>
                     <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ info@photostudio.kiev.ua</li>
+                    <li>✉️ info@wavestudio.kiev.ua</li>
                     <li>💬 <a href="#">Написати в Telegram</a></li>
                 </ul>
             </div>

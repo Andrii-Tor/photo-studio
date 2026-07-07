@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Студія — Головна</title>
+    <title>Фотостудія WAVE — Головна</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -15,21 +16,34 @@
                 <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
             </div>
             <div class="header-logo">
-                <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+                <a href="index.html"><img src="logo.png" alt="WAVE Studio"></a>
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="24" height="24"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
         </div>
+        
+        <!-- НАВІГАЦІЯ З ВИПАДАЮЧИМ МЕНЮ ДЛЯ ЗАЛІВ -->
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html">ГОЛОВНА</a></li>
-                <li><a href="cat.html">ЗАЛИ</a></li>
+                
+                <li class="dropdown">
+                    <a href="cat.html" class="dropbtn">ЗАЛИ <span class="arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="room-air.html">Зал «Air»</a></li>
+                        <li><a href="room-stone.html">Зал «Stone»</a></li>
+                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                    </ul>
+                </li>
+
+                <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
+                <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
                 <li><a href="services.html">ПОСЛУГИ</a></li>
                 <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
@@ -41,24 +55,21 @@
     </header>
 
     <main>
-        <section class="bnr">
-            <h1>[ Головний заголовок студії ]</h1>
-        </section>
-
-        <section class="shw sld-sec">
+        <!-- 1. СЛАЙДИ З РЕКЛАМОЮ (НА КОЖНІЙ СТОРІНЦІ) -->
+        <section class="shw sld-sec" style="margin-top: 20px;">
             <div class="sld-wrp" id="promo-sld">
                 <div class="sld vis-sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800');"></div>
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
                     <div class="sld-txt">
-                        <h3>[ Назва акції 1 ]</h3>
-                        <p>[ Короткий опис акції або пропозиції ]</p>
+                        <h3>Назва</h3>
+                        <p>Опис</p>
                     </div>
                 </div>
                 <div class="sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800');"></div>
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
                     <div class="sld-txt">
-                        <h3>[ Назва акції 2 ]</h3>
-                        <p>[ Короткий опис акції або пропозиції ]</p>
+                        <h3>Назва</h3>
+                        <p>Опис</p>
                     </div>
                 </div>
                 <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
@@ -66,102 +77,66 @@
             </div>
         </section>
 
-        <section class="grd">
-            <div class="crd shw">
-                <div class="img i1"></div>
-                <h3>[ Зал 1 ]</h3>
-                <a href="cat.html" class="btn-c">Детальніше</a>
-            </div>
-            <div class="crd shw">
-                <div class="img i2"></div>
-                <h3>[ Зал 2 ]</h3>
-                <a href="cat.html" class="btn-c">Детальніше</a>
-            </div>
-            <div class="crd shw">
-                <div class="img i3"></div>
-                <h3>[ Зал 3 ]</h3>
-                <a href="cat.html" class="btn-c">Детальніше</a>
+        <!-- 2. ГОЛОВНЕ МЕНЮ В КАРТКАХ -->
+        <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+            <div class="home-grid-6">
+                <!-- Рядок 1 -->
+                <a href="cat.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600');">
+                    <h3>ЗАЛИ</h3>
+                </a>
+
+                <a href="photos.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=600');">
+                    <h3>ФОТОСЕСІЇ</h3>
+                </a>
+
+                <a href="all-inclusive.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600');">
+                    <h3>ВСЕ ВКЛЮЧЕНО</h3>
+                </a>
+
+                <!-- Рядок 2 -->
+                <a href="events.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600');">
+                    <h3>ЗАХОДИ</h3>
+                </a>
+
+                <a href="clothes.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600');">
+                    <h3>ОРЕНДА ОДЯГУ</h3>
+                </a>
+
+                <a href="cert.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600');">
+                    <h3>СЕРТИФІКАТИ</h3>
+                </a>
             </div>
         </section>
 
-        <section class="shw adv-sec">
-            <h2 class="tc">Наші переваги</h2>
-            <div class="adv-grd">
-                <div class="adv-crd">
-                    <div class="adv-ico">⚡</div>
-                    <h4>[ Перевага 1 ]</h4>
-                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
-                </div>
-                <div class="adv-crd">
-                    <div class="adv-ico">🚪</div>
-                    <h4>[ Перевага 2 ]</h4>
-                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
-                </div>
-                <div class="adv-crd">
-                    <div class="adv-ico">📍</div>
-                    <h4>[ Перевага 3 ]</h4>
-                    <p>[ Короткий опис вашої переваги для клієнтів. ]</p>
-                </div>
+        <!-- 3. ПРОДУБЛЬОВАНИЙ КАЛЕНДАР РОЗКЛАДУ -->
+        <section class="shw" style="max-width: 1000px; margin: 50px auto; padding: 0 20px;">
+            <h2 class="tc" style="margin-bottom: 20px;">Розклад та вільні години</h2>
+            <div class="cal-wrp" style="box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea;">
+                <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKiev" scrolling="no" style="width: 100%; height: 500px; border: none;"></iframe>
             </div>
         </section>
 
-        <section class="shw abt-hm">
-            <div class="abt-txt">
-                <h2>Про нашу студію</h2>
-                <p>[ Текст з описом компанії, історії створення, особливостей підходу до роботи та ключових переваг. Заповнюється клієнтом. ]</p>
-                <a href="about.html" class="btn-c">Більше про нас</a>
-            </div>
-            <div class="abt-img"></div>
-        </section>
-
-        <section class="shw prc-sec">
-            <h2 class="tc">Вартість оренди та послуг</h2>
-            <div class="prc-grd">
-                <div class="prc-crd">
-                    <h4>[ Зал 1 ]</h4>
-                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
-                    <ul>
-                        <li>[ Характеристика 1 ]</li>
-                        <li>[ Характеристика 2 ]</li>
-                        <li>[ Умови вихідного дня ]</li>
-                    </ul>
-                    <a href="book.html" class="btn-c">Забронювати</a>
-                </div>
-                <div class="prc-crd popular">
-                    <div class="badge">Популярно</div>
-                    <h4>[ Зал 2 ]</h4>
-                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
-                    <ul>
-                        <li>[ Характеристика 1 ]</li>
-                        <li>[ Характеристика 2 ]</li>
-                        <li>[ Умови вихідного дня ]</li>
-                    </ul>
-                    <a href="book.html" class="btn-c">Забронювати</a>
-                </div>
-                <div class="prc-crd">
-                    <h4>[ Зал 3 ]</h4>
-                    <div class="price">від [ Ціна ] <span>грн/год</span></div>
-                    <ul>
-                        <li>[ Характеристика 1 ]</li>
-                        <li>[ Характеристика 2 ]</li>
-                        <li>[ Умови вихідного дня ]</li>
-                    </ul>
-                    <a href="book.html" class="btn-c">Забронювати</a>
-                </div>
+        <!-- 4. ЧИСТИЙ БЛОК ДЛЯ ТЕКСТУ ВІД КЛІЄНТА (БЕЗ МОЇХ ЗАГОЛОВКІВ) -->
+        <section class="shw" style="max-width: 900px; margin: 50px auto 70px; padding: 0 20px;">
+            <div style="font-size: 16px; color: #555; line-height: 1.8; background: #fff; padding: 35px; border-radius: 8px; border: 1px solid #eaeaea;">
+                <p style="margin: 0; text-align: center; color: #888;">
+                    цей блок потрібен?
+                </p>
             </div>
         </section>
     </main>
 
-<footer class="ftr">
+    <!-- FOOTER -->
+    <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
                 <h4>Навігація</h4>
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="cat.html">Зали</a></li>
+                    <li><a href="photos.html">Фотосесії</a></li>
+                    <li><a href="all-inclusive.html">Все включено</a></li>
                     <li><a href="clothes.html">Оренда одягу</a></li>
-                    <li><a href="services.html">Послуги</a></li>
-                    <li><a href="cert.html">Сертифікати</a></li>
                 </ul>
             </div>
             <div class="f-col">
@@ -179,7 +154,7 @@
                 <ul>
                     <li>📍 Київ, вул. Якова Гніздовського 1А</li>
                     <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ info@photostudio.kiev.ua</li>
+                    <li>✉️ info@wavestudio.kiev.ua</li>
                     <li>💬 <a href="#">Написати в Telegram</a></li>
                 </ul>
             </div>

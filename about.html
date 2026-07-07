@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Про нас та Контакти — Студія</title>
+    <title>Фотостудія WAVE — Про нас та Контакти</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -15,13 +16,13 @@
                 <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
             </div>
             <div class="header-logo">
-                <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+                <a href="index.html"><img src="logo.png" alt="WAVE Studio"></a>
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="24" height="24"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="24" height="24"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
+                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
@@ -29,7 +30,16 @@
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html">ГОЛОВНА</a></li>
-                <li><a href="cat.html">ЗАЛИ</a></li>
+                <li class="dropdown">
+                    <a href="cat.html" class="dropbtn">ЗАЛИ <span class="arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="room-air.html">Зал «Air»</a></li>
+                        <li><a href="room-stone.html">Зал «Stone»</a></li>
+                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
+                <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
                 <li><a href="services.html">ПОСЛУГИ</a></li>
                 <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
@@ -40,39 +50,121 @@
         </nav>
     </header>
 
-    <main>
-        <section class="bnr" style="height: 25vh; min-height: 180px;">
-            <h1>Про нас та Контакти</h1>
+<main>
+        <!-- СЛАЙДИ З РЕКЛАМОЮ -->
+        <section class="shw sld-sec" style="margin-top: 20px;">
+            <div class="sld-wrp" id="promo-sld">
+                <div class="sld vis-sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
+                    <div class="sld-txt">
+                        <h3>[ Спеціальна пропозиція студії ]</h3>
+                        <p>[ Короткий рекламний текст або знижка ]</p>
+                    </div>
+                </div>
+                <div class="sld">
+                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
+                    <div class="sld-txt">
+                        <h3>[ Нова локація чи акція ]</h3>
+                        <p>[ Бронюйте вільні години за вигідною ціною ]</p>
+                    </div>
+                </div>
+                <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
+                <button class="sld-btn nxt" onclick="moveSld(1)">&#10095;</button>
+            </div>
         </section>
 
-        <section class="shw" style="padding: 50px 20px; max-width: 900px; margin: 0 auto;">
-            <h2 class="tc">Інформація про студію</h2>
-            <p style="line-height: 1.8; text-align: center; margin-bottom: 40px; font-size: 18px; color: #555;">
-                заглушка
-            </p>
+        <!-- ЗАГОЛОВОК СТОРІНКИ -->
+        <section class="shw" style="max-width: 1100px; margin: 40px auto 20px; padding: 0 20px; text-align: center;">
+            <h1 style="font-size: 32px; color: #1a252f; margin-bottom: 10px;">Про студію та Контакти</h1>
+            <p style="color: #666; font-size: 16px;">Ми завжди на зв'язку та готові допомогти з організацією вашої зйомки</p>
+        </section>
 
-            <h2 class="tc">Фото демонстрації робіт</h2>
-            <div class="grd gal-wrp">
-                <div class="gal-itm"><div class="img i1"></div></div>
-                <div class="gal-itm"><div class="img i2"></div></div>
-                <div class="gal-itm"><div class="img i3"></div></div>
-                <div class="gal-itm"><div class="img i1" style="filter: grayscale(100%);"></div></div>
-                <div class="gal-itm"><div class="img i2" style="filter: grayscale(100%);"></div></div>
-                <div class="gal-itm"><div class="img i3" style="filter: grayscale(100%);"></div></div>
+        <!-- БЛОК ПРО СТУДІЮ -->
+        <section class="shw" style="max-width: 1000px; margin: 0 auto 40px; padding: 0 20px;">
+            <div style="background: #fff; padding: 35px; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 5px 20px rgba(0,0,0,0.03);">
+                <h2 style="font-size: 22px; color: #2c3e50; margin-bottom: 15px;">Творчий простір WAVE</h2>
+                <p style="color: #555; line-height: 1.8; margin: 0; font-size: 15px;">
+                    текст
+                </p>
+            </div>
+        </section>
+
+        <!-- СІТКА КОНТАКТІВ (4 СТИЛЬНІ КАРТКИ) -->
+        <section class="shw" style="max-width: 1000px; margin: 0 auto 40px; padding: 0 20px;">
+            <div class="contact-grid">
+                
+                <!-- Картка 1: Телефон -->
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Телефон</h3>
+                    <p>Бронювання та консультації</p>
+                    <a href="tel:+380971943583" class="contact-link">+38 097 194 35 83</a>
+                </div>
+
+                <!-- Картка 2: Telegram -->
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Telegram</h3>
+                    <p>Швидка відповідь адміна</p>
+                    <a href="#" target="_blank" class="contact-link">...</a>
+                </div>
+
+                <!-- Картка 3: Instagram -->
+                <div class="contact-card">
+                    <div class="contact-icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>Наші роботи та бекстейджі</p>
+                    <a href="#" target="_blank" class="contact-link"> ... </a>
+                </div>
+
+                <!-- Картка 4: Графік -->
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Графік роботи</h3>
+                    <p>Щодня без вихідних</p>
+                    <span class="contact-time">...</span>
+                </div>
+
+            </div>
+        </section>
+
+<!-- ЯК НАС ЗНАЙТИ + КАРТА З ТОЧНОЮ ТОЧКОЮ -->
+        <section class="shw" style="max-width: 1000px; margin: 0 auto 60px; padding: 0 20px;">
+            <div class="location-box">
+                <div class="location-info">
+                    <h3>📍 Локація</h3>
+                    <p class="loc-address">м. Київ, вул. Якова Гніздовського 1А</p>
+                    <p class="loc-place">Арт-завод «Платформа»</p>
+                    
+                    <div class="loc-tips">
+                        <div class="tip-item">
+                            ...
+                        </div>
+                        <div class="tip-item">
+                            ...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вбудована карта Google з точним піном Арт-заводу Платформа -->
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.8160840422203!2d30.64166631573173!3d50.46166667947703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97a61d19111%3A0x868b446a81d11b33!2zQXJ0LXphdm9kICJQbGF0Zm9ybWEi!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </section>
     </main>
 
-<footer class="ftr">
+    <!-- FOOTER -->
+    <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
                 <h4>Навігація</h4>
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="cat.html">Зали</a></li>
+                    <li><a href="photos.html">Фотосесії</a></li>
+                    <li><a href="all-inclusive.html">Все включено</a></li>
                     <li><a href="clothes.html">Оренда одягу</a></li>
-                    <li><a href="services.html">Послуги</a></li>
-                    <li><a href="cert.html">Сертифікати</a></li>
                 </ul>
             </div>
             <div class="f-col">
@@ -90,7 +182,7 @@
                 <ul>
                     <li>📍 Київ, вул. Якова Гніздовського 1А</li>
                     <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ info@photostudio.kiev.ua</li>
+                    <li>✉️ info@wavestudio.kiev.ua</li>
                     <li>💬 <a href="#">Написати в Telegram</a></li>
                 </ul>
             </div>
