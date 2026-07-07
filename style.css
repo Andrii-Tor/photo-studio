@@ -973,3 +973,43 @@ main {
         display: block !important;
     }
 }
+
+/* =========================================
+   19. КОМПАКТНА ШАПКА ДЛЯ ТЕЛЕФОНІВ
+========================================= */
+@media (max-width: 800px) {
+    /* 1. Ховаємо довгу адресу та соцмережі з шапки (вони залишаться в підвалі) */
+    .header-contacts p,
+    .header-action .social-icons {
+        display: none !important;
+    }
+
+    /* 2. Зменшуємо відступи в шапці, щоб усе стояло щільно */
+    .header-top {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 10px 15px 5px !important;
+    }
+
+    /* 3. Зменшуємо шрифт телефону та кнопку календаря */
+    .header-contacts a {
+        font-size: 14px !important;
+        font-weight: 600;
+    }
+
+    .btn-calendar {
+        padding: 6px 16px !important;
+        font-size: 12px !important;
+        margin-top: 2px !important;
+    }
+
+    /* 4. Робимо акуратнішою кнопку-бургер ☰ */
+    .burger-btn {
+        padding: 2px 0 6px !important;
+        margin: 0 auto !important;
+        font-size: 26px !important;
+        line-height: 1 !important;
+    }
+}
