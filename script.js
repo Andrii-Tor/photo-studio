@@ -27,3 +27,8 @@ if (form) {
         alert('Заявка прийнята! Далі буде налаштовано Telegram-бота.');
     });
 }
+
+function toggleMenu() {
+    const navUl = document.querySelector('.header-nav ul');
+    navUl.classList.toggle('show-mobile-menu');
+}

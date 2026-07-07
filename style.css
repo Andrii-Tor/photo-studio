@@ -909,3 +909,67 @@ main {
 @media (max-width: 500px) {
     .contact-grid { grid-template-columns: 1fr; }
 }
+/* =========================================
+   18. МОБІЛЬНЕ МЕНЮ (БУРГЕР ДЛЯ ТЕЛЕФОНІВ)
+========================================= */
+/* На комп'ютері ховаємо кнопку-бургер */
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+/* Коли екран як у смартфона (менше 800px) */
+@media (max-width: 800px) {
+    .burger-btn {
+        display: block; /* Показуємо іконку ☰ */
+        margin: 0 auto;
+    }
+
+    /* Ховаємо звичайне розсипане меню */
+    .header-nav ul {
+        display: none; 
+        flex-direction: column;
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        border-top: 1px solid #eaeaea;
+    }
+
+    /* Коли натиснули на бургер — показуємо меню стовпчиком */
+    .header-nav ul.show-mobile-menu {
+        display: flex !important;
+    }
+
+    .header-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f4f8fa;
+    }
+
+    .header-nav ul li a {
+        padding: 12px 0;
+        display: block;
+        font-size: 16px;
+    }
+
+    /* Випадаюче меню для ЗАЛІВ на телефоні просто відкривається вниз */
+    .header-nav .dropdown-content {
+        position: static !important;
+        box-shadow: none !important;
+        background: #f8fafc !important;
+        border: none !important;
+        display: none; /* Ховаємо підпункти за замовчуванням */
+    }
+
+    /* Показуємо підпункти при кліку на телефоні */
+    .header-nav .dropdown:hover .dropdown-content,
+    .header-nav .dropdown:focus-within .dropdown-content {
+        display: block !important;
+    }
+}

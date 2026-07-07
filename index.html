@@ -27,9 +27,12 @@
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
         </div>
-        
         <!-- НАВІГАЦІЯ З ВИПАДАЮЧИМ МЕНЮ ДЛЯ ЗАЛІВ -->
-        <nav class="header-nav">
+        <!-- 1. Додаємо кнопку ПЕРЕД nav -->
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- 2. Додаємо id="myNav" у сам тег nav -->
+        <nav class="header-nav" id="myNav">
             <ul>
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 
