@@ -17,20 +17,26 @@ document.querySelectorAll('.shw').forEach(el => obs.observe(el));
 window.toggleMobileDrop = function(e) {
     if (window.innerWidth <= 800) {
         e.preventDefault();
+        e.stopPropagation(); // МАГІЯ: Блокуємо зайві кліки, щоб меню не зникало
+        
         const dropdown = e.currentTarget.closest('.dropdown');
         if (dropdown) {
             const content = dropdown.querySelector('.dropdown-content');
+            
+            // Закриваємо всі інші відкриті меню
             document.querySelectorAll('.dropdown-content').forEach(menu => {
                 if (menu !== content) menu.classList.remove('show-mobile-drop');
             });
+            
             content.classList.toggle('show-mobile-drop');
         }
     }
 };
 
+// Закриття меню при кліку будь-де на сайті (окрім самого меню)
 document.addEventListener('click', function(e) {
     if (window.innerWidth <= 800) {
-        if (!e.target.closest('.dropdown')) {
+        if (!e.target.closest('.dropdown-content') && !e.target.closest('.dropbtn')) {
             document.querySelectorAll('.dropdown-content').forEach(menu => {
                 menu.classList.remove('show-mobile-drop');
             });
@@ -39,7 +45,7 @@ document.addEventListener('click', function(e) {
 });
 
 // =========================================
-// 3. СЛАЙДЕР (МОНОЛІТНИЙ ЯК У GT RACER, 12 СЕКУНД)
+// 3. СЛАЙДЕР (ТІЛЬКИ РУЧНИЙ СВАЙП ЯК ТИ ПРОСИВ)
 // =========================================
 document.addEventListener("DOMContentLoaded", function() {
     const track = document.getElementById("promo-track");
@@ -49,14 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const dots = document.querySelectorAll(".dot");
     
     let currentIndex = 0;
-    let autoSlideInterval;
     
-    // Для свайпу мишкою та пальцем
+    // Змінні для фізичного свайпу
     let isDragging = false;
     let startPos = 0;
     let currentDiff = 0;
 
-    // Головна функція, яка рухає весь блок плавно
+    // Головна функція переміщення треку
     function updateSlider(index) {
         if (index >= slides.length) currentIndex = 0;
         else if (index < 0) currentIndex = slides.length - 1;
@@ -66,32 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
             dot.classList.toggle("active-dot", i === currentIndex);
         });
 
-        // Плавна анімація (easing як у дорогих сайтах)
-        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+        // Плавний доїзд картинки
+        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
     // Для кнопок ❮ ❯
     window.moveSld = function(dir) {
         updateSlider(currentIndex + dir);
-        resetAutoSlide();
     };
 
     // Для точок
     window.goToSld = function(index) {
         updateSlider(index);
-        resetAutoSlide();
     };
-
-    // Таймер 12 секунд
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => { moveSld(1); }, 12000); 
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        startAutoSlide();
-    }
 
     // --- ОБРОБКА СВАЙПІВ (МИШКА + ТЕЛЕФОН) ---
     function getPositionX(event) {
@@ -101,9 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function touchStart(event) {
         isDragging = true;
         startPos = getPositionX(event);
-        track.style.transition = 'none'; // Вимикаємо плавність, щоб картинка "прилипла" до курсора
+        track.style.transition = 'none'; // Вимикаємо плавність, картинка липне до курсора
         track.style.cursor = 'grabbing';
-        clearInterval(autoSlideInterval);
     }
 
     function touchMove(event) {
@@ -111,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentPosition = getPositionX(event);
         currentDiff = currentPosition - startPos;
         
-        // Рухаємо трек за курсором в реальному часі
+        // Рухаємо в реальному часі
         const offset = -(currentIndex * track.clientWidth) + currentDiff;
         track.style.transform = `translateX(${offset}px)`;
     }
@@ -121,34 +113,30 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = false;
         track.style.cursor = 'grab';
 
-        // Якщо протягнули картинку більше ніж на 50px, міняємо слайд
+        // Міняємо слайд, якщо протягнули достатньо
         if (currentDiff < -50) {
-            moveSld(1); // Вліво
+            moveSld(1); 
         } else if (currentDiff > 50) {
-            moveSld(-1); // Вправо
+            moveSld(-1); 
         } else {
-            updateSlider(currentIndex); // Відскок назад, якщо потягнули слабо
+            updateSlider(currentIndex); // Відскок назад
         }
-        
         currentDiff = 0;
-        startAutoSlide();
     }
 
-    // Події для мишки (ПК)
+    // Слухачі для ПК
     track.addEventListener('mousedown', touchStart);
     track.addEventListener('mousemove', touchMove);
     track.addEventListener('mouseup', touchEnd);
     track.addEventListener('mouseleave', () => { if (isDragging) touchEnd() });
 
-    // Події для сенсора (Телефон)
+    // Слухачі для телефону
     track.addEventListener('touchstart', touchStart, {passive: true});
     track.addEventListener('touchmove', touchMove, {passive: true});
     track.addEventListener('touchend', touchEnd);
 
-    // Забороняємо стандартне виділення картинок браузером
+    // Заборона стандартного виділення
     track.addEventListener('dragstart', (e) => e.preventDefault());
 
-    // Старт
     track.style.cursor = 'grab';
-    startAutoSlide();
 });

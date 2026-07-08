@@ -51,28 +51,13 @@ main { flex-grow: 1; }
 .disabled-room { opacity: 0.6; cursor: not-allowed; }
 
 /* =========================================
-   3. СЛАЙДЕР (МОНОЛІТНИЙ ЯК У GT RACER)
+   3. СЛАЙДЕР (МОНОЛІТНИЙ)
 ========================================= */
 .sld-sec { max-width: 1200px; margin: 40px auto; padding: 0 20px; width: 100%; }
 .sld-wrp { position: relative; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); background: #000; height: 350px; overflow: hidden; }
 
-/* ТРЕК СЛАЙДЕРА: Тепер це монолітний блок, що сувається */
-.sld-track { 
-    display: flex; 
-    width: 100%; 
-    height: 100%; 
-    will-change: transform;
-    /* transition додається через JS */
-}
-
-/* ЗАХИСТ ВІД БАГІВ: Забороняємо виділяти текст при тягненні мишкою */
-.sld { 
-    flex: 0 0 100%; 
-    width: 100%; 
-    height: 100%; 
-    position: relative; 
-    user-select: none; /* Заборона виділення */
-}
+.sld-track { display: flex; width: 100%; height: 100%; will-change: transform; }
+.sld { flex: 0 0 100%; width: 100%; height: 100%; position: relative; user-select: none; }
 
 .sld-bg { width: 100%; height: 100%; background-size: cover; background-position: center; pointer-events: none; }
 .sld-txt { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; width: 80%; pointer-events: none; }
@@ -166,12 +151,12 @@ main { flex-grow: 1; }
     .nav-list > li { flex: 0 0 auto !important; margin: 0 !important; }
     .nav-list > li > a { padding: 15px 0 !important; font-size: 15px !important; }
 
-    /* МЕНЮ: Bottom-sheet анімація */
+    /* ВАЖЛИВО: Надійне висувне меню знизу екрана */
     .header-nav .dropdown-content {
-        display: none !important; 
+        display: block !important; 
         position: fixed !important;
         top: auto !important;
-        bottom: 0 !important;
+        bottom: -100% !important; /* Ховаємо внизу екрана */
         left: 0 !important;
         width: 100vw !important;
         background: #fff !important;
@@ -181,6 +166,7 @@ main { flex-grow: 1; }
         padding: 20px 0 40px !important;
         z-index: 100000 !important;
         transform: none !important;
+        transition: bottom 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Плавний виїзд */
     }
     
     .header-nav .dropdown-content::before {
@@ -195,17 +181,12 @@ main { flex-grow: 1; }
         border-bottom: 1px solid #eaeaea;
     }
 
+    /* Клас для появи меню */
     .header-nav .dropdown-content.show-mobile-drop {
-        display: block !important;
-        animation: slideUpMenu 0.3s ease-out forwards !important;
+        bottom: 0 !important;
     }
     
-    @keyframes slideUpMenu {
-        from { transform: translateY(100%); }
-        to { transform: translateY(0); }
-    }
-    
-    .dropdown:hover .dropdown-content { display: none !important; } 
+    .dropdown:hover .dropdown-content { bottom: -100% !important; } 
     
     .dropdown-content li { text-align: center !important; border: none !important; }
     .dropdown-content li a { padding: 15px !important; font-size: 18px !important; }
@@ -224,58 +205,3 @@ main { flex-grow: 1; }
     .contact-grid { grid-template-columns: 1fr; }
     .grd { grid-template-columns: 1fr; padding: 20px; }
 }
-
-/* =========================================
-   7. ПРО НАШУ СТУДІЮ (ABOUT SECTION)
-========================================= */
-.abt-hm { display: flex; max-width: 1200px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); width: 100%; }
-.abt-txt { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
-.abt-txt h2 { font-size: 28px; margin-bottom: 20px; color: #1a1a1a; }
-.abt-txt p { font-size: 16px; color: #555; margin-bottom: 30px; line-height: 1.8; }
-.abt-img { flex: 1; background: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800') center/cover; min-height: 400px; }
-
-/* =========================================
-   8. ВАРТІСТЬ ТА ПОСЛУГИ (PRICES)
-========================================= */
-.prc-sec { padding: 40px 50px; max-width: 1200px; margin: 0 auto; width: 100%; }
-.prc-grd { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-.prc-crd { background: #fff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eaeaea; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-.prc-crd.popular { border: 2px solid #2c3e50; transform: scale(1.03); }
-.badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #2c3e50; color: #fff; padding: 4px 15px; font-size: 12px; font-weight: 600; border-radius: 20px; text-transform: uppercase; }
-.prc-crd h4 { font-size: 20px; color: #1a1a1a; margin-bottom: 15px; }
-.price { font-size: 32px; font-weight: 700; color: #2c3e50; margin-bottom: 20px; }
-.price span { font-size: 14px; font-weight: 400; color: #777; }
-.prc-crd ul { list-style: none; margin-bottom: 30px; text-align: left; }
-.prc-crd li { margin-bottom: 12px; font-size: 14px; color: #555; position: relative; padding-left: 20px; }
-.prc-crd li::before { content: "✓"; position: absolute; left: 0; color: #2c3e50; font-weight: bold; }
-
-/* =========================================
-   9. ГАЛЕРЕЯ ТА КАТАЛОГИ (GALLERY & CATALOG)
-========================================= */
-.gal-wrp { padding: 0; margin-top: 30px; gap: 15px; }
-.gal-itm { overflow: hidden; border-radius: 8px; cursor: pointer; }
-.gal-itm .img { margin-bottom: 0; height: 300px; transition: transform 0.6s ease; }
-.gal-itm:hover .img { transform: scale(1.15); }
-
-.v-list { display: flex; flex-direction: column; gap: 60px; max-width: 800px; margin: 0 auto; padding: 50px 20px; width: 100%; }
-.v-blk { width: 100%; text-align: center; }
-.v-blk h3 { font-size: 22px; margin-bottom: 15px; color: #000; }
-.v-img { width: 100%; height: 400px; border: 4px solid #000; background-size: cover; background-position: center; margin-bottom: 15px; }
-.v-dsc { text-align: left; font-size: 16px; color: #444; line-height: 1.6; }
-
-/* =========================================
-   10. БРОНЮВАННЯ ТА ФОРМА (BOOKING)
-========================================= */
-.bk-main { padding: 50px 20px; max-width: 1200px; margin: 0 auto; width: 100%; }
-.bk-grd { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
-.bk-cal, .bk-frm { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eaeaea; }
-.bk-cal h3, .bk-frm h3 { margin-bottom: 25px; color: #2c3e50; text-align: center; font-size: 22px; }
-.cal-wrp { width: 100%; height: 450px; background: #fafafa; border-radius: 4px; overflow: hidden; border: 1px solid #e0e0e0; }
-.cal-wrp iframe { width: 100%; height: 100%; border: none; }
-.frm { display: flex; flex-direction: column; gap: 20px; }
-.inp { padding: 14px; border: 1px solid #e0e0e0; border-radius: 4px; font-size: 15px; background: #fafafa; transition: border 0.3s; }
-.inp:focus { border-color: #2c3e50; outline: none; }
-.txt { resize: vertical; min-height: 120px; }
-.btn { padding: 15px; background: #2c3e50; color: #fff; border: none; cursor: pointer; font-weight: 600; font-size: 16px; border-radius: 4px; transition: background 0.3s; }
-.btn:hover { background: #1a252f; }
-.bk-rules { font-size: 14px; color: #666; text-align: center; margin-bottom: 20px; }
