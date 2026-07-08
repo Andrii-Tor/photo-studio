@@ -28,16 +28,18 @@
         </div>
         
         <nav class="header-nav" id="myNav">
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
+                
                 <li class="dropdown">
-                    <a href="#" class="dropbtn" onclick="return false;">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="#" class="dropbtn" onclick="toggleMobileDrop(event); return false;">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
+
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
                 <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
@@ -51,11 +53,9 @@
     </header>
 
     <main>
-        <section class="shw sld-sec" style="max-width: 1200px; margin: 20px auto; padding: 0 15px;">
-            <div class="sld-wrp" style="border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                
+        <section class="shw sld-sec">
+            <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
-                    
                     <div class="sld">
                         <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
                         <div class="sld-txt">
@@ -63,7 +63,6 @@
                             <p>[ Короткий рекламний текст або знижка ]</p>
                         </div>
                     </div>
-                    
                     <div class="sld">
                         <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
                         <div class="sld-txt">
@@ -71,20 +70,17 @@
                             <p>[ Бронюйте вільні години за вигідною ціною ]</p>
                         </div>
                     </div>
-
                 </div>
-
                 <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
                 <button class="sld-btn nxt" onclick="moveSld(1)">❯</button>
             </div>
-            
-            <div class="slider-dots" style="text-align: center; margin-top: 15px;">
+            <div class="slider-dots">
                 <span class="dot active-dot" onclick="goToSld(0)"></span>
                 <span class="dot" onclick="goToSld(1)"></span>
             </div>
         </section>
 
-        <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <section class="shw home-grid-sec">
             <div class="home-grid-6">
                 <a href="cat.html" class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600');">
                     <h3>ЗАЛИ</h3>
@@ -107,18 +103,10 @@
             </div>
         </section>
 
-        <section class="shw" style="max-width: 1000px; margin: 50px auto; padding: 0 20px;">
-            <h2 class="tc" style="margin-bottom: 20px;">Розклад та вільні години</h2>
-            <div class="cal-wrp" style="box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea;">
-                <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKiev" scrolling="no" style="width: 100%; height: 500px; border: none;"></iframe>
-            </div>
-        </section>
-
-        <section class="shw" style="max-width: 900px; margin: 50px auto 70px; padding: 0 20px;">
-            <div style="font-size: 16px; color: #555; line-height: 1.8; background: #fff; padding: 35px; border-radius: 8px; border: 1px solid #eaeaea;">
-                <p style="margin: 0; text-align: center; color: #888;">
-                    ...
-                </p>
+        <section class="shw cal-sec">
+            <h2 class="tc">Розклад та вільні години</h2>
+            <div class="cal-wrp">
+                <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKiev" scrolling="no"></iframe>
             </div>
         </section>
     </main>
