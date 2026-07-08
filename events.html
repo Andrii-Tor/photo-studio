@@ -27,17 +27,20 @@
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
         </div>
-        <nav class="header-nav">
-            <ul>
+        
+        <nav class="header-nav" id="myNav">
+            <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
+                
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="#" class="dropbtn" onclick="toggleMobileDrop(event); return false;">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
+
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
                 <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
@@ -52,24 +55,30 @@
 
 <main>
         <!-- 1. СЛАЙДИ З РЕКЛАМОЮ (НА КОЖНІЙ СТОРІНЦІ) -->
-        <section class="shw sld-sec" style="margin-top: 20px;">
-            <div class="sld-wrp" id="promo-sld">
-                <div class="sld vis-sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
-                    <div class="sld-txt">
-                        <h3>Назва</h3>
-                        <p>Опис</p>
+        <section class="shw sld-sec">
+            <div class="sld-wrp">
+                <div class="sld-track" id="promo-track">
+                    <div class="sld">
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
+                        <div class="sld-txt">
+                            <h3>[ Спеціальна пропозиція студії Wave ]</h3>
+                            <p>[ Короткий рекламний текст або знижка ]</p>
+                        </div>
+                    </div>
+                    <div class="sld">
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
+                        <div class="sld-txt">
+                            <h3>[ Нова локація чи акція ]</h3>
+                            <p>[ Бронюйте вільні години за вигідною ціною ]</p>
+                        </div>
                     </div>
                 </div>
-                <div class="sld">
-                    <div class="sld-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
-                    <div class="sld-txt">
-                        <h3>Назва</h3>
-                        <p>Опис</p>
-                    </div>
-                </div>
-                <button class="sld-btn prv" onclick="moveSld(-1)">&#10094;</button>
-                <button class="sld-btn nxt" onclick="moveSld(1)">&#10095;</button>
+                <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
+                <button class="sld-btn nxt" onclick="moveSld(1)">❯</button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active-dot" onclick="goToSld(0)"></span>
+                <span class="dot" onclick="goToSld(1)"></span>
             </div>
         </section>
 

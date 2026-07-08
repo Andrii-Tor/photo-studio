@@ -12,40 +12,68 @@ const obs = new IntersectionObserver((es) => {
 document.querySelectorAll('.shw').forEach(el => obs.observe(el));
 
 // =========================================
-// 2. ВІДКРИТТЯ ПІДМЕНЮ "ЗАЛИ" НА ТЕЛЕФОНІ
+// 2. ВІДКРИТТЯ ПІДМЕНЮ "ЗАЛИ" НА ТЕЛЕФОНІ (З ОВЕРЛЕЄМ ТА КНОПКОЮ)
 // =========================================
+// Створюємо захисний темний екран
+const overlay = document.createElement('div');
+overlay.className = 'mobile-overlay';
+document.body.appendChild(overlay);
+
+// Функція закриття
+function closeMobileMenu() {
+    document.querySelectorAll('.dropdown-content').forEach(menu => {
+        menu.classList.remove('show-mobile-drop');
+    });
+    overlay.classList.remove('show-overlay');
+    document.body.style.overflow = ''; // Повертаємо можливість скролити сайт
+}
+
+// Закриваємо меню при кліку на темний фон
+overlay.addEventListener('click', closeMobileMenu);
+
 window.toggleMobileDrop = function(e) {
     if (window.innerWidth <= 800) {
         e.preventDefault();
-        e.stopPropagation(); // МАГІЯ: Блокуємо зайві кліки, щоб меню не зникало
+        e.stopPropagation();
         
-        const dropdown = e.currentTarget.closest('.dropdown');
-        if (dropdown) {
-            const content = dropdown.querySelector('.dropdown-content');
+        const btn = e.currentTarget;
+        let content = btn.nextElementSibling;
+        
+        if (!content || !content.classList.contains('dropdown-content')) {
+            content = document.getElementById('mobile-rooms-modal');
+        }
+
+        if (content) {
+            // Переносимо меню в body
+            if (content.parentNode !== document.body) {
+                content.id = 'mobile-rooms-modal';
+                document.body.appendChild(content);
+                content.classList.add('mobile-modal-moved');
+                
+                // Додаємо шапку з кнопкою Х
+                const header = document.createElement('div');
+                header.className = 'mobile-menu-header';
+                header.innerHTML = '<span>Оберіть зал:</span><button class="close-mobile-menu">×</button>';
+                content.insertBefore(header, content.firstChild);
+                
+                // Вішаємо закриття на кнопку Х
+                header.querySelector('.close-mobile-menu').addEventListener('click', closeMobileMenu);
+            }
             
-            // Закриваємо всі інші відкриті меню
-            document.querySelectorAll('.dropdown-content').forEach(menu => {
-                if (menu !== content) menu.classList.remove('show-mobile-drop');
-            });
+            const isOpening = !content.classList.contains('show-mobile-drop');
+            closeMobileMenu(); // Скидаємо попередній стан
             
-            content.classList.toggle('show-mobile-drop');
+            if (isOpening) {
+                content.classList.add('show-mobile-drop');
+                overlay.classList.add('show-overlay');
+                document.body.style.overflow = 'hidden'; // Блокуємо скрол сторінки
+            }
         }
     }
 };
 
-// Закриття меню при кліку будь-де на сайті (окрім самого меню)
-document.addEventListener('click', function(e) {
-    if (window.innerWidth <= 800) {
-        if (!e.target.closest('.dropdown-content') && !e.target.closest('.dropbtn')) {
-            document.querySelectorAll('.dropdown-content').forEach(menu => {
-                menu.classList.remove('show-mobile-drop');
-            });
-        }
-    }
-});
-
 // =========================================
-// 3. СЛАЙДЕР (ТІЛЬКИ РУЧНИЙ СВАЙП ЯК ТИ ПРОСИВ)
+// 3. СЛАЙДЕР (ТІЛЬКИ РУЧНИЙ СВАЙП)
 // =========================================
 document.addEventListener("DOMContentLoaded", function() {
     const track = document.getElementById("promo-track");
@@ -55,13 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const dots = document.querySelectorAll(".dot");
     
     let currentIndex = 0;
-    
-    // Змінні для фізичного свайпу
     let isDragging = false;
     let startPos = 0;
     let currentDiff = 0;
 
-    // Головна функція переміщення треку
     function updateSlider(index) {
         if (index >= slides.length) currentIndex = 0;
         else if (index < 0) currentIndex = slides.length - 1;
@@ -71,22 +96,13 @@ document.addEventListener("DOMContentLoaded", function() {
             dot.classList.toggle("active-dot", i === currentIndex);
         });
 
-        // Плавний доїзд картинки
         track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    // Для кнопок ❮ ❯
-    window.moveSld = function(dir) {
-        updateSlider(currentIndex + dir);
-    };
+    window.moveSld = function(dir) { updateSlider(currentIndex + dir); };
+    window.goToSld = function(index) { updateSlider(index); };
 
-    // Для точок
-    window.goToSld = function(index) {
-        updateSlider(index);
-    };
-
-    // --- ОБРОБКА СВАЙПІВ (МИШКА + ТЕЛЕФОН) ---
     function getPositionX(event) {
         return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
     }
@@ -94,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function touchStart(event) {
         isDragging = true;
         startPos = getPositionX(event);
-        track.style.transition = 'none'; // Вимикаємо плавність, картинка липне до курсора
+        track.style.transition = 'none';
         track.style.cursor = 'grabbing';
     }
 
@@ -102,8 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isDragging) return;
         const currentPosition = getPositionX(event);
         currentDiff = currentPosition - startPos;
-        
-        // Рухаємо в реальному часі
         const offset = -(currentIndex * track.clientWidth) + currentDiff;
         track.style.transform = `translateX(${offset}px)`;
     }
@@ -113,30 +127,22 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = false;
         track.style.cursor = 'grab';
 
-        // Міняємо слайд, якщо протягнули достатньо
-        if (currentDiff < -50) {
-            moveSld(1); 
-        } else if (currentDiff > 50) {
-            moveSld(-1); 
-        } else {
-            updateSlider(currentIndex); // Відскок назад
-        }
+        if (currentDiff < -50) moveSld(1); 
+        else if (currentDiff > 50) moveSld(-1); 
+        else updateSlider(currentIndex);
+        
         currentDiff = 0;
     }
 
-    // Слухачі для ПК
     track.addEventListener('mousedown', touchStart);
     track.addEventListener('mousemove', touchMove);
     track.addEventListener('mouseup', touchEnd);
     track.addEventListener('mouseleave', () => { if (isDragging) touchEnd() });
 
-    // Слухачі для телефону
     track.addEventListener('touchstart', touchStart, {passive: true});
     track.addEventListener('touchmove', touchMove, {passive: true});
     track.addEventListener('touchend', touchEnd);
 
-    // Заборона стандартного виділення
     track.addEventListener('dragstart', (e) => e.preventDefault());
-
     track.style.cursor = 'grab';
 });
