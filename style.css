@@ -82,7 +82,7 @@ a, button, .dropbtn {
    4. ГОЛОВНА: СІТКА КАРТОК ТА КАЛЕНДАР
 ========================================= */
 .home-grid-sec { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-.home-grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; }
+.home-grid-6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; width: 100%; }
 .home-card { height: 200px; border-radius: 8px; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; text-decoration: none; color: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; border: 1px solid rgba(255,255,255,0.15); }
 .home-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
 .home-card h3 { font-size: 22px; font-weight: 700; letter-spacing: 1.5px; text-shadow: 2px 2px 6px rgba(0,0,0,0.8); }
