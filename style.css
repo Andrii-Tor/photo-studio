@@ -241,6 +241,8 @@ a, button, .dropbtn {
     .header-logo img { height: 45px !important; margin: 5px 0 !important; }
     .header-action { display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 20px !important; width: 100% !important; }
     .social-icons { display: flex !important; gap: 15px !important; }
+    .sld-txt h3 { font-size: 18px !important; line-height: 1.3 !important; }
+    .sld-txt p { font-size: 13px !important; }
     
     /* Меню навігації */
     .nav-list {
