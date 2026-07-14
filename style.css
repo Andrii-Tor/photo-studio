@@ -307,3 +307,95 @@ a, button, .dropbtn {
         height: 450px; /* Трохи зменшуємо висоту на мобільному, щоб було зручніше гортати сторінку */
     }
 }
+
+/* =========================================
+   ГОРИЗОНТАЛЬНІ БЛОКИ ПОСЛУГ (ЗА ТЗ)
+========================================= */
+.services-list {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Відстань між блоками */
+}
+
+.service-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px; /* Висота блоку */
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-row:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Затемнення поверх картинки */
+.service-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45); 
+    transition: background 0.3s ease;
+}
+
+.service-row:hover .service-overlay {
+    background: rgba(0, 0, 0, 0.25); /* Світлішає при наведенні */
+}
+
+.service-row h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+    padding: 0 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* Тінь для тексту, щоб завжди читався */
+}
+
+/* =========================================
+   SEO ТЕКСТ ВНИЗУ
+========================================= */
+.seo-text-section {
+    max-width: 900px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.seo-text-section h1 {
+    font-size: 24px;
+    color: #1a252f;
+    margin-bottom: 20px;
+}
+
+.seo-text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Адаптація під мобільні телефони */
+@media (max-width: 768px) {
+    .service-row {
+        height: 130px;
+    }
+    .service-row h2 {
+        font-size: 22px;
+    }
+}
