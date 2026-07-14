@@ -85,19 +85,19 @@
         <h2 class="tc" style="margin-top: 30px;">Бронювання та розклад</h2>
         <div class="bk-grd">
             <div class="cal-wrp">
-                <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKiev" scrolling="no"></iframe>
+                <iframe id="gcal" style="border: 0" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
 
             <!-- Права колонка: Форма -->
             <div class="bk-frm shw">
                 <h3>Оформлення заявки</h3>
-                <p class="bk-rules">[ Мінімальний час оренди — 2 години. Бронювання підтверджується після передоплати. ]</p>
+                <p class="bk-rules">текст</p>
                     <form id="f1" class="frm">
-                         <input type="text" class="inp" placeholder="ПІБ" required>
-                         <input type="tel" class="inp" placeholder="Номер телефону" required>
-                         <textarea class="inp txt" placeholder="Коментар (дата, зал, час оренди)"></textarea>
-                         <button type="submit" class="btn">Продовжити</button>
+                     <input type="text" id="clientName" class="inp" placeholder="ПІБ" required>
+                     <input type="tel" id="clientPhone" class="inp" placeholder="Номер телефону" required>
+                     <textarea id="clientComment" class="inp txt" placeholder="Коментар (дата, зал, час оренди)"></textarea>
+                     <button type="submit" class="btn">Продовжити</button>
                     </form>
                 </div>
             </div>

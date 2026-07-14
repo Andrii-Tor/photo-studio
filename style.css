@@ -287,3 +287,23 @@ a, button, .dropbtn {
     .home-grid-6 { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
 }
+
+/* --- Адаптивний Google Календар --- */
+.cal-wrp {
+    width: 100%;
+    max-width: 800px; /* На ПК календар не буде ширшим за 800px */
+    margin: 0 auto;   /* Центруємо його по горизонталі */
+    overflow: hidden; 
+}
+
+.cal-wrp iframe {
+    width: 100%;      /* Змушуємо iframe розтягуватися на всю доступну ширину */
+    height: 600px;    /* Стандартна висота для комп'ютерів */
+}
+
+/* Налаштування спеціально для телефонів */
+@media (max-width: 800px) {
+    .cal-wrp iframe {
+        height: 450px; /* Трохи зменшуємо висоту на мобільному, щоб було зручніше гортати сторінку */
+    }
+}

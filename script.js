@@ -146,3 +146,84 @@ document.addEventListener("DOMContentLoaded", function() {
     track.addEventListener('dragstart', (e) => e.preventDefault());
     track.style.cursor = 'grab';
 });
+// =========================================
+// РОЗУМНИЙ GOOGLE КАЛЕНДАР (АДАПТИВНІСТЬ)
+// =========================================
+function updateCalendarView() {
+    const cal = document.getElementById('gcal');
+    if (!cal) return;
+
+    const baseUrl = "https://calendar.google.com/calendar/embed?src=studiophotowave%40gmail.com&ctz=Europe%2FKiev";
+    
+    // Якщо екран мобільний
+    if (window.innerWidth < 800) {
+        // Додаємо AGENDA + приховуємо заголовок, друк, вкладки та часовий пояс
+        if (!cal.src.includes("mode=AGENDA")) {
+            cal.src = baseUrl + "&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0"; 
+        }
+    } 
+    // Якщо екран комп'ютера (повертаємо стандартний вигляд)
+    else {
+        if (cal.src.includes("mode=AGENDA") || cal.src === "") {
+            cal.src = baseUrl;
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateCalendarView);
+window.addEventListener("resize", updateCalendarView);
+// =========================================
+// ВІДПРАВКА ФОРМИ В TELEGRAM
+// =========================================
+document.getElementById('f1').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Знаходимо кнопку і блокуємо її
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Відправка...'; // Даємо користувачу зворотний зв'язок
+
+    const botToken = '8983299718:AAGGaINauRYCU32bMY2Z7EnLypDQZlq7vqU'; 
+    const chatId = '1928862157'; 
+
+    const name = document.getElementById('clientName').value;
+    let phone = document.getElementById('clientPhone').value;
+
+    // Очищаємо номер від усього, крім цифр
+    let cleaned = phone.replace(/\D/g, '');
+
+    // Якщо номер починається з 380 і має правильну довжину
+    if (cleaned.length === 12 && cleaned.startsWith('380')) {
+    phone = `+38 (${cleaned.slice(2, 5)}) ${cleaned.slice(5, 8)} ${cleaned.slice(8, 10)} ${cleaned.slice(10, 12)}`;
+    } 
+    // Якщо ввели без 38 (наприклад, 0971234567)
+    else if (cleaned.length === 10 && cleaned.startsWith('0')) {
+    phone = `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8, 10)}`;
+    }
+    else {
+    // Якщо формат дивний, просто додаємо плюс на початок очищеного номера, якщо його там не було
+    phone = cleaned.startsWith('380') ? `+${cleaned}` : `+38${cleaned}`;
+    }
+    const comment = document.getElementById('clientComment').value;
+
+    const message = `🔔 Нова заявка з сайту WAVE!\n\n👤 ПІБ: ${name}\n📞 Телефон: ${phone}\n💬 Коментар: ${comment}`;
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+    fetch(url)
+        .then(response => {
+            if(response.ok) {
+                alert('Заявка успішно відправлена! Ми скоро зв\'яжемося з вами.');
+                document.getElementById('f1').reset(); 
+            } else {
+                alert('Помилка відправки. Перевір Chat ID.');
+            }
+        })
+        .catch(error => {
+            alert('Помилка з\'єднання. Перевірте інтернет.');
+        })
+        .finally(() => {
+            // Що б не сталося (успіх чи помилка), розблоковуємо кнопку назад
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Продовжити';
+        });
+});
