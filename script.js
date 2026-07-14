@@ -178,52 +178,56 @@ window.addEventListener("resize", updateCalendarView);
 document.getElementById('f1').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Знаходимо кнопку і блокуємо її
     const submitBtn = this.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Відправка...'; // Даємо користувачу зворотний зв'язок
+    submitBtn.textContent = 'Відправка...';
 
-    const botToken = '8983299718:AAGGaINauRYCU32bMY2Z7EnLypDQZlq7vqU'; 
-    const chatId = '1928862157'; 
-
+    // Збираємо дані
     const name = document.getElementById('clientName').value;
     let phone = document.getElementById('clientPhone').value;
-
-    // Очищаємо номер від усього, крім цифр
-    let cleaned = phone.replace(/\D/g, '');
-
-    // Якщо номер починається з 380 і має правильну довжину
-    if (cleaned.length === 12 && cleaned.startsWith('380')) {
-    phone = `+38 (${cleaned.slice(2, 5)}) ${cleaned.slice(5, 8)} ${cleaned.slice(8, 10)} ${cleaned.slice(10, 12)}`;
-    } 
-    // Якщо ввели без 38 (наприклад, 0971234567)
-    else if (cleaned.length === 10 && cleaned.startsWith('0')) {
-    phone = `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8, 10)}`;
-    }
-    else {
-    // Якщо формат дивний, просто додаємо плюс на початок очищеного номера, якщо його там не було
-    phone = cleaned.startsWith('380') ? `+${cleaned}` : `+38${cleaned}`;
-    }
     const comment = document.getElementById('clientComment').value;
 
-    const message = `🔔 Нова заявка з сайту WAVE!\n\n👤 ПІБ: ${name}\n📞 Телефон: ${phone}\n💬 Коментар: ${comment}`;
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    // --- ТУТ МАЄ БУТИ ТВІЙ КОД ФОРМАТУВАННЯ НОМЕРА (+38...) ---
+    let cleaned = phone.replace(/\D/g, '');
+    if (cleaned.length === 12 && cleaned.startsWith('380')) {
+        phone = `+38 (${cleaned.slice(2, 5)}) ${cleaned.slice(5, 8)} ${cleaned.slice(8, 10)} ${cleaned.slice(10, 12)}`;
+    } else if (cleaned.length === 10 && cleaned.startsWith('0')) {
+        phone = `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8, 10)}`;
+    } else {
+        phone = cleaned.startsWith('380') ? `+${cleaned}` : `+38${cleaned}`;
+    }
+    // ---------------------------------------------------------
 
-    fetch(url)
-        .then(response => {
-            if(response.ok) {
-                alert('Заявка успішно відправлена! Ми скоро зв\'яжемося з вами.');
-                document.getElementById('f1').reset(); 
-            } else {
-                alert('Помилка відправки. Перевір Chat ID.');
-            }
-        })
-        .catch(error => {
-            alert('Помилка з\'єднання. Перевірте інтернет.');
-        })
-        .finally(() => {
-            // Що б не сталося (успіх чи помилка), розблоковуємо кнопку назад
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Продовжити';
-        });
+    // Створюємо об'єкт із даними для C#
+    const requestData = {
+        name: name,
+        phone: phone,
+        comment: comment
+    };
+
+    // Стукаємо на твій ноутбук по локальній мережі!
+    const url = 'http://192.168.0.106:5087/api/Booking'; 
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData) // Перетворюємо дані у JSON
+    })
+    .then(response => {
+        if(response.ok) {
+            alert('Заявка успішно відправлена, з вами зв\'яжуться найближчим часом.');
+            document.getElementById('f1').reset(); 
+        } else {
+            alert('Помилка відправки на сервер.');
+        }
+    })
+    .catch(error => {
+        alert('Помилка з\'єднання із сервером. Не запущений сервер або його блокує брандмауер.');
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Продовжити';
+    });
 });
