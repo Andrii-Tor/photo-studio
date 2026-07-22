@@ -312,12 +312,12 @@ a, button, .dropbtn {
    ГОРИЗОНТАЛЬНІ БЛОКИ ПОСЛУГ (ЗА ТЗ)
 ========================================= */
 .services-list {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Відстань між блоками */
+    gap: 20px;
 }
 
 .service-row {
@@ -325,13 +325,16 @@ a, button, .dropbtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 160px; /* Висота блоку */
+    height: 200px;
     background-size: cover;
     background-position: center;
     text-decoration: none;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .service-row:hover {
@@ -399,3 +402,67 @@ a, button, .dropbtn {
         font-size: 22px;
     }
 }
+
+
+/* =========================================
+   СІТКА КАРТОК (ПОСЛУГИ ТА ЗАХОДИ)
+========================================= */
+.card-grid-container {
+    max-width: 1200px;
+    margin: 20px auto 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.image-card {
+    position: relative;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.image-card .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    transition: background 0.3s ease;
+}
+
+.image-card:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+.image-card h3 {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.page-title {
+    text-align: center;
+    margin: 40px 0 10px;
+    font-size: 32px;
+    color: #1a252f;
+    text-transform: uppercase;
+}
+
