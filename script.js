@@ -189,17 +189,23 @@ document.getElementById('f1').addEventListener('submit', function(e) {
     let phone = document.getElementById('clientPhone').value;
     const comment = document.getElementById('clientComment').value;
 
-    // --- ТУТ МАЄ БУТИ ТВІЙ КОД ФОРМАТУВАННЯ НОМЕРА (+38...) ---
-    let cleaned = phone.replace(/\D/g, '');
-    if (cleaned.length === 12 && cleaned.startsWith('380')) {
-        phone = `+38 (${cleaned.slice(2, 5)}) ${cleaned.slice(5, 8)} ${cleaned.slice(8, 10)} ${cleaned.slice(10, 12)}`;
-    } else if (cleaned.length === 10 && cleaned.startsWith('0')) {
-        phone = `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8, 10)}`;
+    // --- УНІВЕРСАЛЬНА ОБРОБКА НОМЕРА (УКРАЇНСЬКІ + ІНОЗЕМНІ) ---
+    if (phone.trim().startsWith('+') && !phone.trim().startsWith('+38')) {
+        // Якщо номер починається з "+" і це НЕ Україна (+38) — залишаємо як є (іноземний номер)
+        phone = phone.trim();
     } else {
-        phone = cleaned.startsWith('380') ? `+${cleaned}` : `+38${cleaned}`;
+        // Якщо це український номер — красиво форматуємо його
+        let cleaned = phone.replace(/\D/g, '');
+        if (cleaned.length === 12 && cleaned.startsWith('380')) {
+            phone = `+38 (${cleaned.slice(2, 5)}) ${cleaned.slice(5, 8)} ${cleaned.slice(8, 10)} ${cleaned.slice(10, 12)}`;
+        } else if (cleaned.length === 10 && cleaned.startsWith('0')) {
+            phone = `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8, 10)}`;
+        } else {
+            phone = cleaned.startsWith('380') ? `+${cleaned}` : (cleaned.length > 0 ? `+38${cleaned}` : phone);
+        }
     }
     // ---------------------------------------------------------
-
+    
     // Створюємо об'єкт із даними для C#
     const requestData = {
         name: name,

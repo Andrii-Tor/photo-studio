@@ -89,18 +89,36 @@
             </div>
         </div>
 
-            <!-- Права колонка: Форма -->
-            <div class="bk-frm shw">
-                <h3>Оформлення заявки</h3>
-                <p class="bk-rules">текст</p>
-                    <form id="f1" class="frm">
-                     <input type="text" id="clientName" class="inp" placeholder="ПІБ" required>
-                     <input type="tel" id="clientPhone" class="inp" placeholder="Номер телефону" required>
-                     <textarea id="clientComment" class="inp txt" placeholder="Коментар (дата, зал, час оренди)"></textarea>
-                     <button type="submit" class="btn">Продовжити</button>
-                    </form>
-                </div>
-            </div>
+            <!-- ========================================= -->
+<!-- ПОКРАЩЕНА ФОРМА БРОНЮВАННЯ                -->
+<!-- ========================================= -->
+<div class="booking-form-card shw">
+    <div class="form-header-box">
+        <h3>Оформлення заявки</h3>
+        <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+    </div>
+    
+    <form id="f1" class="frm">
+        <div class="form-group">
+            <label for="clientName">👤 ПІБ</label>
+            <input type="text" id="clientName" class="inp" placeholder="" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="clientPhone">📞 Номер телефону</label>
+            <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
+        </div>
+        
+        <div class="form-group">
+            <label for="clientComment">📅 Дата, час та обраний зал</label>
+            <textarea id="clientComment" class="inp txt" placeholder="Зал 'Лофт', 25 число з 14:00 до 16:00" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn submit-btn-styled">Надіслати заявку ➔</button>
+        
+        <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
+    </form>
+</div>
         </div>
     </main>
 

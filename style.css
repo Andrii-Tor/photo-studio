@@ -466,3 +466,217 @@ a, button, .dropbtn {
     text-transform: uppercase;
 }
 
+/* ========================================= */
+/* СТИЛІ ДЛЯ БЛОКІВ ДІЇ (ГОРИЗОНТАЛЬНІ)       */
+/* ========================================= */
+.about-actions-section {
+    max-width: 1000px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+}
+
+.actions-container {
+    display: flex;
+    flex-direction: row; /* Ось це ставить їх в один горизонтальний рядок! */
+    justify-content: center;
+    gap: 30px;
+}
+
+.action-card {
+    flex: 1; /* Обидва блоки будуть однакові за шириною */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.action-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.action-card h3 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.action-card p {
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 280px;
+}
+
+.action-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 240px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Темна кнопка (Заявка) */
+.primary-btn {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #374151;
+    color: #ffffff;
+}
+
+/* Світла/Контурна кнопка (Дзвінок) */
+.secondary-btn {
+    background-color: transparent;
+    color: #1f2937;
+    border: 2px solid #1f2937;
+}
+
+.secondary-btn:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+/* Адаптивність: тільки на смартфонах вони стануть один під одним */
+@media (max-width: 768px) {
+    .actions-container {
+        flex-direction: column;
+    }
+    .about-actions-section {
+        margin: 20px auto 50px auto;
+    }
+    .action-card {
+        padding: 30px 20px;
+    }
+}
+
+/* ========================================= */
+/* СТИЛІ ДЛЯ ПОКРАЩЕНОЇ ФОРМІ БРОНЮВАННЯ     */
+/* ========================================= */
+.booking-form-card {
+    max-width: 650px;
+    margin: 20px auto 80px auto;
+    background: #ffffff;
+    padding: 45px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.form-header-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header-box h3 {
+    font-size: 26px;
+    color: #1a252f;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.form-header-box p {
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.booking-form-card .inp {
+    padding: 15px 18px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    width: 100%;
+    color: #1a252f;
+}
+
+.booking-form-card .inp:focus {
+    border-color: #1f2937;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(31, 41, 55, 0.08);
+    outline: none;
+}
+
+.booking-form-card .txt {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.submit-btn-styled {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn-styled:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 41, 55, 0.2);
+}
+
+.form-disclaimer {
+    font-size: 12px;
+    color: #888888;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 600px) {
+    .booking-form-card {
+        padding: 30px 20px;
+        margin: 10px 15px 60px 15px;
+        border-radius: 16px;
+    }
+    .form-header-box h3 {
+        font-size: 22px;
+    }
+}
