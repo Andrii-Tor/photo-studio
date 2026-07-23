@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
     track.addEventListener('dragstart', (e) => e.preventDefault());
     track.style.cursor = 'grab';
 });
+
 // =========================================
 // РОЗУМНИЙ GOOGLE КАЛЕНДАР (АДАПТИВНІСТЬ)
 // =========================================
@@ -172,6 +173,7 @@ function updateCalendarView() {
 
 document.addEventListener("DOMContentLoaded", updateCalendarView);
 window.addEventListener("resize", updateCalendarView);
+
 // =========================================
 // ВІДПРАВКА ФОРМИ В TELEGRAM
 // =========================================
@@ -205,8 +207,8 @@ document.getElementById('f1').addEventListener('submit', function(e) {
         comment: comment
     };
 
-    // Стукаємо на твій ноутбук по локальній мережі!
-    const url = 'http://192.168.0.106:5087/api/Booking'; 
+    // Стукаємо на живий сервер на Render!
+    const url = 'https://wavestudio-api.onrender.com/api/Booking'; 
 
     fetch(url, {
         method: 'POST',
@@ -224,7 +226,8 @@ document.getElementById('f1').addEventListener('submit', function(e) {
         }
     })
     .catch(error => {
-        alert('Помилка з\'єднання із сервером. Не запущений сервер або його блокує брандмауер.');
+        alert('Помилка з\'єднання із сервером. Перевірте підключення до інтернету.');
+        console.error('Fetch error:', error);
     })
     .finally(() => {
         submitBtn.disabled = false;
