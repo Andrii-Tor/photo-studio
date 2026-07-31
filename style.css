@@ -325,7 +325,7 @@ a, button, .dropbtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 150px;
     background-size: cover;
     background-position: center;
     text-decoration: none;
