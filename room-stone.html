@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — [ Назва розділу ]</title>
+    <title>Фотостудія WAVE — Зал STONE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,13 +16,13 @@
                 <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
             </div>
             <div class="header-logo">
-                <a href="index.html"><img src="logo.png" alt="WAVE Studio"></a>
+                <a href="index.html"><img src="icons/logo.png" alt="WAVE Studio"></a>
             </div>
             <div class="header-action">
                 <div class="social-icons">
                     <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
+                    <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
+                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
@@ -31,16 +31,14 @@
         <nav class="header-nav" id="myNav">
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
-                
                 <li class="dropdown">
-                    <a href="#" class="dropbtn" onclick="toggleMobileDrop(event); return false;">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li><a href="room-air.html">Зал «Air»</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li><li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
-
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
                 <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
@@ -53,42 +51,110 @@
         </nav>
     </header>
 
-<main>
-        <!-- 1. СЛАЙДИ З РЕКЛАМОЮ (НА КОЖНІЙ СТОРІНЦІ) -->
-        <section class="shw sld-sec">
-            <div class="sld-wrp">
-                <div class="sld-track" id="promo-track">
-                    <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
-                        <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
-                        </div>
-                    </div>
-                    <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
-                        <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
-                <button class="sld-btn nxt" onclick="moveSld(1)">❯</button>
-            </div>
-            <div class="slider-dots">
-                <span class="dot active-dot" onclick="goToSld(0)"></span>
-                <span class="dot" onclick="goToSld(1)"></span>
+    <main class="room-page-container">
+        <!-- 1. ЗАГОЛОВОК ТА ГОЛОВНЕ ФОТО -->
+        <section class="shw">
+            <h1 class="room-title">Зал <span class="highlight">STONE</span></h1>
+            <div class="room-main-img-box">
+                <img src="images/stone-main.jpg" alt="Зал Stone" class="room-main-img">
             </div>
         </section>
 
-        <!-- ЧИСТИЙ І НЕЙТРАЛЬНИЙ КОНТЕЙНЕР ДЛЯ КОНТЕНТУ -->
-        <section class="shw" style="padding: 60px 20px; max-width: 900px; margin: 0 auto; text-align: center;">
-            <h1 class="tc" style="margin-bottom: 15px; font-size: 28px; color: #1a252f;">Текст</h1>
-            <p style="font-size: 16px; color: #7f8c8d; max-width: 500px; margin: 0 auto;">
-                Текст
-            </p>
+        <!-- 2. ОПИС, ЦІНА ТА ПАРАМЕТРИ -->
+        <section class="room-info-grid shw">
+            <div class="room-info-card">
+                <div class="room-pricing-header">
+                    <div>
+                        <h3>Локація для фотосесії та простір для відеозйомки</h3>
+                    </div>
+                    <div class="room-price-badge">
+                        <span>ЦІНА:</span> <strong>1000 грн/година</strong>
+                    </div>
+                </div>
+
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
+
+                <h4 style="color: #2c3e50; font-size: 17px;">Параметри зали:</h4>
+                <ul class="room-features-list">
+                    <li>📐 <strong>Площа:</strong> 100 м.кв.</li>
+                    <li>📏 <strong>Висота стелі:</strong> 4,2 м</li>
+                    <li>☀️ <strong>Природне світло:</strong> 4 великі вікна (денне світло весь день, 8:00–14:00 прямі сонячні промені на темній частині залу)</li>
+                    <li>⬜ <strong>Циклорама:</strong> 6х6 м</li>
+                    <li>🛋️ Рейл для речей, дзеркало, вітродув, кондиціонер, відпарювач, гримерна зона, Wi-Fi</li>
+                    <li>👥 <em>Якщо на локації знаходяться більше 7 людей — доплата 30%</em></li>
+                </ul>
+            </div>
+
+            <!-- ОБЛАДНАННЯ -->
+            <div class="room-equipment-card">
+                <h4 style="color: #2c3e50; font-size: 17px;">Базове обладнання залу:</h4>
+                <ul class="equip-list">
+                    <li>💡 2 постійних джерела світла Amaran 300</li>
+                    <li>💡 1 постійне джерело Godox s60 за проєкційною насадкою</li>
+                    <li>⚡ 3 імпульсних джерела світла</li>
+                    <li>🏗️ Журавель, Рідке дзеркало, Імітація H2O</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-size: 17px; margin-top: 20px;">Додаткове обладнання та послуги:</h4>
+                <ul class="equip-list">
+                    <li>💨 Дим-машина — <strong>150 грн/година</strong></li>
+                    <li>🎨 Оренда будь-якого кольорового фону — <strong>200 грн</strong></li>
+                    <li>⚠️ Псування погонного метру фона — <strong>350 грн</strong></li>
+                    <li>🙋‍♂️ Послуги асистента (за домовленістю) — <strong>500 грн/година</strong></li>
+                    <li>🎭 Додатковий студійний реквізит, оренда меблів та декору</li>
+                </ul>
+            </div>
         </section>
+
+        <!-- 3. ПРАВИЛА ОРЕНДИ ТА КОНТАКТИ -->
+        <section class="room-rules-card shw">
+            <h3 style="color: #1a252f; font-size: 22px; margin-bottom: 10px;">Правила оренди</h3>
+            <p class="rules-important">
+                ⏳ <strong>Фактичний час зйомки при бронюванні однієї години — 55 хвилин</strong>
+            </p>
+            <ul class="rules-list">
+                <li>• Мінімальний час оренди будь-якої зали — 1 година.</li>
+                <li>• Мінімальний час оренди гримерного місця — 1 година.</li>
+                <li>• Вхід у студію тільки у змінному взутті.</li>
+                <li>• Кількість осіб — до 7 чоловік, включно з фотографом (більша кількість обговорюється в індивідуальному порядку).</li>
+            </ul>
+        </section>
+
+        <!-- 4. ГАЛЕРЕЯ ФОТО ЗАЛУ -->
+        <section class="shw" style="margin: 40px 0;">
+            <h3 class="tc" style="font-size: 24px;">Фотографії залу STONE</h3>
+            <div class="room-gallery-grid">
+                <img src="images/stone-1.jpg" alt="Stone фото 1" class="gallery-photo">
+                <img src="images/stone-2.jpg" alt="Stone фото 2" class="gallery-photo">
+                <img src="images/stone-3.jpg" alt="Stone фото 3" class="gallery-photo">
+                <img src="images/stone-4.jpg" alt="Stone фото 4" class="gallery-photo">
+            </div>
+        </section>
+
+        <!-- 5. ФОРМА БРОНЮВАННЯ -->
+        <div id="booking-form" class="booking-form-card shw">
+            <div class="form-header-box">
+                <h3>Замовити оренду залу STONE</h3>
+                <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+            </div>
+            
+            <form id="f1" class="frm">
+                <div class="form-group">
+                    <label for="clientName">👤 ПІБ</label>
+                    <input type="text" id="clientName" class="inp" placeholder="Ваше ім'я" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">📞 Номер телефону</label>
+                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientComment">📅 Дата, час та зал</label>
+                    <textarea id="clientComment" class="inp txt" placeholder="Зал STONE, бажана дата і час" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn-styled">Надіслати заявку ➔</button>
+                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
+            </form>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -127,8 +193,8 @@
                 <h4>Слідкуйте за нами</h4>
                 <div class="social-icons">
                     <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
+                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
             </div>
         </div>
