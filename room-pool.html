@@ -33,10 +33,10 @@
                 <li class="dropdown">
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html" style="color: #0ea5e9;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -76,11 +76,7 @@
 
         <section class="item-gallery-sec shw" style="margin-top: 40px;">
             <h3 class="tc">Галерея локації</h3>
-            <div class="item-gallery-grid">
-                <img src="hall-air/головна.jpg" alt="Pool 1" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Pool 2" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Pool 3" class="gallery-photo">
-            </div>
+            <div class="item-gallery-grid auto-gallery" data-folder="img-banner" data-start="1"></div>
         </section>
 
         <div style="text-align: center; margin: 50px 0;">
