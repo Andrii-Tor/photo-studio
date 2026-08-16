@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Все включено</title>
+    <title>Фотостудія WAVE — Зал «Pool»</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ШАПКА -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -38,11 +36,11 @@
                         <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
-                <li><a href="all-inclusive.html" style="color: #0ea5e9;">ВСЕ ВКЛЮЧЕНО</a></li>
+                <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
                 <li><a href="services.html">ПОСЛУГИ</a></li>
                 <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
@@ -53,36 +51,43 @@
         </nav>
     </header>
 
-    <main>
-        <h1 class="page-title">ФОТОСЕСІЯ «ВСЕ ВКЛЮЧЕНО»</h1>
+    <main class="room-page-container">
+        <h1 class="page-title">ЗАЛ «POOL» <span class="badge-closed" style="vertical-align: middle; font-size: 14px;">Відкриття незабаром</span></h1>
 
-        <!-- ФОТО + ОПИС -->
-        <section class="item-layout-top shw">
-            <div class="item-main-photo">
-                <img src="hall-air/головна.jpg" alt="Все включено" class="gallery-photo">
+        <div class="room-info-grid shw">
+            <div class="room-info-card">
+                <div class="room-pricing-header">
+                    <h3>Опис залу</h3>
+                </div>
+                <p style="margin-top: 15px; color: #555; line-height: 1.7;">
+                    Унікальний зал з басейном та ефектними тематичними декораціями. Зал знаходиться на стадії фінального облаштування.
+                </p>
             </div>
 
-            <div class="item-description-box">
-                <h2>Опис та деталі</h2>
-                <p>Текст</p>
-                <p>Текст</p>
-                <p>Текст</p>
-                <a href="book.html#f1" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
+            <div class="room-equipment-card">
+                <h3>Характеристики:</h3>
+                <ul class="room-features-list">
+                    <li>Текст</li>
+                    <li>Текст</li>
+                    <li>Текст</li>
+                </ul>
             </div>
-        </section>
+        </div>
 
-        <!-- ГАЛЕРЕЯ -->
-        <section class="item-gallery-sec shw">
-            <h3 class="tc">Галерея</h3>
+        <section class="item-gallery-sec shw" style="margin-top: 40px;">
+            <h3 class="tc">Галерея локації</h3>
             <div class="item-gallery-grid">
-                <img src="hall-air/головна.jpg" alt="Фото 1" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 2" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 3" class="gallery-photo">
+                <img src="hall-air/головна.jpg" alt="Pool 1" class="gallery-photo">
+                <img src="hall-air/головна.jpg" alt="Pool 2" class="gallery-photo">
+                <img src="hall-air/головна.jpg" alt="Pool 3" class="gallery-photo">
             </div>
         </section>
+
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="book.html?service=Зал Pool (Попередній запис)#booking-form" class="btn-calendar" style="padding: 14px 35px; font-size: 15px;">Залишити попередню заявку</a>
+        </div>
     </main>
 
-    <!-- ПІДВАЛ -->
     <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
@@ -124,7 +129,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

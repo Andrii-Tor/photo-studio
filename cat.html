@@ -19,7 +19,7 @@
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
@@ -30,9 +30,10 @@
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" style="color: #0ea5e9;" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li><li><a href="room-air.html">Зал «Air»</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
+                        <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
@@ -50,10 +51,9 @@
     </header>
 
     <main>
-        <!-- ЗАГОЛОВОК НАД БАНЕРОМ -->
         <h1 class="page-title tc">НАШІ ЗАЛИ</h1>
 
-        <!-- 1. СЛАЙДИ З РЕКЛАМОЮ -->
+        <!-- СЛАЙДЕР -->
         <section class="shw sld-sec" style="margin-top: 15px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
@@ -75,68 +75,75 @@
             </div>
         </section>
 
-        <!-- КАТАЛОГ ЗАЛІВ -->
+        <!-- КАТАЛОГ ЗАЛІВ У МОНОЛІТНІЙ СІТЦІ -->
         <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
             <div class="grd">
                 
                 <!-- ЗАЛ 1: AIR -->
-                <div class="crd" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eaeaea; box-shadow: 0 5px 15px rgba(0,0,0,0.04);">
+                <div class="crd" style="justify-content: space-between;">
                     <div>
-                        <div class="img i1" style="height: 260px; margin-bottom: 15px; background-image: url('hall-air/головна.jpg');"></div>
-                        <h3 style="font-size: 22px; color: #1a252f; margin-bottom: 10px;">Зал «Air»</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 20px; padding: 0 10px;">Світлий просторий зал з великими вікнами та ідеальним природним світлом.</p>
+                        <div class="img" style="background-image: url('hall-air/головна.jpg');"></div>
+                        <h3>Зал «Air»</h3>
+                        <p>Світлий просторий зал з великими вікнами та ідеальним природним світлом.</p>
                     </div>
-                    <div style="padding: 0 10px 10px;">
-                        <div style="font-weight: 700; color: #2c3e50; font-size: 20px; margin-bottom: 15px;">900 <span>грн/год</span></div>
-                        <a href="room-air.html" class="btn-c" style="width: 100%; display: block; padding: 12px 0; font-size: 15px;">Детальніше та бронь</a>
+                    <div>
+                        <div style="font-weight: 700; color: #2c3e50; font-size: 20px; margin-bottom: 12px; text-align: center;">900 <span style="font-size: 14px; color: #888;">грн/год</span></div>
+                        <a href="room-air.html" class="btn-calendar" style="width: 100%; text-align: center; display: block;">Детальніше та бронь</a>
                     </div>
                 </div>
 
                 <!-- ЗАЛ 2: STONE -->
-                <div class="crd" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eaeaea; box-shadow: 0 5px 15px rgba(0,0,0,0.04);">
+                <div class="crd" style="justify-content: space-between;">
                     <div>
-                        <div class="img i2" style="height: 260px; margin-bottom: 15px; background-image: url('images/stone-main.jpg');"></div>
-                        <h3 style="font-size: 22px; color: #1a252f; margin-bottom: 10px;">Зал «Stone»</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 20px; padding: 0 10px;">Стильний темний простір з циклорамою та професійним освітленням.</p>
+                        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600');"></div>
+                        <h3>Зал «Stone»</h3>
+                        <p>Стильний темний простір з циклорамою та професійним освітленням.</p>
                     </div>
-                    <div style="padding: 0 10px 10px;">
-                        <div style="font-weight: 700; color: #2c3e50; font-size: 20px; margin-bottom: 15px;">1000 <span>грн/год</span></div>
-                        <a href="room-stone.html" class="btn-c" style="width: 100%; display: block; padding: 12px 0; font-size: 15px;">Детальніше та бронь</a>
+                    <div>
+                        <div style="font-weight: 700; color: #2c3e50; font-size: 20px; margin-bottom: 12px; text-align: center;">1000 <span style="font-size: 14px; color: #888;">грн/год</span></div>
+                        <a href="room-stone.html" class="btn-calendar" style="width: 100%; text-align: center; display: block;">Детальніше та бронь</a>
                     </div>
                 </div>
 
                 <!-- ЗАЛ 3: POOL (СКОРО) -->
-                <div class="crd" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eaeaea; background: #fcfcfc; opacity: 0.85;">
+                <div class="crd" style="justify-content: space-between; background: #fcfcfc; opacity: 0.85;">
                     <div>
-                        <div class="img i3" style="height: 260px; margin-bottom: 15px; position: relative; filter: grayscale(40%);">
-                            <span style="position: absolute; top: 15px; right: 15px; background: #e74c3c; color: #fff; padding: 5px 12px; font-size: 12px; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">Скоро</span>
+                        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600'); position: relative; filter: grayscale(40%);">
+                            <span style="position: absolute; top: 12px; right: 12px; background: #e74c3c; color: #fff; padding: 4px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">Скоро</span>
                         </div>
-                        <h3 style="font-size: 22px; color: #7f8c8d; margin-bottom: 10px;">Зал «Pool»</h3>
-                        <p style="font-size: 14px; color: #888; line-height: 1.5; margin-bottom: 20px; padding: 0 10px;">Унікальний зал з басейном та ефектними декораціями.</p>
+                        <h3 style="color: #7f8c8d;">Зал «Pool»</h3>
+                        <p>Унікальний зал з басейном та ефектними тематичними декораціями.</p>
                     </div>
-                    <div style="padding: 0 10px 10px;">
-                        <div style="font-weight: 700; color: #95a5a6; font-size: 18px; margin-bottom: 15px;">Відкриття незабаром</div>
-                        <a href="#" onclick="return false;" class="btn-c" style="width: 100%; display: block; padding: 12px 0; font-size: 15px; background: #bdc3c7; cursor: not-allowed;">Скоро відчинення</a>
+                    <div>
+                        <div style="font-weight: 700; color: #95a5a6; font-size: 17px; margin-bottom: 12px; text-align: center;">Відкриття незабаром</div>
+                        <a href="#" onclick="return false;" class="btn-calendar" style="width: 100%; text-align: center; display: block; background: #bdc3c7; cursor: not-allowed;">Скоро відчинення</a>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- ЗАГАЛЬНІ ПРАВИЛА ТА FAQ -->
-        <section class="shw faq-sec" style="margin: 50px auto 60px; max-width: 1000px; padding: 0 20px;">
+        <!-- FAQ / ПРАВИЛА ЗАЛІВ -->
+        <section class="shw faq-sec">
             <h2 class="tc">Що потрібно знати про наші зали?</h2>
             <div class="faq-wrp">
                 <details class="faq-item" open>
                     <summary>Мінімальний час оренди</summary>
-                    <div class="faq-body"><p>Мінімальний час оренди будь-якої зали — 1 година. Фактичний час зйомки при бронюванні однієї години — 55 хвилин.</p></div>
+                    <div class="faq-body">
+                        <p>Мінімальний час оренди будь-якої зали — 1 година. Фактичний час зйомки при бронюванні однієї години — 55 хвилин (5 хвилин на прибирання та вихід).</p>
+                    </div>
                 </details>
                 <details class="faq-item">
                     <summary>Вимоги до взуття</summary>
-                    <div class="faq-body"><p>Вхід у студію дозволено тільки у чистому змінному взутті.</p></div>
+                    <div class="faq-body">
+                        <p>Вхід у студію та зали дозволено тільки у чистому змінному взутті або студійних капцях.</p>
+                    </div>
                 </details>
                 <details class="faq-item">
                     <summary>Кількість людей на зйомці</summary>
-                    <div class="faq-body"><p>Базова вартість розрахована до 7 чоловік, включно з фотографом. Більша кількість обговорюється індивідуально (доплата 30%).</p></div>
+                    <div class="faq-body">
+                        <p>Базова вартість розрахована до 7 чоловік, включно з фотографом. Більша кількість людей узгоджується індивідуально.</p>
+                    </div>
                 </details>
             </div>
         </section>
@@ -176,7 +183,7 @@
             <div class="f-col">
                 <h4>Слідкуйте за нами</h4>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>

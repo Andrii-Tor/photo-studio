@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Все включено</title>
+    <title>Фотостудія WAVE — Назва</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://t.me/studiophotowave" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
@@ -33,7 +33,7 @@
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" onclick="toggleMobileDrop(event)">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
-                <li><a href="all-inclusive.html" style="color: #0ea5e9;">ВСЕ ВКЛЮЧЕНО</a></li>
+                <li><a href="all-inclusive.html">ВСЕ ВКЛЮЧЕНО</a></li>
                 <li><a href="clothes.html">ОРЕНДА ОДЯГУ</a></li>
                 <li><a href="services.html">ПОСЛУГИ</a></li>
                 <li><a href="cert.html">СЕРТИФІКАТИ</a></li>
@@ -54,12 +54,12 @@
     </header>
 
     <main>
-        <h1 class="page-title">ФОТОСЕСІЯ «ВСЕ ВКЛЮЧЕНО»</h1>
+        <h1 class="page-title">Текст</h1>
 
-        <!-- ФОТО + ОПИС -->
+        <!-- 1. СИНІЙ КВАДРАТ (ФОТО) + ЧОРНІ СМУГИ (ОПИС) -->
         <section class="item-layout-top shw">
             <div class="item-main-photo">
-                <img src="hall-air/головна.jpg" alt="Все включено" class="gallery-photo">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800" alt="Основне фото" class="gallery-photo">
             </div>
 
             <div class="item-description-box">
@@ -67,19 +67,44 @@
                 <p>Текст</p>
                 <p>Текст</p>
                 <p>Текст</p>
-                <a href="book.html#f1" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
+                <a href="#f1" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
             </div>
         </section>
 
-        <!-- ГАЛЕРЕЯ -->
+        <!-- 2. ЧЕРВОНІ КВАДРАТИ (ГАЛЕРЕЯ ДЛЯ ДОДАТКОВИХ ФОТО) -->
         <section class="item-gallery-sec shw">
             <h3 class="tc">Галерея</h3>
             <div class="item-gallery-grid">
-                <img src="hall-air/головна.jpg" alt="Фото 1" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 2" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 3" class="gallery-photo">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600" alt="Фото 1" class="gallery-photo">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600" alt="Фото 2" class="gallery-photo">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600" alt="Фото 3" class="gallery-photo">
+                <!-- Щоб додати ще фото, просто копіюєш цей рядок <img> нижче -->
             </div>
         </section>
+
+        <!-- 3. СТАНДАРТНА МОНОЛІТНА ФОРМА -->
+        <div id="booking-form" class="booking-form-card shw" style="margin-top: 50px;">
+            <div class="form-header-box">
+                <h3>Оформлення заявки</h3>
+                <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+            </div>
+            <form id="f1" class="frm">
+                <div class="form-group">
+                    <label for="clientName">👤 ПІБ</label>
+                    <input type="text" id="clientName" class="inp" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">📞 Номер телефону</label>
+                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
+                </div>
+                <div class="form-group">
+                    <label for="clientComment">📅 Дата, час та побажання</label>
+                    <textarea id="clientComment" class="inp txt" placeholder="Текст" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn-styled">Надіслати заявку ➔</button>
+                <p class="form-disclaimer" style="text-align: center; font-size: 12px; color: #888; margin-top: 10px;">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
+            </form>
+        </div>
     </main>
 
     <!-- ПІДВАЛ -->
@@ -119,7 +144,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://t.me/studiophotowave" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
             </div>
         </div>

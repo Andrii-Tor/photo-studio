@@ -20,7 +20,7 @@
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
@@ -32,9 +32,10 @@
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" style="color: #0ea5e9;" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li><li><a href="room-air.html">Зал «Air»</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
+                        <li><a href="room-air.html" style="color: #0ea5e9;">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
                         <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
@@ -56,7 +57,7 @@
         <section class="shw">
             <h1 class="room-title">ЗАЛ AIR</h1>
             <div class="room-main-img-box">
-                <img src="hall-air/головна.jpg" alt="Зал Air" class="room-main-img">
+                <img src="hall-air/головна.jpg" alt="Зал Air" class="room-main-img gallery-photo">
             </div>
         </section>
 
@@ -67,8 +68,11 @@
                     <div>
                         <h3>Локація для фотосесії та простір для відеозйомки</h3>
                     </div>
-                    <div class="room-price-badge">
-                        <span>ЦІНА:</span> <strong>900 грн/година</strong>
+                    <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                        <div class="room-price-badge">
+                            <span>ЦІНА:</span> <strong>900 грн/година</strong>
+                        </div>
+                        <a href="#f1" class="btn-calendar" style="padding: 8px 18px; font-size: 13px;">Забронювати</a>
                     </div>
                 </div>
 
@@ -87,13 +91,13 @@
             <!-- ОБЛАДНАННЯ -->
             <div class="room-equipment-card">
                 <h4 style="color: #2c3e50; font-size: 17px;">Базове обладнання залу:</h4>
-                <ul class="equip-list">
+                <ul class="room-features-list">
                     <li>💡 2 постійних джерела світла Godox SL150</li>
                     <li>💡 1 джерело 1000W (тепле)</li>
                 </ul>
 
                 <h4 style="color: #2c3e50; font-size: 17px; margin-top: 20px;">Додаткове обладнання та послуги:</h4>
-                <ul class="equip-list">
+                <ul class="room-features-list">
                     <li>💨 Дим-машина — <strong>150 грн/година</strong></li>
                     <li>🎨 Оренда будь-якого кольорового фону — <strong>200 грн</strong></li>
                     <li>⚠️ Псування погонного метру фона — <strong>350 грн</strong></li>
@@ -109,35 +113,35 @@
             <p class="rules-important">
                 ⏳ <strong>Фактичний час зйомки при бронюванні однієї години — 55 хвилин</strong>
             </p>
-            <ul class="rules-list">
-                <li>• Мінімальний час оренди будь-якої зали — 1 година.</li>
-                <li>• Мінімальний час оренди гримерного місця — 1 година.</li>
-                <li>• Вхід у студію тільки у змінному взутті.</li>
-                <li>• Кількість осіб — до 7 чоловік, включно з фотографом (більша кількість обговорюється в індивідуальному порядку).</li>
+            <ul class="room-features-list">
+                <li>Мінімальний час оренди будь-якої зали — 1 година.</li>
+                <li>Мінімальний час оренди гримерного місця — 1 година.</li>
+                <li>Вхід у студію тільки у змінному взутті.</li>
+                <li>Кількість осіб — до 7 чоловік, включно з фотографом (більша кількість обговорюється в індивідуальному порядку).</li>
             </ul>
         </section>
 
         <!-- 4. ГАЛЕРЕЯ ВСІХ ФОТО ЗАЛУ AIR -->
         <section class="shw" style="margin: 40px 0;">
             <h3 class="tc" style="font-size: 24px;">Фотографії залу AIR</h3>
-                <div class="room-gallery-grid">
+            <div class="room-gallery-grid">
                 <img src="hall-air/490A1729.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A1733.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A1734.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A1737.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A1739.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A2048.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A4271.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A4279.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A4282.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A4290-2.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A4292-2.jpg" class="gallery-photo" alt="Зал Air">
-                   <img src="hall-air/490A6517.jpg" class="gallery-photo" alt="Зал Air">
-                </div>
+                <img src="hall-air/490A1733.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A1734.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A1737.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A1739.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A2048.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A4271.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A4279.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A4282.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A4290-2.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A4292-2.jpg" class="gallery-photo" alt="Зал Air">
+                <img src="hall-air/490A6517.jpg" class="gallery-photo" alt="Зал Air">
+            </div>
         </section>
 
         <!-- 5. ОФОРМЛЕННЯ ЗАЯВКИ -->
-        <div class="booking-form-card shw">
+        <div id="booking-form" class="booking-form-card shw">
             <div class="form-header-box">
                 <h3>Оформлення заявки</h3>
                 <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
@@ -153,7 +157,7 @@
                     <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
                 </div>
                 <div class="form-group">
-                    <label for="clientComment">📅 Дата, час та обраний зал</label>
+                    <label for="clientComment">📅 Дата, час та побажання</label>
                     <textarea id="clientComment" class="inp txt" placeholder="Зал 'AIR', 25 число з 14:00 до 16:00" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn-styled">Надіслати заявку ➔</button>
@@ -197,7 +201,7 @@
             <div class="f-col">
                 <h4>Слідкуйте за нами</h4>
                 <div class="social-icons">
-                    <a href="#" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>

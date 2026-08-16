@@ -299,4 +299,13 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.textContent = 'Надіслати заявку ➔';
         });
     });
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const serviceName = params.get('service');
+    const commentField = document.getElementById('clientComment');
+    
+    if (serviceName && commentField) {
+        commentField.value = `Послуга: ${serviceName}. `;
+    }
+});
 });
