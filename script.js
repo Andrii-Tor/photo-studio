@@ -219,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target === lbModal) closeLb();
     });
 
-    // Керування стрілочками з клавіатури
     document.addEventListener('keydown', function(e) {
         if (!lbModal.classList.contains('active')) return;
         if (e.key === 'Escape') closeLb();
@@ -227,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
     });
 
-    // Свайпи для телефонів
     let touchStartX = 0;
     lbModal.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, {passive: true});
     lbModal.addEventListener('touchend', (e) => {
@@ -299,7 +297,12 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.textContent = 'Надіслати заявку ➔';
         });
     });
-window.addEventListener('DOMContentLoaded', () => {
+});
+
+// =========================================
+// 7. АВТОЗАПОВНЕННЯ ПОСЛУГИ З URL
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const serviceName = params.get('service');
     const commentField = document.getElementById('clientComment');
@@ -308,4 +311,39 @@ window.addEventListener('DOMContentLoaded', () => {
         commentField.value = `Послуга: ${serviceName}. `;
     }
 });
+
+// =========================================
+// 8. АВТОМАТИЧНЕ ПІДТЯГУВАННЯ ГАЛЕРЕЙ
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.auto-gallery').forEach(gallery => {
+        const folder = gallery.dataset.folder;
+        const start = parseInt(gallery.dataset.start, 10) || 1;
+        const maxCheck = start + 100;
+        let missedInRow = 0;
+
+        function tryLoadImage(currentIdx) {
+            if (currentIdx > maxCheck || missedInRow > 3) return;
+
+            const img = new Image();
+            const src = `${folder}/${currentIdx}.jpg`;
+
+            img.onload = () => {
+                missedInRow = 0;
+                img.alt = `Фото ${currentIdx}`;
+                img.className = 'gallery-photo';
+                gallery.appendChild(img);
+                tryLoadImage(currentIdx + 1);
+            };
+
+            img.onerror = () => {
+                missedInRow++;
+                tryLoadImage(currentIdx + 1);
+            };
+
+            img.src = src;
+        }
+
+        tryLoadImage(start);
+    });
 });

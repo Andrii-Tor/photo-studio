@@ -53,28 +53,24 @@
 
     <main>
         <h1 class="page-title">КОСТЮМИ</h1>
-
+        <!-- 1. ГОЛОВНЕ ФОТО + ОПИС -->
         <section class="item-layout-top shw">
             <div class="item-main-photo">
-                <img src="hall-air/головна.jpg" alt="Костюми" class="gallery-photo">
+                <img src="dress-suits/main.jpg" alt="Костюми" class="gallery-photo">
             </div>
-
             <div class="item-description-box">
                 <h2>Опис та умови</h2>
                 <p>Текст</p>
                 <p>Текст</p>
                 <p>Текст</p>
-                <a href="book.html#f1" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Забронювати</a>
+                <a href="book.html?service=Оренда костюмів#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Забронювати</a>
             </div>
         </section>
 
+        <!-- 2. АВТОМАТИЧНА ГАЛЕРЕЯ ВНИЗУ -->
         <section class="item-gallery-sec shw">
             <h3 class="tc">Каталог моделей</h3>
-            <div class="item-gallery-grid">
-                <img src="hall-air/головна.jpg" alt="Фото 1" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 2" class="gallery-photo">
-                <img src="hall-air/головна.jpg" alt="Фото 3" class="gallery-photo">
-            </div>
+            <div class="item-gallery-grid auto-gallery" data-folder="dress-suits" data-start="1"></div>
         </section>
     </main>
 

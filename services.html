@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Послуги студії</title>
+    <title>Фотостудія WAVE — Послуги</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ШАПКА -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -35,10 +33,10 @@
                 <li class="dropdown">
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -54,23 +52,17 @@
     </header>
 
     <main>
-        <!-- СЛАЙДЕР -->
+        <!-- СЛАЙДЕР (З img-banner/) -->
         <section class="shw sld-sec" style="margin-top: 25px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
-                        <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
-                        </div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
+                        <div class="sld-txt"><h3>Текст</h3><p>Текст</p></div>
                     </div>
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
-                        <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
-                        </div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
+                        <div class="sld-txt"><h3>Текст</h3><p>Текст</p></div>
                     </div>
                 </div>
                 <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
@@ -84,47 +76,45 @@
 
         <h1 class="page-title">ПОСЛУГИ СТУДІЇ</h1>
 
-        <!-- ПЛАШКИ ПОСЛУГ -->
+        <!-- ПЛАШКИ ПОСЛУГ (З img-services/) -->
         <section class="services-list shw">
-            <a href="clothes.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="clothes.html" class="service-row" style="background-image: url('img-services/clothes.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Оренда одягу</h2>
             </a>
 
-            <a href="cat.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="cat.html" class="service-row" style="background-image: url('img-services/hall.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Оренда залу</h2>
             </a>
 
-            <a href="photos.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="photos.html" class="service-row" style="background-image: url('img-services/photos.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Фотосесії</h2>
             </a>
 
-            <a href="cert.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="cert.html" class="service-row" style="background-image: url('img-services/cert.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Подарункові сертифікати</h2>
             </a>
 
-            <a href="service-photobooks.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="service-photobooks.html" class="service-row" style="background-image: url('img-services/photobooks.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Фотокниги</h2>
             </a>
 
-            <a href="service-makeup.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="service-makeup.html" class="service-row" style="background-image: url('img-services/makeup.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Мейк та зачіска</h2>
             </a>
         </section>
 
-        <!-- ТЕКСТ ВНИЗУ -->
         <section class="seo-text-section shw">
             <h3>Текст</h3>
             <p>Текст</p>
         </section>
     </main>
 
-    <!-- ПІДВАЛ -->
     <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
@@ -166,7 +156,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

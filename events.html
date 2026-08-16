@@ -35,10 +35,10 @@
                 <li class="dropdown">
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -54,19 +54,19 @@
     </header>
 
     <main>
-        <!-- СЛАЙДЕР -->
+        <!-- СЛАЙДЕР (Бере фото з img-banner/) -->
         <section class="shw sld-sec" style="margin-top: 25px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
                         </div>
                     </div>
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
@@ -84,11 +84,11 @@
 
         <h1 class="page-title">ЗАХОДИ ТА ПОДІЇ</h1>
 
-        <!-- БЛОКИ З РОЗГОРТАННЯМ -->
+        <!-- БЛОКИ З РОЗГОРТАННЯМ (Беруть фото з img-events/) -->
         <section class="events-accordion-sec shw">
             <!-- 1. ВОРКШОПИ -->
             <details class="event-accordion-item">
-                <summary class="service-row" style="background-image: url('hall-air/головна.jpg');">
+                <summary class="service-row" style="background-image: url('img-events/workshops.jpg');">
                     <div class="service-overlay"></div>
                     <h2>Воркшопи</h2>
                 </summary>
@@ -104,7 +104,7 @@
 
             <!-- 2. ФОТОДНІ -->
             <details class="event-accordion-item">
-                <summary class="service-row" style="background-image: url('hall-air/головна.jpg');">
+                <summary class="service-row" style="background-image: url('img-events/photodays.jpg');">
                     <div class="service-overlay"></div>
                     <h2>Фотодні</h2>
                 </summary>
@@ -120,7 +120,7 @@
 
             <!-- 3. ЗУСТРІЧІ -->
             <details class="event-accordion-item">
-                <summary class="service-row" style="background-image: url('hall-air/головна.jpg');">
+                <summary class="service-row" style="background-image: url('img-events/meetings.jpg');">
                     <div class="service-overlay"></div>
                     <h2>Зустрічі</h2>
                 </summary>

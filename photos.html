@@ -23,7 +23,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="https://t.me/studiophotowave" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
@@ -33,12 +33,12 @@
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn" onclick="toggleMobileDrop(event)">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html" style="color: #0ea5e9;">ФОТОСЕСІЇ</a></li>
@@ -54,19 +54,19 @@
     </header>
 
     <main>
-        <!-- СЛАЙДЕР З РЕКЛАМОЮ -->
+        <!-- СЛАЙДЕР З РЕКЛАМОЮ (Бере фото з img-banner/) -->
         <section class="shw sld-sec" style="margin-top: 25px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
                         </div>
                     </div>
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
@@ -84,54 +84,54 @@
 
         <h1 class="page-title">ФОТОСЕСІЇ</h1>
 
-        <!-- ГОРИЗОНТАЛЬНІ СМУГИ ФОТОСЕСІЙ -->
+        <!-- ГОРИЗОНТАЛЬНІ СМУГИ ФОТОСЕСІЙ (Беруть фото з img-photos/) -->
         <section class="services-list shw">
-            <a href="photo-portrait.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200');">
+            <a href="photo-portrait.html" class="service-row" style="background-image: url('img-photos/portrait.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Портрет</h2>
             </a>
 
-            <a href="photo-pregnancy.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200');">
+            <a href="photo-pregnancy.html" class="service-row" style="background-image: url('img-photos/pregnancy.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Вагітність</h2>
             </a>
 
-            <a href="photo-birthday.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1200');">
+            <a href="photo-birthday.html" class="service-row" style="background-image: url('img-photos/birthday.jpg');">
                 <div class="service-overlay"></div>
                 <h2>До Дня народження</h2>
             </a>
 
-            <a href="photo-family.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1200');">
+            <a href="photo-family.html" class="service-row" style="background-image: url('img-photos/family.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Сімейна</h2>
             </a>
 
-            <a href="photo-lovestory.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200');">
+            <a href="photo-lovestory.html" class="service-row" style="background-image: url('img-photos/lovestory.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Love Story</h2>
             </a>
 
-            <a href="photo-kids.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1200');">
+            <a href="photo-kids.html" class="service-row" style="background-image: url('img-photos/kids.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Дитяча</h2>
             </a>
 
-            <a href="photo-all-inclusive.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200');">
+            <a href="photo-all-inclusive.html" class="service-row" style="background-image: url('img-photos/all-inclusive.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Фотосесія "Все включено"</h2>
             </a>
 
-            <a href="photo-days.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200');">
+            <a href="photo-days.html" class="service-row" style="background-image: url('img-photos/days.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Фотодні</h2>
             </a>
 
-            <a href="photo-product.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200');">
+            <a href="photo-product.html" class="service-row" style="background-image: url('img-photos/product.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Предметна зйомка</h2>
             </a>
 
-            <a href="photo-content.html" class="service-row" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200');">
+            <a href="photo-content.html" class="service-row" style="background-image: url('img-photos/content.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Контент зйомка</h2>
             </a>
@@ -181,7 +181,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="https://t.me/studiophotowave" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
             </div>
         </div>

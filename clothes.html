@@ -35,10 +35,10 @@
                 <li class="dropdown">
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -54,19 +54,19 @@
     </header>
 
     <main>
-        <!-- СЛАЙДЕР З РЕКЛАМОЮ -->
+        <!-- СЛАЙДЕР З РЕКЛАМОЮ (Бере фото з img-banner/) -->
         <section class="shw sld-sec" style="margin-top: 25px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
                         </div>
                     </div>
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('hall-air/головна.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Текст</h3>
                             <p>Текст</p>
@@ -84,34 +84,34 @@
 
         <h1 class="page-title">ОРЕНДА ОДЯГУ</h1>
 
-        <!-- ПЛАШКИ ОДЯГУ -->
+        <!-- ПЛАШКИ ОДЯГУ (Беруть фото з img-clothes/) -->
         <section class="services-list shw">
-            <a href="clothes-dresses.html" class="service-row" style="background-image: url('dress-dresses/100.jpg');">
+            <a href="clothes-dresses.html" class="service-row" style="background-image: url('img-clothes/dresses.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Сукні</h2>
             </a>
 
-            <a href="clothes-suits.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="clothes-suits.html" class="service-row" style="background-image: url('img-clothes/suits.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Костюми</h2>
             </a>
 
-            <a href="clothes-casual.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="clothes-casual.html" class="service-row" style="background-image: url('img-clothes/casual.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Одяг</h2>
             </a>
 
-            <a href="clothes-pregnancy.html" class="service-row" style="background-image: url('dress-pregnancy/100.jpg');">
+            <a href="clothes-pregnancy.html" class="service-row" style="background-image: url('img-clothes/pregnancy.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Вагітність</h2>
             </a>
 
-            <a href="clothes-props.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="clothes-props.html" class="service-row" style="background-image: url('img-clothes/props.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Реквізит</h2>
             </a>
 
-            <a href="clothes-accessories.html" class="service-row" style="background-image: url('hall-air/головна.jpg');">
+            <a href="clothes-accessories.html" class="service-row" style="background-image: url('img-clothes/accessories.jpg');">
                 <div class="service-overlay"></div>
                 <h2>Аксесуари та взуття</h2>
             </a>
