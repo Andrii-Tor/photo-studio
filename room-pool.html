@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Зал «Pool»</title>
+    <title>Фотостудія WAVE — Зал POOL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -15,23 +16,23 @@
                 <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
             </div>
             <div class="header-logo">
-                <a href="index.html"><img src="icons/logo.png" alt="WAVE Logo" style="height: 45px; width: auto; display: block;"></a>
+                <a href="index.html"><img src="icons/logo.png" alt="WAVE Studio"></a>
             </div>
             <div class="header-action">
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
-                    <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
-                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="Facebook" width="28" height="28"></a>
+                    <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
+                    <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
                 <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
             </div>
         </div>
-
+        
         <nav class="header-nav" id="myNav">
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
-                    <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
+                    <a href="cat.html" class="dropbtn" style="color: #0ea5e9;" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
@@ -52,38 +53,82 @@
     </header>
 
     <main class="room-page-container">
-        <h1 class="page-title">ЗАЛ «POOL» <span class="badge-closed" style="vertical-align: middle; font-size: 14px;">Відкриття незабаром</span></h1>
+        <!-- 1. ЗАГОЛОВОК ТА ГОЛОВНЕ ФОТО -->
+        <section class="shw">
+            <h1 class="room-title">ЗАЛ POOL <span class="badge-closed" style="vertical-align: middle; font-size: 14px;">Відкриття незабаром</span></h1>
+            <div class="room-main-img-box">
+                <img src="hall-pool/main.jpg" alt="Зал Pool" class="room-main-img">
+            </div>
+        </section>
 
-        <div class="room-info-grid shw">
+        <!-- 2. ОПИС ТА ПАРАМЕТРИ -->
+        <section class="room-info-grid shw">
             <div class="room-info-card">
                 <div class="room-pricing-header">
-                    <h3>Опис залу</h3>
+                    <div>
+                        <h3>Локація для фотосесій та відеозйомки</h3>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                        <div class="room-price-badge" style="background: #fef2f2; color: #dc2626; border-color: #fecaca;">
+                            <span>СТАТУС:</span> <strong>Скоро відкриття</strong>
+                        </div>
+                        <a href="#f1" class="btn-calendar" style="padding: 8px 18px; font-size: 13px;">Попередній запис</a>
+                    </div>
                 </div>
-                <p style="margin-top: 15px; color: #555; line-height: 1.7;">
-                    Опис
+
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
+
+                <h4 style="color: #2c3e50; font-size: 17px;">Опис залу:</h4>
+                <p style="margin-top: 10px; color: #555; line-height: 1.6; font-size: 15px;">
+                    Третій зал студії з басейном наразі знаходиться на етапі підготовки та технічного облаштування. Детальний опис локації, перелік обладнання та точна вартість оренди будуть опубліковані після завершення робіт.
                 </p>
             </div>
 
+            <!-- ОБЛАДНАННЯ -->
             <div class="room-equipment-card">
-                <h3>Характеристики:</h3>
+                <h4 style="color: #2c3e50; font-size: 17px;">Параметри та оснащення:</h4>
                 <ul class="room-features-list">
-                    <li>Текст</li>
-                    <li>Текст</li>
-                    <li>Текст</li>
+                    <li>🌊 Інтер'єрна водна зона з басейном</li>
+                    <li>💡 Професійне студійне освітлення</li>
+                    <li>🛋️ Зона підготовки та переодягання</li>
+                    <li>👥 Можливість проведення індивідуальних і групових зйомок</li>
                 </ul>
             </div>
-        </div>
-
-        <section class="item-gallery-sec shw" style="margin-top: 40px;">
-            <h3 class="tc">Галерея локації</h3>
-            <div class="item-gallery-grid auto-gallery" data-folder="img-banner" data-start="1"></div>
         </section>
 
-        <div style="text-align: center; margin: 50px 0;">
-            <a href="book.html?service=Зал Pool (Попередній запис)#booking-form" class="btn-calendar" style="padding: 14px 35px; font-size: 15px;">Залишити попередню заявку</a>
+        <!-- 3. ГАЛЕРЕЯ ВСІХ ФОТО ЗАЛУ POOL -->
+        <section class="shw" style="margin: 40px 0;">
+            <h3 class="tc" style="font-size: 24px;">Фотографії залу POOL</h3>
+            <div class="room-gallery-grid auto-gallery" data-folder="hall-pool" data-start="1"></div>
+        </section>
+
+        <!-- 4. ОФОРМЛЕННЯ ПОПЕРЕДНЬОЇ ЗАЯВКИ -->
+        <div id="booking-form" class="booking-form-card shw">
+            <div class="form-header-box">
+                <h3>Попередній запис у зал POOL</h3>
+                <p>Залиште контакти, щоб першими дізнатися про відкриття локації та забронювати зручний час за спеціальною ціною.</p>
+            </div>
+            
+            <form id="f1" class="frm">
+                <div class="form-group">
+                    <label for="clientName">👤 ПІБ</label>
+                    <input type="text" id="clientName" class="inp" placeholder="Ваше ім'я" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">📞 Номер телефону</label>
+                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
+                </div>
+                <div class="form-group">
+                    <label for="clientComment">📅 Побажання або формат зйомки</label>
+                    <textarea id="clientComment" class="inp txt" placeholder="Попередній запис: Зал POOL" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn-styled">Залишити попередню заявку ➔</button>
+                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
+            </form>
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">

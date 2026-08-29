@@ -35,7 +35,7 @@
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -58,12 +58,19 @@
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
-                        <div class="sld-txt"><h3>Текст</h3><p>Текст</p></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide1.jpg');"></div>
+                        <div class="sld-txt">
+                            <h3>Фотостудія WAVE</h3>
+                            <p>Студія на Лівому березі Києва з двома інтер'єрними залами та необмеженим простором для втілення ваших ідей</p>
+                        </div>
                     </div>
+
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
-                        <div class="sld-txt"><h3>Текст</h3><p>Текст</p></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide2.jpg');"></div>
+                        <div class="sld-txt">
+                            <h3>Творчість без меж</h3>
+                            <p>Не пливіть за течією, а створюйте власну хвилю творчості разом із Wave 💙</p>
+                        </div>
                     </div>
                 </div>
                 <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
@@ -75,17 +82,17 @@
             </div>
         </section>
 
-        <!-- КАТАЛОГ ЗАЛІВ У МОНОЛІТНІЙ СІТЦІ -->
+        <!-- КАТАЛОГ ЗАЛІВ У СІТЦІ -->
         <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
             <div class="grd">
                 
                 <!-- ЗАЛ 1: AIR -->
                 <div class="crd" style="justify-content: space-between;">
-                <div>
-                    <div class="img" style="background-image: url('hall-air/main.jpg');"></div>
-                    <h3>Зал «Air»</h3>
-                    <p>Світлий просторий зал з великими вікнами та ідеальним природним світлом.</p>
-                </div>
+                    <div>
+                        <div class="img" style="background-image: url('hall-air/main.jpg');"></div>
+                        <h3>Зал «Air»</h3>
+                        <p>Світлий просторий зал з великими вікнами та ідеальним природним світлом.</p>
+                    </div>
                     <div>
                         <div style="font-weight: 700; color: #2c3e50; font-size: 20px; margin-bottom: 12px; text-align: center;">900 <span style="font-size: 14px; color: #888;">грн/год</span></div>
                         <a href="room-air.html" class="btn-calendar" style="width: 100%; text-align: center; display: block;">Детальніше та бронь</a>
@@ -95,7 +102,7 @@
                 <!-- ЗАЛ 2: STONE -->
                 <div class="crd" style="justify-content: space-between;">
                     <div>
-                        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600');"></div>
+                        <div class="img" style="background-image: url('hall-stone/main.jpg');"></div>
                         <h3>Зал «Stone»</h3>
                         <p>Стильний темний простір з циклорамою та професійним освітленням.</p>
                     </div>
@@ -106,17 +113,17 @@
                 </div>
 
                 <!-- ЗАЛ 3: POOL (СКОРО) -->
-                <div class="crd" style="justify-content: space-between; background: #fcfcfc; opacity: 0.85;">
+                <div class="crd" style="justify-content: space-between; background: #fcfcfc;">
                     <div>
-                        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600'); position: relative; filter: grayscale(40%);">
+                        <div class="img" style="background-image: url('img-banner/slide1.jpg'); position: relative;">
                             <span style="position: absolute; top: 12px; right: 12px; background: #e74c3c; color: #fff; padding: 4px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">Скоро</span>
                         </div>
-                        <h3 style="color: #7f8c8d;">Зал «Pool»</h3>
+                        <h3 style="color: #1a252f;">Зал «Pool»</h3>
                         <p>Унікальний зал з басейном та ефектними тематичними декораціями.</p>
                     </div>
                     <div>
-                        <div style="font-weight: 700; color: #95a5a6; font-size: 17px; margin-bottom: 12px; text-align: center;">Відкриття незабаром</div>
-                        <a href="#" onclick="return false;" class="btn-calendar" style="width: 100%; text-align: center; display: block; background: #bdc3c7; cursor: not-allowed;">Скоро відчинення</a>
+                        <div style="font-weight: 700; color: #e74c3c; font-size: 17px; margin-bottom: 12px; text-align: center;">Скоро</div>
+                        <a href="room-pool.html" class="btn-calendar" style="width: 100%; text-align: center; display: block;">Детальніше та бронь</a>
                     </div>
                 </div>
 
@@ -125,26 +132,105 @@
 
         <!-- FAQ / ПРАВИЛА ЗАЛІВ -->
         <section class="shw faq-sec">
-            <h2 class="tc">Що потрібно знати про наші зали?</h2>
+            <h2 class="tc">FAQ: популярні питання перед бронюванням</h2>
             <div class="faq-wrp">
+                
                 <details class="faq-item" open>
-                    <summary>Мінімальний час оренди</summary>
+                    <summary>Скільки коштує оренда фотостудії на Лівому березі Києва?</summary>
                     <div class="faq-body">
-                        <p>Мінімальний час оренди будь-якої зали — 1 година. Фактичний час зйомки при бронюванні однієї години — 55 хвилин (5 хвилин на прибирання та вихід).</p>
+                        <p><strong>Вартість оренди студії:</strong></p>
+                        <p>Зал AIR — 900 грн/година.<br>Зал STONE — 1000 грн/година.</p>
+                        <p style="margin-top: 10px;"><a href="book.html" class="btn-calendar" style="display: inline-block; padding: 6px 14px; font-size: 13px;">Забронювати зал</a></p>
                     </div>
                 </details>
+
                 <details class="faq-item">
-                    <summary>Вимоги до взуття</summary>
+                    <summary>Що входить у вартість оренди студії?</summary>
                     <div class="faq-body">
-                        <p>Вхід у студію та зали дозволено тільки у чистому змінному взутті або студійних капцях.</p>
+                        <p>У вартість оренди студії входить:</p>
+                        <ul style="margin-left: 20px; margin-top: 6px; line-height: 1.6;">
+                            <li>зал, який ви обрали (можливість користування усіма локаціями, меблями та світлом, яке в ньому знаходиться);</li>
+                            <li>обладнання для студійної зйомки;</li>
+                            <li>рейл для речей;</li>
+                            <li>дзеркало;</li>
+                            <li>вітродув;</li>
+                            <li>кондиціонер;</li>
+                            <li>Wi-Fi;</li>
+                            <li>безкоштовний чай / кава в холлі студії.</li>
+                        </ul>
                     </div>
                 </details>
+
                 <details class="faq-item">
-                    <summary>Кількість людей на зйомці</summary>
+                    <summary>Чи можна зняти фотостудію лише на годину?</summary>
                     <div class="faq-body">
-                        <p>Базова вартість розрахована до 7 чоловік, включно з фотографом. Більша кількість людей узгоджується індивідуально.</p>
+                        <p>Так, оренда залів у фотостудії Вейв стартує від 1 години. Фактичний час оренди залу при бронюванні однієї години — 55 хвилин.</p>
                     </div>
                 </details>
+
+                <details class="faq-item">
+                    <summary>Чи є в студії циклорама?</summary>
+                    <div class="faq-body">
+                        <p>Так, в залі <a href="room-stone.html" style="color: #0ea5e9; font-weight: 600;">Stone</a> є біла циклорама (розмір 6х6 метрів).</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Чи можна орендувати студію для відеозйомки?</summary>
+                    <div class="faq-body">
+                        <p>Так, звичайно. Студія підходить для будь-яких видів фото- та відеозйомок. А також у студії Wave можна проводити інші івенти (за запитом): воркшопи, майстер-класи і т.п.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Чи є природне світло в студії?</summary>
+                    <div class="faq-body">
+                        <p>Обидва зали студії мають великі вікна і гарне природне світло протягом всього дня. Також в період з 8:00 до 14:00 в залах є прямі сонячні промені.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Яке освітлення є в залах?</summary>
+                    <div class="faq-body">
+                        <p>В обидвох залах є постійне та імпульсне світло (Godox, Amaran). Детальніше про обладнання дивіться на сторінках залів <a href="room-air.html" style="color: #0ea5e9;">Air</a> та <a href="room-stone.html" style="color: #0ea5e9;">Stone</a>.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Скільки людей може бути на зйомці?</summary>
+                    <div class="faq-body">
+                        <p>Стандартна вартість діє до 7 людей (враховуючи всіх людей на локації: учасників зйомки, помічників, асистентів та фотографа). В студії великі зали та є зона очікування, тому допускаємо більшу кількість людей за попередньою домовленістю. Якщо в залі знаходиться більше 7 людей — доплата 30%.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Чи можна з тваринами?</summary>
+                    <div class="faq-body">
+                        <p>Так, за попередньою домовленістю можна приходити з тваринками. Тварини можуть знаходитися в залі за умови чистих лапок, а також власники відповідають за збереження всіх меблів та реквізиту, та не залазять на м'які меблі.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Де знаходиться студія?</summary>
+                    <div class="faq-body">
+                        <p>Студія на Лівому березі Києва за 5 хвилин від метро «Лісова» (вул. Якова Гніздовського 1А, Арт-завод Платформа).</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Як забронювати студію Київ?</summary>
+                    <div class="faq-body">
+                        <p>Оберіть зручний для вас час та забронюйте зал за посиланням: <a href="book.html" style="color: #0ea5e9; font-weight: 600;">Календар бронювання</a>.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Чи можна замовити студію з фотографом?</summary>
+                    <div class="faq-body">
+                        <p>Так, ви можете замовити фотосесію з нашим студійним фотографом. Детальніше дивіться у розділі <a href="photos.html" style="color: #0ea5e9; font-weight: 600;">Фотосесії</a>.</p>
+                    </div>
+                </details>
+
             </div>
         </section>
     </main>

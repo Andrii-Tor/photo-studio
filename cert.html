@@ -38,7 +38,7 @@
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -53,23 +53,23 @@
         </nav>
     </header>
 
-    <main class="room-page-container">
-        <!-- СЛАЙДЕР (З img-banner/) -->
+    <main>
+        <!-- СЛАЙДЕР -->
         <section class="shw sld-sec" style="margin-top: 25px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide1.jpg');"></div>
                         <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
+                            <h3>Подарункові сертифікати</h3>
+                            <p>Подаруйте емоції, цінний досвід та яскраві спогади на все життя 💙</p>
                         </div>
                     </div>
                     <div class="sld">
-                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide2.jpg');"></div>
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
-                            <h3>Текст</h3>
-                            <p>Текст</p>
+                            <h3>Особливий подарунок</h3>
+                            <p>Оформлення на будь-яку послугу студії або зйомку «Все включено»</p>
                         </div>
                     </div>
                 </div>
@@ -84,51 +84,40 @@
 
         <h1 class="page-title">ПОДАРУНКОВІ СЕРТИФІКАТИ</h1>
 
-        <!-- ОПИС ТА ПРАВИЛА -->
-        <div class="room-info-grid shw">
-            <div class="room-info-card">
-                <div class="room-pricing-header">
-                    <h3>Про сертифікати</h3>
+        <!-- ІНФО-БЛОКИ ПРО СЕРТИФІКАТИ -->
+        <section class="shw" style="max-width: 1200px; margin: 30px auto; padding: 0 15px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+                
+                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
+                    <h3 style="color: #1e293b; margin-top: 0; font-size: 18px;">🎁 Про сертифікати</h3>
+                    <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 0;">
+                        Подарувати зйомку у студії — одне з найкращих рішень, якщо ви хочете приємно здивувати та зробити подарунок на роки. Адже, окрім гарних емоцій безпосередньо на зйомці, цінні моменти ваших близьких будуть назавжди збережені на фото.
+                    </p>
                 </div>
-                <p style="margin-top: 15px; color: #555; line-height: 1.7;">
-                    Текст
-                </p>
-            </div>
 
-            <div class="room-equipment-card">
-                <h3>Умови використання:</h3>
-                <ul class="room-features-list">
-                    <li>Текст</li>
-                    <li>Текст</li>
-                    <li>Текст</li>
-                </ul>
-            </div>
-        </div>
+                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
+                    <h3 style="color: #1e293b; margin-top: 0; font-size: 18px;">📜 Умови використання:</h3>
+                    <ul style="color: #475569; font-size: 14px; line-height: 1.7; margin: 0; padding-left: 20px;">
+                        <li>Діє на будь-яку зйомку, оренду залів або послуги гардеробу та візажиста.</li>
+                        <li>Термін дії сертифіката — 6 місяців з моменту придбання.</li>
+                        <li>Доступний в електронному вигляді або у фірмовому роздрукованому пакуванні.</li>
+                    </ul>
+                </div>
 
-        <!-- КАРТКИ СЕРТИФІКАТІВ (З img-services/) -->
-        <h3 class="tc shw" style="margin-top: 40px;">Варіанти сертифікатів</h3>
-        <div class="grd shw">
-            <div class="crd">
-                <div class="img" style="background-image: url('img-services/cert.jpg');"></div>
-                <h3>Сертифікат на оренду</h3>
-                <p>Текст</p>
-                <a href="book.html?service=Сертифікат на оренду#booking-form" class="btn-calendar" style="text-align: center; margin-top: auto;">Замовити</a>
             </div>
+        </section>
 
-            <div class="crd">
-                <div class="img" style="background-image: url('img-services/cert.jpg');"></div>
-                <h3>Сертифікат на фотосесію</h3>
-                <p>Текст</p>
-                <a href="book.html?service=Сертифікат на фотосесію#booking-form" class="btn-calendar" style="text-align: center; margin-top: auto;">Замовити</a>
+        <!-- ВАРІАНТИ ТА ЗАМОВЛЕННЯ -->
+        <section class="shw" style="max-width: 1200px; margin: 40px auto 60px auto; padding: 35px 25px; background: #ffffff; border-radius: 12px; text-align: center;">
+            <h2 style="font-size: 22px; color: #1e293b; margin-top: 0; margin-bottom: 12px;">Як замовити сертифікат?</h2>
+            <p style="font-size: 15px; color: #64748b; max-width: 700px; margin: 0 auto 25px auto; line-height: 1.6;">
+                Зв'яжіться з нами в Telegram або телефоном, оберіть бажаний номінал чи конкретну зйомку — і ми оформимо сертифікат протягом 15 хвилин.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="btn-calendar" style="padding: 10px 25px; font-size: 15px;">Написати в Telegram</a>
+                <a href="tel:+380971943583" class="btn-calendar" style="background: #334155; padding: 10px 25px; font-size: 15px;">Зателефонувати</a>
             </div>
-
-            <div class="crd">
-                <div class="img" style="background-image: url('img-services/cert.jpg');"></div>
-                <h3>Сертифікат «Все включено»</h3>
-                <p>Текст</p>
-                <a href="book.html?service=Сертифікат Все включено#booking-form" class="btn-calendar" style="text-align: center; margin-top: auto;">Замовити</a>
-            </div>
-        </div>
+        </section>
     </main>
 
     <!-- ПІДВАЛ -->

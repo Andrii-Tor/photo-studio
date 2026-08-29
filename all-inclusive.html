@@ -38,7 +38,7 @@
                         <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
                         <li><a href="room-air.html">Зал «Air»</a></li>
                         <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="#" class="disabled-room" onclick="return false;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -56,31 +56,25 @@
     <main>
         <h1 class="page-title">ФОТОСЕСІЯ «ВСЕ ВКЛЮЧЕНО»</h1>
 
-        <!-- ФОТО + ОПИС -->
+        <!-- 1. ГОЛОВНЕ ФОТО + ОПИС -->
         <section class="item-layout-top shw">
             <div class="item-main-photo">
-                <!-- ГОЛОВНЕ ФОТО (бере 1.jpg) -->
-                <img src="img-all-inclusive/1.jpg" alt="Все включено" class="gallery-photo">
+                <img src="photo-all-inclusive/main.jpg" alt="Фотосесія Все включено" class="gallery-photo">
             </div>
 
             <div class="item-description-box">
                 <h2>Опис та деталі</h2>
-                <p>Текст</p>
-                <p>Текст</p>
-                <p>Текст</p>
-                <a href="book.html#f1" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
+                <p>Це формат зйомки, де вам потрібно лише приїхати і насолоджуватися процесом, адже ми подбали про всі нюанси:</p>
+                <p>• Фотограф та допомога у позуванні<br>• Оренда студії та гримерної зони<br>• Професійний макіяж і зачіска<br>• Декілька образів із нашої гардеробної: одяг, взуття та аксесуари</p>
+                <p>Залишилося лише обрати зручну дату і насолоджуватися результатом 💙</p>
+                <a href="book.html?service=Фотосесія Все включено#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
             </div>
         </section>
 
-        <!-- ГАЛЕРЕЯ -->
+        <!-- 2. АВТОМАТИЧНА ГАЛЕРЕЯ ВНИЗУ -->
         <section class="item-gallery-sec shw">
             <h3 class="tc">Галерея</h3>
-            <div class="item-gallery-grid">
-                <!-- КАРТИНКИ ГАЛЕРЕЇ (беруть 1.jpg, 2.jpg, 3.jpg) -->
-                <img src="img-all-inclusive/1.jpg" alt="Фото 1" class="gallery-photo">
-                <img src="img-all-inclusive/2.jpg" alt="Фото 2" class="gallery-photo">
-                <img src="img-all-inclusive/3.jpg" alt="Фото 3" class="gallery-photo">
-            </div>
+            <div class="item-gallery-grid auto-gallery" data-folder="photo-all-inclusive" data-start="1"></div>
         </section>
     </main>
 
