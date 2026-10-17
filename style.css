@@ -842,7 +842,7 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
 .dropdown-content.mobile-modal-moved li.mobile-only-link { display: block !important; }
 
 /* =========================================
-   16. МОБІЛЬНА АДАПТАЦІЯ (320PX — 850PX)
+   16. МОБІЛЬНА АДАПТАЦІЯ (320PX - 850PX)
 ========================================= */
 @media (max-width: 850px) {
     .header-top { 

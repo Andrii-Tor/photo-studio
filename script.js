@@ -252,8 +252,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let phone = document.getElementById('clientPhone').value;
         const comment = document.getElementById('clientComment').value;
 
-        // Регулярний вираз однаково добре вирізає як довге тире (—), так і короткий дефіс (-)
-        const pageSource = document.title.replace(/Фотостудія WAVE\s*[-—]\s*/i, ''); 
+        // Регулярний вираз однаково добре вирізає як довге тире (-), так і короткий дефіс (-)
+        const pageSource = document.title.replace(/Фотостудія WAVE\s*[--]\s*/i, ''); 
         const finalComment = `${comment}\n\n📌 Джерело: ${pageSource}`;
 
         if (phone.trim().startsWith('+') && !phone.trim().startsWith('+38')) {
