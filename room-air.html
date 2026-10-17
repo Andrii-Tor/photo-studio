@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Зал AIR</title>
+    <title>Фотостудія WAVE - Зал AIR</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +11,8 @@
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
-                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
-                <p>🏢 Арт-завод Платформа</p>
-                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+                <a href="https://www.google.com/maps/place/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D1%96%D1%8F+Photowave/@50.4588368,30.6387113,16z/data=!4m15!1m8!3m7!1s0x40d4db449892e23b:0xf5cc04b865f334ff!2z0KTQvtGC0L7RgdGC0YPQtNGW0Y8gUGhvdG93YXZl!8m2!3d50.4591851!4d30.6404731!10e1!16s%2Fg%2F11vfb9gd53!3m5!1s0x40d4db449892e23b:0xf5cc04b865f334ff!8m2!3d50.4591851!4d30.6404731!16s%2Fg%2F11vfb9gd53?entry=ttu" target="_blank" class="header-loc-link">Київ, вул. Якова Гніздовського 1А</a>
+                <a href="tel:+380971943583" class="header-phone-link">+38 097 194 35 83</a>
             </div>
             <div class="header-logo">
                 <a href="index.html"><img src="icons/logo.png" alt="WAVE Studio"></a>
@@ -24,7 +23,7 @@
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
-                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+                <a href="book.html" class="btn-calendar">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
         
@@ -35,9 +34,9 @@
                     <a href="cat.html" class="dropbtn" style="color: #0ea5e9;" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
-                        <li><a href="room-air.html" style="color: #0ea5e9;">Зал «Air»</a></li>
-                        <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-air.html" style="color: #0ea5e9;">Зал «Air» (900 грн)</a></li>
+                        <li><a href="room-stone.html">Зал «Stone» (1000 грн)</a></li>
+                        <li><a href="room-pool.html">Зал «Pool»</a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -53,103 +52,114 @@
     </header>
 
     <main class="room-page-container">
-        <!-- 1. ЗАГОЛОВОК ТА ГОЛОВНЕ ФОТО -->
-        <section class="shw">
-            <h1 class="room-title">ЗАЛ AIR</h1>
-            <div class="room-main-img-box">
-                <img src="hall-air/main.jpg" alt="Зал Air" class="room-main-img">
-            </div>
-        </section>
+        <!-- НАВІГАЦІЯ / ХЛІБНІ КРИХТИ -->
+        <nav class="breadcrumbs-box">
+            <a href="index.html">ГОЛОВНА</a><span class="sep">/</span><a href="cat.html">ЗАЛИ</a><span class="sep">/</span><span class="current">ЗАЛ AIR</span>
+        </nav>
 
-        <!-- 2. ОПИС, ЦІНА ТА ПАРАМЕТРИ -->
-        <section class="room-info-grid shw">
-            <div class="room-info-card">
+        <h1 class="room-title">ЗАЛ AIR</h1>
+
+        <section class="item-layout-top shw">
+            <div class="item-main-photo">
+                <img src="hall-air/main.jpg" alt="Зал Air" class="gallery-photo">
+            </div>
+
+            <div class="item-description-box">
                 <div class="room-pricing-header">
-                    <div>
-                        <h3>Локація для фотосесії та простір для відеозйомки</h3>
-                    </div>
-                    <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                        <div class="room-price-badge">
-                            <span>ЦІНА:</span> <strong>900 грн/година</strong>
-                        </div>
-                        <a href="#f1" class="btn-calendar" style="padding: 8px 18px; font-size: 13px;">Забронювати</a>
-                    </div>
+                    <h2>Простір світла та вільного кадру</h2>
+                    <div class="room-price-badge">900 грн/година</div>
                 </div>
+                
+                <p>
+                    Світла простора локація для фото- та відеозйомок з великими вікнами та високими стелями. Атмосфера свіжості, білі напівпрозорі тканини та рухомий реквізит для створення легких мінімалістичних або силуетних кадрів.
+                </p>
 
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-
-                <h4 style="color: #2c3e50; font-size: 17px;">Параметри зали:</h4>
-                <ul class="room-features-list">
-                    <li>📐 <strong>Площа:</strong> 100 м.кв.</li>
-                    <li>📏 <strong>Висота стелі:</strong> 4,2 м</li>
-                    <li>☀️ <strong>Природне світло:</strong> 4 великі вікна (денне світло весь день, 8:00–14:00 прямі сонячні промені)</li>
-                    <li>🛋️ Рейл для речей, дзеркало, вітродув, кондиціонер, Wi-Fi</li>
-                    <li>👥 <em>Якщо на локації знаходяться більше 7 людей — доплата 30%</em></li>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong>Площа:</strong> 100 м² | <strong>Висота стелі:</strong> 4,2 м</li>
+                    <li><strong>Природне світло:</strong> 4 панорамні вікна (сонце з 08:00 до 14:00)</li>
+                    <li><strong>Базове світло:</strong> 2 джерела Godox SL150 + 1 тепле джерело 1000W</li>
+                    <li><strong>Зручності в залі:</strong> вітродув, рейл для одягу, дзеркало, кондиціонер, Wi-Fi</li>
                 </ul>
-            </div>
 
-            <!-- ОБЛАДНАННЯ -->
+                <a href="#booking-form" class="btn-calendar" style="text-align: center; margin-top: 10px; width: 100%;">Забронювати зал «Air»</a>
+            </div>
+        </section>
+
+        <section class="room-info-grid shw" style="margin-top: 30px;">
             <div class="room-equipment-card">
-                <h4 style="color: #2c3e50; font-size: 17px;">Базове обладнання залу:</h4>
+                <h3 style="color: #1a252f; font-size: 19px; margin-bottom: 12px;">Додаткове обладнання</h3>
                 <ul class="room-features-list">
-                    <li>💡 2 постійних джерела світла Godox SL150</li>
-                    <li>💡 1 джерело 1000W (тепле)</li>
+                    <li>Дим-машина — <strong>150 грн/год</strong></li>
+                    <li>Оренда кольорового фону — <strong>200 грн</strong></li>
+                    <li>Пошкодження погонного метра фону — <strong>350 грн</strong></li>
+                    <li>Послуги асистента на зйомці — <strong>500 грн/год</strong></li>
+                    <li>Оренда додаткового студійного декору та меблів</li>
                 </ul>
+            </div>
 
-                <h4 style="color: #2c3e50; font-size: 17px; margin-top: 20px;">Додаткове обладнання та послуги:</h4>
+            <div class="room-rules-card">
+                <h3 style="color: #1a252f; font-size: 19px; margin-bottom: 12px;">Умови та правила оренди</h3>
+                <div class="rules-important">
+                    Фактичний час зйомки при оренді 1 години становить <strong>55 хвилин</strong>
+                </div>
                 <ul class="room-features-list">
-                    <li>💨 Дим-машина — <strong>150 грн/година</strong></li>
-                    <li>🎨 Оренда будь-якого кольорового фону — <strong>200 грн</strong></li>
-                    <li>⚠️ Псування погонного метру фона — <strong>350 грн</strong></li>
-                    <li>🙋‍♂️ Послуги асистента (за домовленістю) — <strong>500 грн/година</strong></li>
-                    <li>🎭 Додатковий студійний реквізит, оренда додаткових меблів та декору</li>
+                    <li>Мінімальний час оренди залу або гримерки — 1 година</li>
+                    <li>Вхід у знімальний простір виключно у чистому змінному взутті</li>
+                    <li>До 7 людей на зйомці (якщо більше — доплата 30%)</li>
                 </ul>
             </div>
         </section>
 
-        <!-- 3. ПРАВИЛА ОРЕНДИ -->
-        <section class="room-rules-card shw">
-            <h3 style="color: #1a252f; font-size: 22px; margin-bottom: 10px;">Правила оренди</h3>
-            <p class="rules-important">
-                ⏳ <strong>Фактичний час зйомки при бронюванні однієї години — 55 хвилин</strong>
-            </p>
-            <ul class="room-features-list">
-                <li>Мінімальний час оренди будь-якої зали — 1 година.</li>
-                <li>Мінімальний час оренди гримерного місця — 1 година.</li>
-                <li>Вхід у студію тільки у змінному взутті.</li>
-                <li>Кількість осіб — до 7 чоловік, включно з фотографом (більша кількість обговорюється в індивідуальному порядку).</li>
-            </ul>
-        </section>
-
-        <!-- 4. ГАЛЕРЕЯ ВСІХ ФОТО ЗАЛУ AIR -->
-        <section class="shw" style="margin: 40px 0;">
-            <h3 class="tc" style="font-size: 24px;">Фотографії залу AIR</h3>
+        <section class="shw" style="margin: 50px 0 30px;">
+            <h2 class="tc" style="font-size: 26px;">Галерея залу AIR</h2>
             <div class="room-gallery-grid auto-gallery" data-folder="hall-air" data-start="1"></div>
         </section>
 
-        <!-- 5. ОФОРМЛЕННЯ ЗАЯВКИ -->
-        <div id="booking-form" class="booking-form-card shw">
-            <div class="form-header-box">
-                <h3>Оформлення заявки</h3>
-                <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+        <div id="booking-form" class="booking-split-container shw">
+            <div class="booking-split-card">
+                <div class="booking-info-pane">
+                    <div>
+                        <h3>Забронювати зал «Air»</h3>
+                        <p>Оберіть зручний час для зйомки або воркшопу. Адміністратор узгодить бронювання та відповість на запитання.</p>
+                        
+                        <ul class="booking-perks-list">
+                            <li class="booking-perk-item">Оренда залу: цілодобово за записом</li>
+                            <li class="booking-perk-item">Обробка дзвінків: щодня з 09:00 до 20:00</li>
+                            <li class="booking-perk-item">Вільні дати дивіться в онлайн-календарі</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-info-footer">
+                        вул. Якова Гніздовського 1А, вхід CAPSULE
+                    </div>
+                </div>
+
+                <div class="booking-form-pane">
+                    <div class="mobile-form-title">
+                        <h3>Бронювання залу Air</h3>
+                        <p>Залиште контакти для узгодження часу</p>
+                    </div>
+
+                    <form id="f1" class="frm">
+                        <div class="form-group">
+                            <label for="clientName">Ім'я та прізвище</label>
+                            <input type="text" id="clientName" class="inp" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Номер телефону</label>
+                            <input type="tel" id="clientPhone" class="inp" placeholder="+38 (0__) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientComment">Дата, години та деталі</label>
+                            <textarea id="clientComment" class="inp txt" placeholder="" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-premium">Надіслати заявку ➔</button>
+                        <p class="form-policy-note">
+                            Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних
+                        </p>
+                    </form>
+                </div>
             </div>
-            
-            <form id="f1" class="frm">
-                <div class="form-group">
-                    <label for="clientName">👤 ПІБ</label>
-                    <input type="text" id="clientName" class="inp" placeholder="ПІБ" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientPhone">📞 Номер телефону</label>
-                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
-                </div>
-                <div class="form-group">
-                    <label for="clientComment">📅 Дата, час та побажання</label>
-                    <textarea id="clientComment" class="inp txt" placeholder="Зал 'AIR', 25 число з 14:00 до 16:00" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn-styled">Надіслати заявку ➔</button>
-                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
-            </form>
         </div>
     </main>
 
@@ -172,21 +182,21 @@
                     <li><a href="book.html">Календар бронювання</a></li>
                     <li><a href="events.html">Заходи та події</a></li>
                     <li><a href="about.html">Контакти</a></li>
-                    <li><a href="#">Правила студії</a></li>
-                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="cat.html#faq">Правила студії</a></li>
+                    <li><a href="cat.html#faq">Умови оренди</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
-                    <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ studiophotowave@gmail.com</li>
-                    <li>💬 <a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
+                    <li>Київ, вул. Якова Гніздовського 1А</li>
+                    <li><a href="tel:+380971943583">+38 097 194 35 83</a></li>
+                    <li>studiophotowave@gmail.com</li>
+                    <li><a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Слідкуйте за нами</h4>
+                <h4>Соціальні мережі</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>

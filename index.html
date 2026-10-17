@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Головна</title>
+    <title>Фотостудія WAVE - Головна</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +11,9 @@
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
-                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
-                <p>🏢 Арт-завод Платформа</p>
-                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+                <a href="https://www.google.com/maps/place/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D1%96%D1%8F+Photowave/@50.4588368,30.6387113,16z/data=!4m15!1m8!3m7!1s0x40d4db449892e23b:0xf5cc04b865f334ff!2z0KTQvtGC0L7RgdGC0YPQtNGW0Y8gUGhvdG93YXZl!8m2!3d50.4591851!4d30.6404731!10e1!16s%2Fg%2F11vfb9gd53!3m5!1s0x40d4db449892e23b:0xf5cc04b865f334ff!8m2!3d50.4591851!4d30.6404731!16s%2Fg%2F11vfb9gd53?entry=ttu" target="_blank" class="header-loc-link">Київ, вул. Якова Гніздовського 1А</a>
+                
+                <a href="tel:+380971943583" class="header-phone-link">+38 097 194 35 83</a>
             </div>
             <div class="header-logo">
                 <a href="index.html"><img src="icons/logo.png" alt="WAVE Logo" style="height: 45px; width: auto; display: block;"></a>
@@ -24,7 +24,7 @@
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
-                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+                <a href="#booking-form" class="btn-calendar">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
         
@@ -35,8 +35,8 @@
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
-                        <li><a href="room-air.html">Зал «Air»</a></li>
-                        <li><a href="room-stone.html">Зал «Stone»</a></li>
+                        <li><a href="room-air.html">Зал «Air» (900 грн)</a></li>
+                        <li><a href="room-stone.html">Зал «Stone» (1000 грн)</a></li>
                         <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
                     </ul>
                 </li>
@@ -69,7 +69,7 @@
                         <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Творчість без меж</h3>
-                            <p>Не пливіть за течією, а створюйте власну хвилю творчості разом із Wave 💙</p>
+                            <p>Не пливіть за течією, а створюйте власну хвилю творчості разом із Wave</p>
                         </div>
                     </div>
                 </div>
@@ -82,162 +82,180 @@
             </div>
         </section>
 
-        <!-- СІТКА КАРТОК ГОЛОВНОЇ -->
-        <section class="shw" style="max-width: 1200px; margin: 30px auto; padding: 0 15px;">
-            <div class="grd" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-                
-                <a href="cat.html" class="service-row" style="background-image: url('img-index/halls.jpg'); height: 160px; margin: 0;">
+        <!-- 6 ГОЛОВНИХ БЛОКІВ (2 КОЛОНКИ ПО 3) -->
+        <section class="shw">
+            <div class="home-categories-grid">
+                <a href="cat.html" class="service-row" style="background-image: url('img-index/halls.jpg');">
                     <div class="service-overlay"></div>
                     <h2>ЗАЛИ</h2>
                 </a>
 
-                <a href="photos.html" class="service-row" style="background-image: url('img-index/photos.jpg'); height: 160px; margin: 0;">
+                <a href="photos.html" class="service-row" style="background-image: url('img-index/photos.jpg');">
                     <div class="service-overlay"></div>
                     <h2>ФОТОСЕСІЇ</h2>
                 </a>
 
-                <a href="all-inclusive.html" class="service-row" style="background-image: url('img-index/all-inclusive.jpg'); height: 160px; margin: 0;">
+                <a href="all-inclusive.html" class="service-row" style="background-image: url('img-index/all-inclusive.jpg');">
                     <div class="service-overlay"></div>
                     <h2>ВСЕ ВКЛЮЧЕНО</h2>
                 </a>
 
-                <a href="events.html" class="service-row" style="background-image: url('img-index/events.jpg'); height: 160px; margin: 0;">
-                    <div class="service-overlay"></div>
-                    <h2>ЗАХОДИ</h2>
-                </a>
-
-                <a href="clothes.html" class="service-row" style="background-image: url('img-index/clothes.jpg'); height: 160px; margin: 0;">
+                <a href="clothes.html" class="service-row" style="background-image: url('img-index/clothes.jpg');">
                     <div class="service-overlay"></div>
                     <h2>ОРЕНДА ОДЯГУ</h2>
                 </a>
 
-                <a href="cert.html" class="service-row" style="background-image: url('img-index/cert.jpg'); height: 160px; margin: 0;">
+                <a href="events.html" class="service-row" style="background-image: url('img-index/events.jpg');">
+                    <div class="service-overlay"></div>
+                    <h2>ЗАХОДИ</h2>
+                </a>
+
+                <a href="cert.html" class="service-row" style="background-image: url('img-index/cert.jpg');">
                     <div class="service-overlay"></div>
                     <h2>СЕРТИФІКАТИ</h2>
                 </a>
-
             </div>
         </section>
 
-        <!-- ЧОМУ ВАРТО ОБРАТИ СТУДІЮ WAVE -->
-        <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 35px 25px; background: #ffffff; border-radius: 12px;">
-            <h2 class="tc" style="font-size: 24px; color: #1e293b; margin-bottom: 20px;">Чому варто забронювати фотостудію Wave?</h2>
-            
-            <p style="font-size: 15px; line-height: 1.7; color: #475569; text-align: center; max-width: 950px; margin: 0 auto 30px auto;">
-                Ми створювали студію з величезною любов’ю до фотографії та досвідом 10+ років у проведенні фотосесій, фотопроєктів та воркшопів для фотографів. Нашою метою було створити простір, в якому враховані всі потреби для якісної, легкої та натхненної роботи, аби кожен учасник зйомки міг повністю зосередитися на творчості, насолодитися знімальним процесом, і не думати про організаційні деталі.
+        <!-- SEO ТА ОПИС СТУДІЇ -->
+        <section class="shw" style="max-width: 1200px; margin: 30px auto 60px auto; padding: 40px 30px; background: #ffffff; border-radius: 16px; border: 1px solid #eaeaea;">
+            <h1 style="font-size: 26px; color: #1e293b; text-align: center; margin-bottom: 15px;">Фотостудія WAVE — творчий простір на Лівому березі Києва</h1>
+            <p style="font-size: 16px; line-height: 1.8; color: #475569; text-align: center; max-width: 950px; margin: 0 auto 35px auto;">
+                Фотостудія Wave — це студія на лівому березі Києва з двома інтер’єрними залами для зйомки та необмеженим простором для втілення ваших ідей.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">🏛️ Зали та локації</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">2 великі студії для фотосесії (по 100 м², стеля 4.2 м) + третій зал у процесі створення. Локації-конструктори, біла циклорама 6х6 м, паперові та тканинні фони.</p>
-                </div>
-
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">☀️ Природне та студійне світло</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">Великі вікна вздовж двох стін (гарне денне світло, сонячні промені з 8:00 до 14:00). Професійне постійне та імпульсне світло з великим вибором насадок.</p>
-                </div>
-
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">💄 Гримерка та образи</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">2 гримерні місця з ідеальним освітленням для майстрів. Оренда одягу (понад 200 одиниць), близько 50 пар взуття та аксесуари під будь-який стиль.</p>
-                </div>
-
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">🎉 Реквізит та спецефекти</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">Дим-машина, снігова машина, вітродув, свічки, бокали, квіти та святковий реквізит для зйомки Дня народження.</p>
-                </div>
-
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">☕ Зручність та безпека</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">Зона очікування з безкоштовним чаєм/кавою, швидкісний Wi-Fi, безкоштовна парковка прямо біля входу та надійне укриття в будівлі студії.</p>
-                </div>
-
-                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #334155;">
-                    <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">🤝 Найкраща команда</h4>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.5;">Допомога адміністратора в усіх організаційних питаннях та можливість замовити послуги асистента безпосередньо на зйомку.</p>
+            <!-- Чому варто забронювати -->
+            <div style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; color: #1e293b; text-align: center; margin-bottom: 12px;">Чому варто забронювати фотостудію Wave?</h2>
+                <p style="font-size: 15px; line-height: 1.8; color: #475569; text-align: center; max-width: 950px; margin: 0 auto 20px auto;">
+                    Ми створювали студію з любов'ю до фотографії та досвідом 10+ років у проведенні зйомок та воркшопів. Наша мета — надати простір, де враховані всі потреби для легкої творчої роботи, щоб ви насолоджувалися процесом і не думали про організаційні дрібниці.
+                </p>
+                
+                <!-- 10 ПЕРЕВАГ СОЛІДНИМИ КАРТКАМИ -->
+                <div class="features-grid-10">
+                    <div class="feature-card-item">
+                        <strong>2 великі студії + зал у процесі створення</strong>
+                        <p>Локації-конструктори з рухомими меблями, паперовими та тканинними фонами під вашу задумку.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Великі вікна та природне сонце</strong>
+                        <p>Гарне денне світло протягом усього дня та прямі сонячні промені з 8:00 до 14:00.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Професійне студійне світло</strong>
+                        <p>Постійні та імпульсні джерела (Godox, Amaran) з великим вибором світлоформуючих насадок.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Оренда комфортної гримерки</strong>
+                        <p>2 обладнані місця з ідеальним освітленням для майстрів та зручними кріслами (200 грн/год).</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Власний гардероб студії</strong>
+                        <p>Понад 200 суконь і костюмів, взуття (~50 пар), авторські аксесуари, капелюхи та перуки.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Спецефекти та святковий реквізит</strong>
+                        <p>Дим-машина, снігова машина, стильні келихи, реквізит до зйомок Дня народження, свічки.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Затишок і зона очікування</strong>
+                        <p>Безкоштовна кава та чай для всіх гостей, швидкісний Wi-Fi та приємна атмосфера.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Безпечне укриття</strong>
+                        <p>Облаштоване укриття знаходиться безпосередньо в будівлі студії для вашого спокою.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Зручна локація та парковка</strong>
+                        <p>5 хвилин пішки від метро «Лісова» та безкоштовна парковка прямо біля входу до студії.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <strong>Турботлива команда студії</strong>
+                        <p>Постійна допомога адміністратора та можливість замовити асистента на зйомку.</p>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- НАЙПОПУЛЯРНІШІ ПОСЛУГИ -->
-        <section class="shw" style="max-width: 1200px; margin: 40px auto; padding: 35px 25px; background: #ffffff; border-radius: 12px;">
-            <h2 class="tc" style="font-size: 24px; color: #1e293b; margin-bottom: 25px;">Найпопулярніші послуги у фотостудії Wave</h2>
+            <!-- Детальний опис залів та послуг -->
+            <h2 style="font-size: 22px; color: #1e293b; text-align: center; margin-bottom: 25px;">Популярні зали та послуги студії WAVE</h2>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-                
-                <div style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background: #fafafa;">
-                    <div>
-                        <h3 style="color: #1e293b; font-size: 18px; margin-top: 0;">Оренда фотостудії</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">
-                            Світлий зал <strong>Air</strong> (900 грн/год) або атмосферний зал <strong>Stone</strong> із білою циклорамою 6х6 м (1000 грн/год).
-                        </p>
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 15px;">
+                <!-- Оренда студії -->
+                <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; background: #fafbfc;">
+                    <h3 style="color: #1e293b; margin-top: 0; font-size: 19px;">Оренда залів (100 м², стеля 4.2 м)</h3>
+                    <p style="color: #475569; line-height: 1.7; font-size: 15px; margin-bottom: 18px;">
+                        Обидва зали мають площу 100 кв.м та висоту стелі 4.2 м — це максимум вільного простору для кадру з будь-яким об'єктивом. Локації працюють як конструктор: реквізит і меблі можна вільно переміщати.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+                        <div style="background: #ffffff; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">Зал AIR — 900 грн/година</h4>
+                            <p style="margin: 0 0 12px 0; color: #64748b; font-size: 14px; line-height: 1.6;">Атмосфера повітря, свіжості та світла. Світлі нейтральні кольори та напівпрозорі тканини для силуетних кадрів.</p>
+                            <a href="room-air.html" style="color: #0ea5e9; font-weight: bold; font-size: 14px; text-decoration: none;">Переглянути зал AIR ➔</a>
+                        </div>
+                        <div style="background: #ffffff; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 16px;">Зал STONE — 1000 грн/година</h4>
+                            <p style="margin: 0 0 12px 0; color: #64748b; font-size: 14px; line-height: 1.6;">Велика біла циклорама 6х6 метрів, темні фактурні стіни, індустріальний стиль та власна гримерка на 2 майстри.</p>
+                            <a href="room-stone.html" style="color: #0ea5e9; font-weight: bold; font-size: 14px; text-decoration: none;">Переглянути зал STONE ➔</a>
+                        </div>
                     </div>
-                    <a href="cat.html" class="btn-calendar" style="display: block; text-align: center; margin-top: 15px;">Обрати зал</a>
                 </div>
 
-                <div style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background: #fafafa;">
-                    <div>
-                        <h3 style="color: #1e293b; font-size: 18px; margin-top: 0;">Гримерка, макіяж і зачіска</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">
-                            Оренда місця (200 грн/год) або послуги майстрів: комплекс «Макіяж + зачіска» — 2500 грн (окремо: макіяж 1500 грн, зачіска 1200 грн).
+                <!-- Гримерка, одяг -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+                    <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px; background: #ffffff;">
+                        <h3 style="color: #1e293b; margin-top: 0; font-size: 17px;">Гримерка, макіяж і зачіска</h3>
+                        <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+                            Гримерне місце — 200 грн/год. Комплекс «Макіяж + зачіска» — 2500 грн (макіяж окремо — 1500 грн, зачіска — 1200 грн).
                         </p>
+                        <a href="services.html" style="color: #0ea5e9; font-weight: bold; font-size: 14px; text-decoration: none;">Деталі послуг ➔</a>
                     </div>
-                    <a href="services.html" class="btn-calendar" style="display: block; text-align: center; margin-top: 15px;">Замовити образ</a>
+
+                    <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px; background: #ffffff;">
+                        <h3 style="color: #1e293b; margin-top: 0; font-size: 17px;">Оренда одягу та взуття</h3>
+                        <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+                            Понад 200 суконь та костюмів, взуття (~50 пар) та аксесуари. Допомога адміністратора у підборі образу.
+                        </p>
+                        <a href="clothes.html" style="color: #0ea5e9; font-weight: bold; font-size: 14px; text-decoration: none;">Каталог одягу ➔</a>
+                    </div>
                 </div>
 
-                <div style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background: #fafafa;">
-                    <div>
-                        <h3 style="color: #1e293b; font-size: 18px; margin-top: 0;">Оренда одягу та взуття</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">
-                            Власний гардероб студії: понад 200 суконь та костюмів, взуття різних розмірів і стильні аксесуари для створення неповторного образу.
-                        </p>
-                    </div>
-                    <a href="clothes.html" class="btn-calendar" style="display: block; text-align: center; margin-top: 15px;">Каталог гардеробу</a>
+                <!-- Фотосесія під ключ -->
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; text-align: center;">
+                    <h3 style="color: #1e293b; margin-top: 0; font-size: 19px;">Фотосесії зі штатним фотографом у Києві</h3>
+                    <p style="color: #475569; line-height: 1.7; font-size: 15px; max-width: 900px; margin: 0 auto 15px auto;">
+                        Зйомки під ключ від 2700 грн із готовими фотографіями за 3 робочі дні. Допомога у позуванні, створення невимушеної атмосфери та якісні спогади.
+                    </p>
+                    <a href="photos.html" class="btn-calendar" style="padding: 10px 24px; font-size: 14px;">Варіанти фотосесій ➔</a>
                 </div>
-
-                <div style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background: #fafafa;">
-                    <div>
-                        <h3 style="color: #1e293b; font-size: 18px; margin-top: 0;">Фотосесії з фотографом</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">
-                            Професійні зйомки під ключ (індивідуальні, контент, Love Story, «Все включено») від наших штатних студійних фотографів.
-                        </p>
-                    </div>
-                    <a href="photos.html" class="btn-calendar" style="display: block; text-align: center; margin-top: 15px;">Вибрати фотосесію</a>
-                </div>
-
             </div>
         </section>
 
         <!-- КАРТКИ КОНТАКТІВ -->
         <div class="contact-grid">
             <div class="contact-card">
-                <div class="contact-icon">📞</div>
                 <h3>Телефон</h3>
                 <p>Бронювання та консультації</p>
                 <a href="tel:+380971943583" class="contact-link">+38 097 194 35 83</a>
             </div>
             <div class="contact-card">
-                <div class="contact-icon">💬</div>
                 <h3>Telegram</h3>
-                <p>Швидка відповідь</p>
-                <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="contact-link">Написати нам</a>
+                <p>Швидка відповідь адміністратора</p>
+                <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="contact-link">@wave_photostudio_kyiv</a>
             </div>
             <div class="contact-card">
-                <div class="contact-icon">📸</div>
                 <h3>Instagram</h3>
-                <p>Наші роботи</p>
+                <p>Портфоліо та бекстейджі</p>
                 <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="contact-link">@wave.photostudio.kyiv</a>
             </div>
             <div class="contact-card">
-                <div class="contact-icon">🕒</div>
                 <h3>Графік роботи</h3>
-                <p>Цілодобово</p>
-                <span class="contact-link" style="color: #2c3e50;">09:00 - 20:00</span>
+                <p>Оренда студії: цілодобово</p>
+                <span class="contact-link" style="color: #2c3e50;">Дзвінки: 09:00 - 20:00</span>
             </div>
         </div>
 
-        <section class="shw cal-sec">
+        <!-- КАЛЕНДАР -->
+        <section class="shw cal-sec" id="calendar-sec">
             <h2 class="tc">Розклад та вільні години</h2>
             <div class="cal-wrp">
                 <iframe id="gcal" style="border: 0" frameborder="0" scrolling="no"></iframe>
@@ -245,27 +263,52 @@
         </section>
 
         <!-- ФОРМА БРОНЮВАННЯ -->
-        <div id="booking-form" class="booking-form-card shw">
-            <div class="form-header-box">
-                <h3>Оформлення заявки</h3>
-                <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+        <div id="booking-form" class="booking-split-container shw">
+            <div class="booking-split-card">
+                <div class="booking-info-pane">
+                    <div>
+                        <h3>Бронювання студії WAVE</h3>
+                        <p>Оберіть зручний час або замовте послугу. Адміністратор зв'яжеться з вами для узгодження деталей.</p>
+                        
+                        <ul class="booking-perks-list">
+                            <li class="booking-perk-item">Оренда залів: цілодобово за записом</li>
+                            <li class="booking-perk-item">Прийом дзвінків: з 09:00 до 20:00</li>
+                            <li class="booking-perk-item">Бронь закріплюється після передплати</li>
+                            <li class="booking-perk-item">Вільні години дивіться в календарі вище</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-info-footer">
+                        вул. Якова Гніздовського 1А, вхід CAPSULE
+                    </div>
+                </div>
+
+                <div class="booking-form-pane">
+                    <div class="mobile-form-title">
+                        <h3>Оформлення заявки</h3>
+                        <p>Залиште контакти для узгодження часу</p>
+                    </div>
+
+                    <form id="f1" class="frm">
+                        <div class="form-group">
+                            <label for="clientName">Ім'я</label>
+                            <input type="text" id="clientName" class="inp" placeholder="Введіть ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Номер телефону</label>
+                            <input type="tel" id="clientPhone" class="inp" placeholder="+38 (0__) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientComment">Деталі зйомки</label>
+                            <textarea id="clientComment" class="inp txt" placeholder="Вкажіть зал, дату, години або послугу" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-premium">Надіслати заявку ➔</button>
+                        <p class="form-policy-note">
+                            Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних
+                        </p>
+                    </form>
+                </div>
             </div>
-            <form id="f1" class="frm">
-                <div class="form-group">
-                    <label for="clientName">👤 ПІБ</label>
-                    <input type="text" id="clientName" class="inp" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientPhone">📞 Номер телефону</label>
-                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
-                </div>
-                <div class="form-group">
-                    <label for="clientComment">📅 Дата, час та обраний зал / послуга</label>
-                    <textarea id="clientComment" class="inp txt" placeholder="Зал 'Air', 25 число з 14:00 до 16:00" required></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn-styled">Надіслати заявку ➔</button>
-                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
-            </form>
         </div>
     </main>
 
@@ -288,21 +331,20 @@
                     <li><a href="book.html">Календар бронювання</a></li>
                     <li><a href="events.html">Заходи та події</a></li>
                     <li><a href="about.html">Контакти</a></li>
-                    <li><a href="#">Правила студії</a></li>
-                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="cat.html">Часті питання (FAQ)</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
-                    <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ studiophotowave@gmail.com</li>
-                    <li>💬 <a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
+                    <li>Київ, вул. Якова Гніздовського 1А</li>
+                    <li><a href="tel:+380971943583">+38 097 194 35 83</a></li>
+                    <li>studiophotowave@gmail.com</li>
+                    <li><a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Слідкуйте за нами</h4>
+                <h4>Соціальні мережі</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>

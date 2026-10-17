@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Дитяча фотосесія</title>
+    <title>Фотостудія WAVE - Дитяча фотосесія</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
-                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
-                <p>🏢 Арт-завод Платформа</p>
-                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+                <a href="https://www.google.com/maps/place/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D1%96%D1%8F+Photowave/@50.4588368,30.6387113,16z/data=!4m15!1m8!3m7!1s0x40d4db449892e23b:0xf5cc04b865f334ff!2z0KTQvtGC0L7RgdGC0YPQtNGW0Y8gUGhvdG93YXZl!8m2!3d50.4591851!4d30.6404731!10e1!16s%2Fg%2F11vfb9gd53!3m5!1s0x40d4db449892e23b:0xf5cc04b865f334ff!8m2!3d50.4591851!4d30.6404731!16s%2Fg%2F11vfb9gd53?entry=ttu" target="_blank" class="header-loc-link">Київ, вул. Якова Гніздовського 1А</a>
+                <a href="tel:+380971943583" class="header-phone-link">+38 097 194 35 83</a>
             </div>
             <div class="header-logo">
                 <a href="index.html"><img src="icons/logo.png" alt="WAVE Logo" style="height: 45px; width: auto; display: block;"></a>
@@ -23,19 +22,20 @@
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
-                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+                <a href="book.html" class="btn-calendar">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
+
         <nav class="header-nav" id="myNav">
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
                 <li class="dropdown">
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
-                        <li class="mobile-only-link"><a href="cat.html">Всі зали</a></li>
-                        <li><a href="room-air.html">Зал «Air»</a></li>
-                        <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
+                        <li><a href="room-air.html">Зал «Air» (900 грн)</a></li>
+                        <li><a href="room-stone.html">Зал «Stone» (1000 грн)</a></li>
+                        <li><a href="room-pool.html">Зал «Pool»</a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html" style="color: #0ea5e9;">ФОТОСЕСІЇ</a></li>
@@ -50,9 +50,14 @@
         </nav>
     </header>
 
-    <main>
+    <main class="room-page-container">
+        <!-- НАВІГАЦІЯ / ХЛІБНІ КРИХТИ -->
+        <nav class="breadcrumbs-box">
+            <a href="index.html">ГОЛОВНА</a><span class="sep">/</span><a href="photos.html">ФОТОСЕСІЇ</a><span class="sep">/</span><span class="current">ДИТЯЧА</span>
+        </nav>
+
         <h1 class="page-title">ДИТЯЧА</h1>
-        <!-- 1. ГОЛОВНЕ ФОТО + ОПИС -->
+
         <section class="item-layout-top shw">
             <div class="item-main-photo">
                 <img src="photo-kids/main.jpg" alt="Дитяча фотосесія" class="gallery-photo">
@@ -62,11 +67,10 @@
                 <p>Текст</p>
                 <p>Текст</p>
                 <p>Текст</p>
-                <a href="book.html?service=Дитяча фотосесія#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; max-width: 220px;">Замовити зйомку</a>
+                <a href="book.html?service=Дитяча фотосесія#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; width: 100%;">Замовити зйомку</a>
             </div>
         </section>
 
-        <!-- 2. АВТОМАТИЧНА ГАЛЕРЕЯ ВНИЗУ -->
         <section class="item-gallery-sec shw">
             <h3 class="tc">Галерея</h3>
             <div class="item-gallery-grid auto-gallery" data-folder="photo-kids" data-start="1"></div>
@@ -91,21 +95,21 @@
                     <li><a href="book.html">Календар бронювання</a></li>
                     <li><a href="events.html">Заходи та події</a></li>
                     <li><a href="about.html">Контакти</a></li>
-                    <li><a href="#">Правила студії</a></li>
-                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="cat.html#faq">Правила студії</a></li>
+                    <li><a href="cat.html#faq">Умови оренди</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
-                    <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ studiophotowave@gmail.com</li>
-                    <li>💬 <a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
+                    <li>Київ, вул. Якова Гніздовського 1А</li>
+                    <li><a href="tel:+380971943583">+38 097 194 35 83</a></li>
+                    <li>studiophotowave@gmail.com</li>
+                    <li><a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Слідкуйте за нами</h4>
+                <h4>Соціальні мережі</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>

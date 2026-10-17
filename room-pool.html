@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Зал POOL</title>
+    <title>Фотостудія WAVE - Зал POOL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +11,8 @@
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
-                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
-                <p>🏢 Арт-завод Платформа</p>
-                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+                <a href="https://www.google.com/maps/place/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D1%96%D1%8F+Photowave/@50.4588368,30.6387113,16z/data=!4m15!1m8!3m7!1s0x40d4db449892e23b:0xf5cc04b865f334ff!2z0KTQvtGC0L7RgdGC0YPQtNGW0Y8gUGhvdG93YXZl!8m2!3d50.4591851!4d30.6404731!10e1!16s%2Fg%2F11vfb9gd53!3m5!1s0x40d4db449892e23b:0xf5cc04b865f334ff!8m2!3d50.4591851!4d30.6404731!16s%2Fg%2F11vfb9gd53?entry=ttu" target="_blank" class="header-loc-link">Київ, вул. Якова Гніздовського 1А</a>
+                <a href="tel:+380971943583" class="header-phone-link">+38 097 194 35 83</a>
             </div>
             <div class="header-logo">
                 <a href="index.html"><img src="icons/logo.png" alt="WAVE Studio"></a>
@@ -24,7 +23,7 @@
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="Instagram" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="Telegram" width="28" height="28"></a>
                 </div>
-                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+                <a href="book.html" class="btn-calendar">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
         
@@ -35,9 +34,9 @@
                     <a href="cat.html" class="dropbtn" style="color: #0ea5e9;" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
-                        <li><a href="room-air.html">Зал «Air»</a></li>
-                        <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="room-pool.html" style="color: #0ea5e9;">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-air.html">Зал «Air» (900 грн)</a></li>
+                        <li><a href="room-stone.html">Зал «Stone» (1000 грн)</a></li>
+                        <li><a href="room-pool.html" style="color: #0ea5e9;">Зал «Pool»</a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -53,78 +52,80 @@
     </header>
 
     <main class="room-page-container">
-        <!-- 1. ЗАГОЛОВОК ТА ГОЛОВНЕ ФОТО -->
-        <section class="shw">
-            <h1 class="room-title">ЗАЛ POOL <span class="badge-closed" style="vertical-align: middle; font-size: 14px;">Відкриття незабаром</span></h1>
-            <div class="room-main-img-box">
-                <img src="hall-pool/main.jpg" alt="Зал Pool" class="room-main-img">
+        <!-- НАВІГАЦІЯ / ХЛІБНІ КРИХТИ -->
+        <nav class="breadcrumbs-box">
+            <a href="index.html">ГОЛОВНА</a><span class="sep">/</span><a href="cat.html">ЗАЛИ</a><span class="sep">/</span><span class="current">ЗАЛ POOL</span>
+        </nav>
+
+        <h1 class="room-title">ЗАЛ POOL</h1>
+
+        <section class="item-layout-top shw">
+            <div class="item-main-photo">
+                <img src="hall-pool/main.jpg" alt="Зал Pool" class="gallery-photo">
+            </div>
+
+            <div class="item-description-box">
+                <h2>Опис та деталі</h2>
+
+                <p>Текст</p>
+                <p>Текст</p>
+                <p>Текст</p>
+
+                <a href="#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; width: 100%;">Замовити бронь</a>
             </div>
         </section>
 
-        <!-- 2. ОПИС ТА ПАРАМЕТРИ -->
-        <section class="room-info-grid shw">
-            <div class="room-info-card">
-                <div class="room-pricing-header">
-                    <div>
-                        <h3>Локація для фотосесій та відеозйомки</h3>
-                    </div>
-                    <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                        <div class="room-price-badge" style="background: #fef2f2; color: #dc2626; border-color: #fecaca;">
-                            <span>СТАТУС:</span> <strong>Скоро відкриття</strong>
-                        </div>
-                        <a href="#f1" class="btn-calendar" style="padding: 8px 18px; font-size: 13px;">Попередній запис</a>
-                    </div>
-                </div>
-
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-
-                <h4 style="color: #2c3e50; font-size: 17px;">Опис залу:</h4>
-                <p style="margin-top: 10px; color: #555; line-height: 1.6; font-size: 15px;">
-                    Третій зал студії з басейном наразі знаходиться на етапі підготовки та технічного облаштування. Детальний опис локації, перелік обладнання та точна вартість оренди будуть опубліковані після завершення робіт.
-                </p>
-            </div>
-
-            <!-- ОБЛАДНАННЯ -->
-            <div class="room-equipment-card">
-                <h4 style="color: #2c3e50; font-size: 17px;">Параметри та оснащення:</h4>
-                <ul class="room-features-list">
-                    <li>🌊 Інтер'єрна водна зона з басейном</li>
-                    <li>💡 Професійне студійне освітлення</li>
-                    <li>🛋️ Зона підготовки та переодягання</li>
-                    <li>👥 Можливість проведення індивідуальних і групових зйомок</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 3. ГАЛЕРЕЯ ВСІХ ФОТО ЗАЛУ POOL -->
-        <section class="shw" style="margin: 40px 0;">
-            <h3 class="tc" style="font-size: 24px;">Фотографії залу POOL</h3>
+        <!-- ГАЛЕРЕЯ -->
+        <section class="shw" style="margin: 50px 0 30px;">
+            <h2 class="tc" style="font-size: 26px;">Фотографії локації</h2>
             <div class="room-gallery-grid auto-gallery" data-folder="hall-pool" data-start="1"></div>
         </section>
 
-        <!-- 4. ОФОРМЛЕННЯ ПОПЕРЕДНЬОЇ ЗАЯВКИ -->
-        <div id="booking-form" class="booking-form-card shw">
-            <div class="form-header-box">
-                <h3>Попередній запис у зал POOL</h3>
-                <p>Залиште контакти, щоб першими дізнатися про відкриття локації та забронювати зручний час за спеціальною ціною.</p>
+        <!-- ФОРМА БРОНЮВАННЯ -->
+        <div id="booking-form" class="booking-split-container shw">
+            <div class="booking-split-card">
+                <div class="booking-info-pane">
+                    <div>
+                        <h3>Бронювання залу Pool</h3>
+                        <p>Залиште контакти, і адміністратор зв'яжеться з вами для уточнення деталей та бронювання.</p>
+                        
+                        <ul class="booking-perks-list">
+                            <li class="booking-perk-item">Оренда залу за попереднім записом</li>
+                            <li class="booking-perk-item">Обробка заявок: щодня з 09:00 до 20:00</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-info-footer">
+                        вул. Якова Гніздовського 1А, вхід CAPSULE
+                    </div>
+                </div>
+
+                <div class="booking-form-pane">
+                    <div class="mobile-form-title">
+                        <h3>Замовлення залу Pool</h3>
+                        <p>Залиште контакти для зв'язку</p>
+                    </div>
+
+                    <form id="f1" class="frm">
+                        <div class="form-group">
+                            <label for="clientName">Ім'я та прізвище</label>
+                            <input type="text" id="clientName" class="inp" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Номер телефону</label>
+                            <input type="tel" id="clientPhone" class="inp" placeholder="+38 (0__) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientComment">Дата, години та деталі</label>
+                            <textarea id="clientComment" class="inp txt" placeholder="Зал POOL, бажані дати та деталі зйомки" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-premium">Надіслати заявку ➔</button>
+                        <p class="form-policy-note">
+                            Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних
+                        </p>
+                    </form>
+                </div>
             </div>
-            
-            <form id="f1" class="frm">
-                <div class="form-group">
-                    <label for="clientName">👤 ПІБ</label>
-                    <input type="text" id="clientName" class="inp" placeholder="Ваше ім'я" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientPhone">📞 Номер телефону</label>
-                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
-                </div>
-                <div class="form-group">
-                    <label for="clientComment">📅 Побажання або формат зйомки</label>
-                    <textarea id="clientComment" class="inp txt" placeholder="Попередній запис: Зал POOL" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn-styled">Залишити попередню заявку ➔</button>
-                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
-            </form>
         </div>
     </main>
 
@@ -147,21 +148,21 @@
                     <li><a href="book.html">Календар бронювання</a></li>
                     <li><a href="events.html">Заходи та події</a></li>
                     <li><a href="about.html">Контакти</a></li>
-                    <li><a href="#">Правила студії</a></li>
-                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="cat.html#faq">Правила студії</a></li>
+                    <li><a href="cat.html#faq">Умови оренди</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
-                    <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ studiophotowave@gmail.com</li>
-                    <li>💬 <a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
+                    <li>Київ, вул. Якова Гніздовського 1А</li>
+                    <li><a href="tel:+380971943583">+38 097 194 35 83</a></li>
+                    <li>studiophotowave@gmail.com</li>
+                    <li><a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Слідкуйте за нами</h4>
+                <h4>Соціальні мережі</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>

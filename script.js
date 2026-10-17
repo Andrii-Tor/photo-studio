@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
     track.addEventListener('mousedown', touchStart);
     track.addEventListener('mousemove', touchMove);
     track.addEventListener('mouseup', touchEnd);
-    track.addEventListener('mouseleave', () => { if (isDragging) touchEnd() });
+    track.addEventListener('mouseleave', () => { if (isDragging) touchEnd(); });
 
     track.addEventListener('touchstart', touchStart, {passive: true});
     track.addEventListener('touchmove', touchMove, {passive: true});
@@ -193,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function() {
         lbImg.src = currentImages[currentIndex].src;
     }
 
-    // Клік по будь-якому фото в галереї
     document.addEventListener('click', function(e) {
         if (e.target.tagName === 'IMG' && e.target.closest('main')) {
             currentImages = Array.from(document.querySelectorAll('main img'));
@@ -253,7 +252,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let phone = document.getElementById('clientPhone').value;
         const comment = document.getElementById('clientComment').value;
 
-        const pageSource = document.title.replace('Фотостудія WAVE — ', ''); 
+        // Регулярний вираз однаково добре вирізає як довге тире (—), так і короткий дефіс (-)
+        const pageSource = document.title.replace(/Фотостудія WAVE\s*[-—]\s*/i, ''); 
         const finalComment = `${comment}\n\n📌 Джерело: ${pageSource}`;
 
         if (phone.trim().startsWith('+') && !phone.trim().startsWith('+38')) {

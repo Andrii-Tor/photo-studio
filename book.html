@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудія WAVE — Календар</title>
+    <title>Фотостудія WAVE - Календар</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
-                <p>📍 Київ, вул. Якова Гніздовського 1А</p>
-                <p>🏢 Арт-завод Платформа</p>
-                <a href="tel:+380971943583">📞 +38 097 194 35 83</a>
+                <a href="https://www.google.com/maps/place/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D1%96%D1%8F+Photowave/@50.4588368,30.6387113,16z/data=!4m15!1m8!3m7!1s0x40d4db449892e23b:0xf5cc04b865f334ff!2z0KTQvtGC0L7RgdGC0YPQtNGW0Y8gUGhvdG93YXZl!8m2!3d50.4591851!4d30.6404731!10e1!16s%2Fg%2F11vfb9gd53!3m5!1s0x40d4db449892e23b:0xf5cc04b865f334ff!8m2!3d50.4591851!4d30.6404731!16s%2Fg%2F11vfb9gd53?entry=ttu" target="_blank" class="header-loc-link">Київ, вул. Якова Гніздовського 1А</a>
+                <a href="tel:+380971943583" class="header-phone-link">+38 097 194 35 83</a>
             </div>
             <div class="header-logo">
                 <a href="index.html"><img src="icons/logo.png" alt="WAVE Logo" style="height: 45px; width: auto; display: block;"></a>
@@ -23,9 +22,10 @@
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
                     <a href="https://t.me/wave_photostudio_kyiv" target="_blank" class="soc-link"><img src="icons/tg.png" alt="TG" width="28" height="28"></a>
                 </div>
-                <a href="book.html" class="btn-calendar">КАЛЕНДАР</a>
+                <a href="#booking-form" class="btn-calendar">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
+
         <nav class="header-nav" id="myNav">
             <ul class="nav-list">
                 <li><a href="index.html">ГОЛОВНА</a></li>
@@ -33,9 +33,9 @@
                     <a href="cat.html" class="dropbtn" onclick="if(window.innerWidth <= 800) { toggleMobileDrop(event); return false; }">ЗАЛИ <span class="arrow">▼</span></a>
                     <ul class="dropdown-content">
                         <li class="mobile-only-link"><a href="cat.html" style="font-weight: 700; color: #0ea5e9;">Всі зали</a></li>
-                        <li><a href="room-air.html">Зал «Air»</a></li>
-                        <li><a href="room-stone.html">Зал «Stone»</a></li>
-                        <li><a href="room-pool.html">Зал «Pool» <span class="badge-closed">Скоро</span></a></li>
+                        <li><a href="room-air.html">Зал «Air» (900 грн)</a></li>
+                        <li><a href="room-stone.html">Зал «Stone» (1000 грн)</a></li>
+                        <li><a href="room-pool.html">Зал «Pool»</a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">ФОТОСЕСІЇ</a></li>
@@ -50,18 +50,18 @@
         </nav>
     </header>
 
-    <main class="bk-main">
-        <!-- ЗАГОЛОВОК НАД БАНЕРОМ -->
+    <main>
         <h1 class="page-title tc">КАЛЕНДАР ТА БРОНЮВАННЯ</h1>
 
+        <!-- 1. СЛАЙДЕР (1200PX) -->
         <section class="shw sld-sec" style="margin-top: 15px;">
             <div class="sld-wrp">
                 <div class="sld-track" id="promo-track">
                     <div class="sld">
-                    <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
-                    <div class="sld-txt">
+                        <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('img-banner/slide1.jpg');"></div>
+                        <div class="sld-txt">
                             <h3>Фотостудія WAVE</h3>
-                            <p>Студія на Лівому березі Києва з двома інтер'єрними залами та необмеженим простором для втілення ваших ідей</p>
+                            <p>Студія на Лівому березі Києва з двома інтер'єрними залами та простором для творчості</p>
                         </div>
                     </div>
 
@@ -69,8 +69,10 @@
                         <div class="sld-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('img-banner/slide2.jpg');"></div>
                         <div class="sld-txt">
                             <h3>Творчість без меж</h3>
-                            <p>Не пливіть за течією, а створюйте власну хвилю творчості разом із Wave 💙</p>
+                            <p>Створюйте власну хвилю творчості разом із Wave</p>
                         </div>
+                    </div>
+                </div>
                 <button class="sld-btn prv" onclick="moveSld(-1)">❮</button>
                 <button class="sld-btn nxt" onclick="moveSld(1)">❯</button>
             </div>
@@ -80,34 +82,60 @@
             </div>
         </section>
 
-        <div class="bk-grd">
+        <!-- 2. КАЛЕНДАР (ШИРИНА 1200PX) -->
+        <section class="shw cal-sec">
             <div class="cal-wrp">
                 <iframe id="gcal" style="border: 0" frameborder="0" scrolling="no"></iframe>
             </div>
-        </div>
+        </section>
 
-        <!-- ПОКРАЩЕНА ФОРМА БРОНЮВАННЯ -->
-        <div id="booking-form" class="booking-form-card shw">
-            <div class="form-header-box">
-                <h3>Оформлення заявки</h3>
-                <p>Заповніть деталі нижче, і наш адміністратор зв'яжеться з вами протягом 15 хвилин для підтвердження бронювання.</p>
+        <!-- 3. ФОРМА БРОНЮВАННЯ (ШИРИНА 1200PX) -->
+        <div id="booking-form" class="booking-split-container shw">
+            <div class="booking-split-card">
+                <div class="booking-info-pane">
+                    <div>
+                        <h3>Бронювання студії WAVE</h3>
+                        <p>Оберіть зручний час або замовте послугу. Адміністратор зв'яжеться з вами для узгодження деталей.</p>
+                        
+                        <ul class="booking-perks-list">
+                            <li class="booking-perk-item">Оренда залів: цілодобово за записом</li>
+                            <li class="booking-perk-item">Прийом дзвінків: з 09:00 до 20:00</li>
+                            <li class="booking-perk-item">Бронь закріплюється після передплати</li>
+                            <li class="booking-perk-item">Вільні години дивіться в календарі вище</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-info-footer">
+                        вул. Якова Гніздовського 1А, вхід CAPSULE
+                    </div>
+                </div>
+
+                <div class="booking-form-pane">
+                    <div class="mobile-form-title">
+                        <h3>Оформлення заявки</h3>
+                        <p>Залиште контакти для узгодження часу</p>
+                    </div>
+
+                    <form id="f1" class="frm">
+                        <div class="form-group">
+                            <label for="clientName">Ім'я</label>
+                            <input type="text" id="clientName" class="inp" placeholder="Введіть ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Номер телефону</label>
+                            <input type="tel" id="clientPhone" class="inp" placeholder="+38 (0__) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientComment">Деталі зйомки</label>
+                            <textarea id="clientComment" class="inp txt" placeholder="" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-premium">Надіслати заявку ➔</button>
+                        <p class="form-policy-note">
+                            Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних
+                        </p>
+                    </form>
+                </div>
             </div>
-            <form id="f1" class="frm">
-                <div class="form-group">
-                    <label for="clientName">👤 ПІБ</label>
-                    <input type="text" id="clientName" class="inp" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientPhone">📞 Номер телефону</label>
-                    <input type="tel" id="clientPhone" class="inp" placeholder="+38 (093) 000-00-00 або +48 / +49..." required>
-                </div>
-                <div class="form-group">
-                    <label for="clientComment">📅 Дата, час та обраний зал / послуга</label>
-                    <textarea id="clientComment" class="inp txt" placeholder="Зал 'Air', 25 число з 14:00 до 16:00 або потрібна послуга" required></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn-styled">Надіслати заявку ➔</button>
-                <p class="form-disclaimer">🔒 Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних</p>
-            </form>
         </div>
     </main>
 
@@ -129,21 +157,21 @@
                     <li><a href="book.html">Календар бронювання</a></li>
                     <li><a href="events.html">Заходи та події</a></li>
                     <li><a href="about.html">Контакти</a></li>
-                    <li><a href="#">Правила студії</a></li>
-                    <li><a href="#">Умови оренди</a></li>
+                    <li><a href="cat.html#faq">Правила студії</a></li>
+                    <li><a href="cat.html#faq">Умови оренди</a></li>
                 </ul>
             </div>
             <div class="f-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li>📍 Київ, вул. Якова Гніздовського 1А</li>
-                    <li>📞 +38 097 194 35 83</li>
-                    <li>✉️ studiophotowave@gmail.com</li>
-                    <li>💬 <a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
+                    <li>Київ, вул. Якова Гніздовського 1А</li>
+                    <li><a href="tel:+380971943583">+38 097 194 35 83</a></li>
+                    <li>studiophotowave@gmail.com</li>
+                    <li><a href="https://t.me/wave_photostudio_kyiv" target="_blank">Написати в Telegram</a></li>
                 </ul>
             </div>
             <div class="f-col">
-                <h4>Слідкуйте за нами</h4>
+                <h4>Соціальні мережі</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61565576208035" target="_blank" class="soc-link"><img src="icons/fb.png" alt="FB" width="28" height="28"></a>
                     <a href="https://www.instagram.com/wave.photostudio.kyiv" target="_blank" class="soc-link"><img src="icons/insta.png" alt="IN" width="28" height="28"></a>
