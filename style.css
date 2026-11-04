@@ -795,6 +795,10 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
 .dropdown-content.mobile-modal-moved li.mobile-only-link { display: block !important; }
 
 @media (max-width: 850px) {
+    * {
+        max-width: 100% !important;
+    }
+
     .header-top { 
         flex-direction: column !important; 
         gap: 12px !important; 
@@ -843,6 +847,22 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
         margin: 15px 0 25px 0 !important; 
     }
     .feature-card-item { padding: 14px !important; }
+
+    main section[style*="max-width: 1200px"] {
+        padding: 20px 12px !important;
+        margin: 20px auto 40px auto !important;
+    }
+
+    div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    div[style*="padding: 25px"],
+    div[style*="padding: 22px"],
+    div[style*="padding: 20px"] {
+        padding: 14px 12px !important;
+    }
 
     .room-page-container { padding: 0 10px !important; margin: 15px auto 40px !important; }
     .item-layout-top {
@@ -920,19 +940,5 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
     .f-col { 
         min-width: 100% !important; 
         width: 100% !important; 
-    }
-    section.shw[style*="max-width: 1200px"] {
-        padding: 25px 12px !important;
-        margin: 20px auto 40px auto !important;
-    }
-
-    div[style*="minmax(260px, 1fr)"],
-    div[style*="minmax(280px, 1fr)"] {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-
-    div[style*="padding: 25px"] {
-        padding: 16px 12px !important;
     }
 }
