@@ -1,6 +1,7 @@
-// =========================================
-// 1. АНІМАЦІЯ ПОЯВИ ЕЛЕМЕНТІВ (При скролі)
-// =========================================
+/* ========================================================
+   СКРИПТИ САЙТУ (script.js)
+   Логіка галерей, форми бронювання, слайдера та календаря
+======================================================== */
 const obs = new IntersectionObserver((es) => {
     es.forEach(e => {
         if (e.isIntersecting) {
@@ -11,9 +12,6 @@ const obs = new IntersectionObserver((es) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.shw').forEach(el => obs.observe(el));
 
-// =========================================
-// 2. ВІДКРИТТЯ ПІДМЕНЮ "ЗАЛИ" НА ТЕЛЕФОНІ
-// =========================================
 const overlay = document.createElement('div');
 overlay.className = 'mobile-overlay';
 document.body.appendChild(overlay);
@@ -66,9 +64,6 @@ window.toggleMobileDrop = function(e) {
     }
 };
 
-// =========================================
-// 3. СЛАЙДЕР
-// =========================================
 document.addEventListener("DOMContentLoaded", function() {
     const track = document.getElementById("promo-track");
     if (!track) return;
@@ -141,9 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
     track.style.cursor = 'grab';
 });
 
-// =========================================
-// 4. GOOGLE КАЛЕНДАР
-// =========================================
 function updateCalendarView() {
     const cal = document.getElementById('gcal');
     if (!cal) return;
@@ -164,9 +156,6 @@ function updateCalendarView() {
 document.addEventListener("DOMContentLoaded", updateCalendarView);
 window.addEventListener("resize", updateCalendarView);
 
-// =========================================
-// 5. LIGHTBOX ЗІ СТРІЛОЧКАМИ ПЕРЕМИКАННЯ
-// =========================================
 document.addEventListener("DOMContentLoaded", function() {
     const lbModal = document.createElement('div');
     lbModal.className = 'lightbox-modal';
@@ -234,9 +223,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// =========================================
-// 6. ВІДПРАВКА ФОРМИ В TELEGRAM
-// =========================================
 document.addEventListener("DOMContentLoaded", function() {
     const bookingForm = document.getElementById('f1');
     if (!bookingForm) return;
@@ -252,8 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let phone = document.getElementById('clientPhone').value;
         const comment = document.getElementById('clientComment').value;
 
-        // Регулярний вираз однаково добре вирізає як довге тире (-), так і короткий дефіс (-)
-        const pageSource = document.title.replace(/Фотостудія WAVE\s*[--]\s*/i, ''); 
+        const pageSource = document.title.replace(/Фотостудія WAVE\s*-\s*/i, ''); 
         const finalComment = `${comment}\n\n📌 Джерело: ${pageSource}`;
 
         if (phone.trim().startsWith('+') && !phone.trim().startsWith('+38')) {
@@ -299,9 +284,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// =========================================
-// 7. АВТОЗАПОВНЕННЯ ПОСЛУГИ З URL
-// =========================================
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const serviceName = params.get('service');
@@ -312,9 +294,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// =========================================
-// 8. АВТОМАТИЧНЕ ПІДТЯГУВАННЯ ГАЛЕРЕЙ
-// =========================================
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.auto-gallery').forEach(gallery => {
         const folder = gallery.dataset.folder;

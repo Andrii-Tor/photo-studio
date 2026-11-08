@@ -1,3 +1,4 @@
+<!-- СТОРІНКА: ЗАЛ POOL (room-pool.html) -->
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
     <header class="main-header">
         <div class="header-top">
             <div class="header-contacts">
@@ -52,7 +52,6 @@
     </header>
 
     <main class="room-page-container">
-        <!-- НАВІГАЦІЯ / ХЛІБНІ КРИХТИ -->
         <nav class="breadcrumbs-box">
             <a href="index.html">ГОЛОВНА</a><span class="sep">/</span><a href="cat.html">ЗАЛИ</a><span class="sep">/</span><span class="current">ЗАЛ POOL</span>
         </nav>
@@ -65,27 +64,28 @@
             </div>
 
             <div class="item-description-box">
+                <!-- ТЕКСТ -->
                 <h2>Опис та деталі</h2>
 
                 <p>Текст</p>
                 <p>Текст</p>
                 <p>Текст</p>
+                <!-- /ТЕКСТ -->
 
                 <a href="#booking-form" class="btn-calendar" style="text-align: center; margin-top: 15px; width: 100%;">Замовити бронь</a>
             </div>
         </section>
 
-        <!-- ГАЛЕРЕЯ -->
         <section class="shw" style="margin: 50px 0 30px;">
             <h2 class="tc" style="font-size: 26px;">Фотографії локації</h2>
             <div class="room-gallery-grid auto-gallery" data-folder="hall-pool" data-start="1"></div>
         </section>
 
-        <!-- ФОРМА БРОНЮВАННЯ -->
         <div id="booking-form" class="booking-split-container shw">
             <div class="booking-split-card">
                 <div class="booking-info-pane">
                     <div>
+                        <!-- ТЕКСТ -->
                         <h3>Бронювання залу Pool</h3>
                         <p>Залиште контакти, і адміністратор зв'яжеться з вами для уточнення деталей та бронювання.</p>
                         
@@ -93,6 +93,7 @@
                             <li class="booking-perk-item">Оренда залу за попереднім записом</li>
                             <li class="booking-perk-item">Обробка заявок: щодня з 09:00 до 20:00</li>
                         </ul>
+                        <!-- /ТЕКСТ -->
                     </div>
                     
                     <div class="booking-info-footer">
@@ -109,7 +110,7 @@
                     <form id="f1" class="frm">
                         <div class="form-group">
                             <label for="clientName">Ім'я та прізвище</label>
-                            <input type="text" id="clientName" class="inp" placeholder="Ваше ім'я" required>
+                            <input type="text" id="clientName" class="inp" placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="clientPhone">Номер телефону</label>
@@ -117,7 +118,7 @@
                         </div>
                         <div class="form-group">
                             <label for="clientComment">Дата, години та деталі</label>
-                            <textarea id="clientComment" class="inp txt" placeholder="Зал POOL, бажані дати та деталі зйомки" required></textarea>
+                            <textarea id="clientComment" class="inp txt" placeholder="" required></textarea>
                         </div>
                         <button type="submit" class="btn-submit-premium">Надіслати заявку ➔</button>
                         <p class="form-policy-note">
@@ -129,7 +130,6 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="ftr">
         <div class="ftr-w">
             <div class="f-col">
