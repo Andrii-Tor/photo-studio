@@ -56,6 +56,16 @@ window.toggleMobileDrop = function(e) {
             closeMobileMenu();
             
             if (isOpening) {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                content.querySelectorAll('li a').forEach(link => {
+                    const linkTarget = link.getAttribute('href');
+                    if (linkTarget === currentPage) {
+                        link.classList.add('active-room-link');
+                    } else {
+                        link.classList.remove('active-room-link');
+                    }
+                });
+
                 content.classList.add('show-mobile-drop');
                 overlay.classList.add('show-overlay');
                 document.body.style.overflow = 'hidden';

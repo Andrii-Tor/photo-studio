@@ -682,7 +682,7 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
     border: 1px solid #eaeaea; 
     box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
 }
-.cal-wrp iframe { width: 100%; height: 100%; border: none; }
+.cal-wrp iframe { width: 100%; height: 100%; border: none; display: block; }
 
 .faq-sec { max-width: 900px; margin: 40px auto 60px; padding: 0 20px; }
 .faq-wrp { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
@@ -934,6 +934,7 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
     }
 
     .cal-sec { padding: 0 10px !important; margin: 30px auto !important; }
+    .cal-wrp { height: 420px !important; }
     .cal-wrp iframe { height: 420px !important; }
 
     .ftr-w { 
@@ -944,5 +945,15 @@ a, button, .dropbtn { -webkit-tap-highlight-color: transparent; outline: none !i
     .f-col { 
         min-width: 100% !important; 
         width: 100% !important; 
+    }
+
+    .dropdown-content.mobile-modal-moved li a {
+        color: #1e293b !important;
+        font-weight: 500 !important;
+    }
+    .dropdown-content.mobile-modal-moved li a.active-room-link {
+        color: #0ea5e9 !important;
+        font-weight: 700 !important;
+        background-color: #f0f9ff !important;
     }
 }
